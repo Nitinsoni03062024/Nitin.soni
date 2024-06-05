@@ -187,10 +187,6 @@ Stack is a linear data structure. The elements are inserted or removed from the 
  Push :- We can upload the data in stack
  pop :- We can remove the data from stack 
 
- > **Example of Stack**
-
- !(img src=https://cdn1.byjus.com/wp-content/uploads/2022/01/last-in-first-out-in-stack.png)
-
  > **Private Cloud**
 
 Private cloud is not availale to each persion and private cloud are desined only instities or only orgnizations, private closud provide to security and costly, best example of open stack for private cloud, private cloud mostly use IAAS Service (Insfrasture As A Service). and more then costmized.
