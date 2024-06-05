@@ -2,7 +2,6 @@
 layout: DevOps Learning
 title: Coredge DevOps Engineer training
 ---
----
 # (03/06/2024) Monday
 # What is Shell ?
 ---
@@ -14,7 +13,7 @@ shell and kernel are reposable in the backend of whatever Linux is running.
   when we are ceating shell scripting, so sript is devide in 2 parts, 1 :- sebang and header 2:- commented line 3 :- program body #!/bin/bash OR #!/bin/sh and This 
   is indicate to not commented) /bin/sh and /bin/bash ( This is indicate to shell location) you can fire this command in linux , echo $ECHO*
 ---
-# (04/06/2024)
+# (04/06/2024 and 05/06/2024)
 # What is shell scripting ?
 
   Shell scripting is a set of command, with the help of shell scripting we can automante any task shell scripting, when we are input - any command from the keyboad   or mounse After interpreting the input, it converts our input into 0 and 1 and gives us output.
@@ -25,6 +24,7 @@ shell and kernel are reposable in the backend of whatever Linux is running.
 - 1:- shebang OR header section
 - 2:- comment section
 - 3:- Program body secotion
+
 # This is a basic shell scripting, 
 
 - vim coredge.sh (#This is coredege file for creating shell scripting, after enter we are gose to the editor)
