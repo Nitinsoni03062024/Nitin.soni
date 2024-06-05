@@ -1,7 +1,6 @@
 ---
 layout: DevOps Learning
-title: coredge.io india pvt ltd,
-title: DevOps Engineer
+title: coredge.io india pvt ltd, DevOps Engineer
 ---
 # (03/06/2024) Monday
 
