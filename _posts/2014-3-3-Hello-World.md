@@ -130,6 +130,7 @@ When we are any changes in a code, then adding the code in staging aria with thi
 Local repositoy mean that code are availe in local system, or local disk space.
 
 # These are same command available, for push the code in github repository, and Add repository,
+
 - git init ( This command is activate and initialize of git)
 - git remote add origin master "github url"
 - git pull origin master (We are pull code from github server to local system)
@@ -138,6 +139,17 @@ Local repositoy mean that code are availe in local system, or local disk space.
 - git add . ( This command, your code to add in staging aria )
 - git commit -m "Nitin Soni" ( This command is indicate to commit and commit user name)
 - git push origin master ( Push the code in github server repo).
+
+# What is Branch in git ?
+
+Each task has one saprate branch, we can create multipule branches for coding of users and after done the code we can marge the code from master branch and this is a perallel branch, we can ceate any no of branches 
+
+- git branch ( we can see all branches)
+- git log --oneline ( we can see all commited code in a one line)
+- git branch nitin ( we can create a branch from nitin name)
+- git checkout nitin ( we can going to another branches)
+- git branch -d "branch nname" ( With the hekp this command we can delete branch)
+
 
 
 # What is Stack ?
