@@ -3,6 +3,7 @@ layout: DevOps Learning
 title: coredge.io india pvt ltd, DevOps Engineer. 
 ---
 # (03/06/2024) Monday
+---
 
 > What is Shell ?
 ---
@@ -15,8 +16,10 @@ shell and kernel are reposable in the backend of whatever Linux is running.
   echo $SHELL (With the help this command we can check shell in current Linux machine machine) and shell is located in /bin/sh location.
   when we are ceating shell scripting, so sript is devide in 2 parts, 1 :- sebang and header 2:- commented line 3 :- program body #!/bin/bash OR #!/bin/sh and This 
   is indicate to not commented) /bin/sh and /bin/bash ( This is indicate to shell location) you can fire this command in linux , echo $ECHO*
+
 ---
 # (04/06/2024 and 05/06/2024)
+---
 
 > **What is shell scripting ?**
 
@@ -183,6 +186,10 @@ Stack is a linear data structure. The elements are inserted or removed from the 
 
  Push :- We can upload the data in stack
  pop :- We can remove the data from stack 
+
+ > **Example of Stack**
+
+ ![Book Logo](img src="https://cdn1.byjus.com/wp-content/uploads/2022/01/last-in-first-out-in-stack.png)
 
  > **Private Cloud**
 
