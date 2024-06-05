@@ -152,10 +152,16 @@ Each task has one saprate branch, we can create multipule branches for coding of
 
 # Marge ?
 
-We can't marge brachges of diffrence repository, and we can marg branch to another branch for copy the code,
+We can't marge brachges of diffrence repository, and we can marg branch to another branch for copy the code, if any emplooye saying that, i want to wright the code in saprate, then i am creating saprate branch for user,
+
+**Note**
+
+We can't merge branches to diffrent branch, because data can conflit, 
 
 - git merge <branch name> ( from this command we can merge brach to another branch)
 - git log ( we can verify git log)
+- git merge branch1 ( we can marge branch for copy the codegit )
+- git branch
 
 
 
