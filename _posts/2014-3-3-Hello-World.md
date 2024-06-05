@@ -5,6 +5,7 @@ title: Coredge DevOps Engineer training
 ---
 # (03/06/2024) Monday
 # What is Shell ?
+---
 To write a script in any OS a language is needed, which we call shell in Linux OR When we give any input into the system and after interpreting the same input into a shell, we give the output in the machine language, which is called shell, and shell is a intface between user and kernal, that shell is called Bash.
 shell and kernel are reposable in the backend of whatever Linux is running.
 - Types Of Shell ?
@@ -15,13 +16,17 @@ shell and kernel are reposable in the backend of whatever Linux is running.
 ---
 # (04/06/2024)
 # What is shell scripting ?
+
   Shell scripting is a set of command, with the help of shell scripting we can automante any task shell scripting, when we are input - any command from the keyboad   or mounse After interpreting the input, it converts our input into 0 and 1 and gives us output.
   When we are creating shell scripting so fist going to the anyh editor, for example (vim,nano,vi) these are 3 editors for linux OS.
+
 # 3 Parameter are available in shell scripting.
+
 - 1:- shebang OR header section
 - 2:- comment section
 - 3:- Program body secotion
-# This is a basic shell scripting,  
+# This is a basic shell scripting, 
+
 - vim coredge.sh (#This is coredege file for creating shell scripting, after enter we are gose to the editor)
 - #!/bin/bash (#!, we can say not commaneted and /bin/bash, It means, this is location shell location and The interpreter takes our input and converts it into the - form of 0 and 1 and gives us output.)
 - #!/bin/bash
@@ -34,10 +39,14 @@ shell and kernel are reposable in the backend of whatever Linux is running.
   And if we are run shell scripting file. and We should always know that when we create a shell scripting file, the file must have excution permissions to - - run it. we can run with help of .coredge OR sh .coredge
  these are tools are available in the market for automate the task
  Shell/Bash Scripting and Ansible for automate task
+
 # What is VIM Editor ?
+
   VIM Editor it's test editor file, we can edit and modify any existing file and we can create new file accoring to the need.
   For Example :- If we want to create a new file, vim coredge, vim core, we can take any name
+
 # Types of Editor in Linux OS,
+
 - VIM,VI,NANO
   In VIM Editor, we can use these commands for save,quit,set number etc,
   1:- Esc+wq! = Enter (file save and quit from the file)
@@ -59,6 +68,7 @@ Data Wrangling it is kind to transforming or orgnaize you raw data into the same
 - Improved Communication and Decision-Making
 
 # About Alterys Tools ( This is data analytics and visualization tool) 
+
 Alteryx processes values based on the data type. Alteryx supports string, numeric, date-time, and boolean data types, as well as, spatial objects and Alteryx is used to automate data processes more quickly and efficiently
 - CEO of Alterys :-  Mark Anderson
 - Date founded:- 1997
@@ -156,7 +166,7 @@ We can't marge brachges of diffrence repository, and we can marg branch to anoth
 
 **Note**
 
-We can't merge branches to diffrent branch, because data can conflit, 
+we can merge data to difrent branches and files, data can conflict.   
 
 - git merge <branch name> ( from this command we can merge brach to another branch)
 - git log ( we can verify git log)
