@@ -189,7 +189,7 @@ Stack is a linear data structure. The elements are inserted or removed from the 
 
  > **Example of Stack**
 
- !(img src="https://cdn1.byjus.com/wp-content/uploads/2022/01/last-in-first-out-in-stack.png)
+ !(img src=https://cdn1.byjus.com/wp-content/uploads/2022/01/last-in-first-out-in-stack.png)
 
  > **Private Cloud**
 
