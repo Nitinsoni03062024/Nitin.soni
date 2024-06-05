@@ -150,6 +150,14 @@ Each task has one saprate branch, we can create multipule branches for coding of
 - git checkout nitin ( we can going to another branches)
 - git branch -d "branch nname" ( With the hekp this command we can delete branch)
 
+# Marge ?
+
+We can't marge brachges of diffrence repository, and we can marg branch to another branch for copy the code,
+
+- git merge <branch name> ( from this command we can merge brach to another branch)
+- git log ( we can verify git log)
+
+
 
 
 # What is Stack ?
