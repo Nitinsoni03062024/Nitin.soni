@@ -129,10 +129,12 @@ When we are any changes in a code, then adding the code in staging aria with thi
 
 Local repositoy mean that code are availe in local system, or local disk space.
 
-# These are same command available, for push the code in github repository,
+# These are same command available, for push the code in github repository, and Add repository,
 - git init ( This command is activate and initialize of git)
-- git status
-- git log
+- git remote add origin master "github url"
+- git pull origin master (We are pull code from github server to local system)
+- git status ( Showing status of git)
+- git log ( Showing logs of git)
 - git add . ( This command, your code to add in staging aria )
 - git commit -m "Nitin Soni" ( This command is indicate to commit and commit user name)
 - git push origin master ( Push the code in github server repo).
@@ -168,4 +170,3 @@ Monolithic Kernal :- Linux,Unix,Dos
 
 SSID (Service set identifier), When we install Wi-Fi at home, and after installing Wi-Fi, we receive a name which is called SSID when we login to the wifi by entering the password.
 
-# Nitin
