@@ -104,6 +104,10 @@ All OS related component stuffed as a single module of a kernal, all services ar
 
 Monolithic Kernal :- Linux,Unix,Dos
 
+> **We can Understand monolithik kernal form this iamages**
+
+![This is images of monolithik kernal](../images/mono.jpeg)
+
 > **What is SSID :-**
 
 SSID (Service set identifier), When we install Wi-Fi at home, and after installing Wi-Fi, we receive a name which is called SSID when we login to the wifi by entering the password.
