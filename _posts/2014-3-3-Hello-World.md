@@ -188,8 +188,32 @@ If you have written code in your project and now the customer gives any work on 
 
 - git stash (we can stashing the code)
 - git stash list ( we can see all shashing list)
-- git stash apply stash{@} ( we can find particuler stash)
+- git stash apply stash@{0,1} ( we can find particuler stash)
 - git stash clear ( to clear all stash)
+
+> **Git Reset ? **
+
+Git reset is a very poer full command, that is use to undo local changes to the state of a git repo, git reset basicly remove OR delete the changes from stagging area, befoure commit the code we can remove and delete the code fom stagging aria and local/working aria.
+
+These are same command we can manage reset code from stagging aria.
+
+- git reset filename (to reset the file from stagging aria)
+- git reset . ( to reset all code from stagging aria)
+- git reset hard ( Code is deleted from stagging aria and working space both)
+
+> **What is Git revert ?**
+
+The reset command helps you undo an exciting commit. after commit your code is public any one can access and see you file from central repository, it does not delete any data in this process insrtend rathere git created a new commit with the includes files reverted to their previous stat, so your version control history movies forword while the state of your file moves backword.
+
+> **These are same commnd for revert your code,**
+
+- git revert <commit i'd> ( Revet the command from this command)
+
+> **How to remove untrack files**
+
+- git clean -n (during the deleting file, this commnad ask that you are really you want to delete this file or not)
+- git clean -f  (force fully can delete untrack file).
+
 
 > **What is Stack ?**
 
