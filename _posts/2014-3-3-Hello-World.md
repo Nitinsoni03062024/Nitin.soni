@@ -1,9 +1,9 @@
 ---
 layout: DevOps Learning
-title: Coredge.io india pvt ltd, DevOps Engineer ((03/06/2024) Monday)
+title: Coredge.io india pvt ltd, DevOps Engineer
 ---
 
-# (04/06/2024 and 05/06/2024)
+# (03/06/2024 and 04/06/2024)
 
 > What is Shell ?
 ---
@@ -117,4 +117,6 @@ Monolithic Kernal :- Linux,Unix,Dos
 > **What is SSID :-**
 
 SSID (Service set identifier), When we install Wi-Fi at home, and after installing Wi-Fi, we receive a name which is called SSID when we login to the wifi by entering the password.
+
+# Keep Learning........
 
