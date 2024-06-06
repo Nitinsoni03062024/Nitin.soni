@@ -46,6 +46,10 @@ shell and kernel are reposable in the backend of whatever Linux is running.
 
 Data Wrangling it is kind to transforming or orgnaize you raw data into the same another formate, and wrangling data easy to undersatnd, according to the data wranging we can take a decision on data wranging, RAW data it's a critical data we can't ready and not understable data.
 
+> **You can understand from this images of Wrangling**
+
+![Wrangling Imeage](../images/Wrangling.png)
+
 > **Data Wrangling gives us some features**
 
 - Easy to understable
