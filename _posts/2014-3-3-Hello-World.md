@@ -179,6 +179,18 @@ When same name file having diffrent contect in a diffrent branches, if you do me
 - git merge branch1 ( we can marge branch for copy the codegit )
 - git branch
 
+> **What is Git Stashing**
+
+Stashing is temporary storage for kept a data or code,
+If you have written code in your project and now the customer gives any work on urgent basis then you have to work for the customer instead of working on your code and have to stop your code for a few hours. and we keep the code in stashing.
+
+> **These are same command for stashing the code**
+
+- git stash (we can stashing the code)
+- git stash list ( we can see all shashing list)
+- git stash apply stash{@} ( we can find particuler stash)
+- git stash clear ( to clear all stash)
+
 > **What is Stack ?**
 
 Stack is a linear data structure. The elements are inserted or removed from the same end. Queue is also a linear data structure. The elements are inserted or removed from two different ends, that is called (FIFO,First in first out And LIFO, Last in first out). In one stack we can uplaod and remove data from the stack.
