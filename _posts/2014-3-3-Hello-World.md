@@ -3,6 +3,8 @@ layout: DevOps Learning
 title: Coredge.io india pvt ltd, DevOps Engineer ((03/06/2024) Monday)
 ---
 
+# (04/06/2024 and 05/06/2024)
+
 > What is Shell ?
 ---
 To write a script in any OS a language is needed, which we call shell in Linux OR When we give any input into the system and after interpreting the same input into a shell, we give the output in the machine language, which is called shell, and shell is a intface between user and kernal, that shell is called Bash.
@@ -14,10 +16,6 @@ shell and kernel are reposable in the backend of whatever Linux is running.
   echo $SHELL (With the help this command we can check shell in current Linux machine machine) and shell is located in /bin/sh location.
   when we are ceating shell scripting, so sript is devide in 2 parts, 1 :- sebang and header 2:- commented line 3 :- program body #!/bin/bash OR #!/bin/sh and This 
   is indicate to not commented) /bin/sh and /bin/bash ( This is indicate to shell location) you can fire this command in linux , echo $ECHO*
-
----
-# (04/06/2024 and 05/06/2024)
----
 
 > **What is shell scripting ?**
 
