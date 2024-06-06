@@ -1,4 +1,4 @@
 ---
 Layout: Post
-Titile: Coredge.io India pvt ltd.
+Titile: Coredge.io India pvt ltd
 ---
