@@ -17,9 +17,3 @@ Docker & Container
 AWS
 Networking
 Shell/Bash Scripting
-
-
-### Contact me
-
-[email@domain.com](?)
-[Contact Number](?) 
