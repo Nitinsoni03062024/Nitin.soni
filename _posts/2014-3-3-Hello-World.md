@@ -1,8 +1,6 @@
 ---
 layout: DevOps Learning
-title: Coredge.io india pvt ltd, DevOps Engineer. 
----
-# (03/06/2024) Monday
+title: Coredge.io india pvt ltd, DevOps Engineer ((03/06/2024) Monday)
 ---
 
 > What is Shell ?
