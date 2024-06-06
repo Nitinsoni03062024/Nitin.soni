@@ -1,15 +1,25 @@
 ---
-layout: page
-title: About
+layout: Nitin SOni  
+title: DevOps Engineer  
 permalink: /about/
 ---
 
-Some information about you!
+Hello EveryOne My name is nitin soni, I am a graduate on BSC(IT) HONS.
 
 ### More Information
 
-A place to include any other types of information that you'd like to include about yourself.
+> **My Skills:-**
+
+RHCSA(Linux)
+Using Thise OS in linux (Ubuntu,CentsOS,Kali Linux, OpenSuse Linux,Redhat)
+Git/GitHub (This is my GitHub link :- https://nitinsoni03062024.github.io/Nitin.soni/)
+Docker & Container
+AWS
+Networking
+Shell/Bash Scripting
+
 
 ### Contact me
 
-[email@domain.com](mailto:email@domain.com)
+[email@domain.com](?)
+[Contact Number](?) 
