@@ -1,0 +1,26 @@
+# This is About VIM text editor in linux
+
+> **What is VIM Editor ?**
+
+  VIM Editor it's test editor file, we can edit and modify any existing file and we can create new file accoring to the need.
+  For Example :- If we want to create a new file, vim coredge, vim core, we can take any name
+
+> **Types of Editor in Linux OS,**
+
+> **This is a basics command of VIM Editor**
+
+- VIM,VI,NANO
+  In VIM Editor, we can use these commands for save,quit,set number etc,
+- Esc+wq! = Enter (file save and quit from the file)
+- Esc+q!
+- I ( press i for eiditing in file)
+- / (we can search any work in file)
+- :set number ( With this coommand can set numnber of test lines), and these are same command we can use it.
+- 7j : move 7 lines down.
+- w : move a word forward
+- ctrl + f : move down a page
+- ctrl + b : move up a page
+- gg : move to the top of the document
+- dw : delete a word
+- 4dd : delete 4 lines
+- cc : change a line ( change is delete and go in insert mode ) 

@@ -1,14 +1,15 @@
 ---
-layout: page
-title: About
+layout: Nitin Soni  
+title: DevOps Engineer
 permalink: /about/
 ---
 
 Hello, Nitin Soni
 
 ### My Skills
-
-- Linux
-
-### Contact me
+- Linux (Ubuntu.CentOS,Kali Linux,OpenSuse,RedHat)
+- AWS
+- Git/GitHub
+- Shell/Bash scripting
+- Docker And Container
 
