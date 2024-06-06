@@ -159,7 +159,7 @@ Local repositoy mean that code are availe in local system, or local disk space.
 
 > **What is Branch in git ?**
 
-Each task has one saprate branch, we can create multipule branches for coding of users and after done the code we can marge the code from master branch and this is a perallel branch, we can ceate any no of branches 
+Each task has one saprate branch, we can create multipule branches for coding of users and after done the code we can marge the code from master branch and this is a perallel branch, we can ceate any no of branches, and when we are ceating any branch and in a branch write any changes and after addd and commit, so data is not repflect in master branch, only showing in saprate branch.and for exmaple we have create one branch and inside the branch, create one file and if not commit and not push so file is showing in all branches.
 
 - git branch ( we can see all branches)
 - git log --oneline ( we can see all commited code in a one line)
@@ -169,11 +169,10 @@ Each task has one saprate branch, we can create multipule branches for coding of
 
 > **Marge branch and files in git ?**
 
-We can't marge brachges of diffrence repository, and we can marg branch to another branch for copy the code, if any emplooye saying that, i want to wright the code in saprate, then i am creating saprate branch for user,
+We can marge brachges of diffrence repository, and we can marg branch to another branch for copy the code, if any emplooye saying that, i want to wright the code in saprate space, then i am creating saprate branch for user, after merge the data, data is available in both side. and data will merge in central repository, 
+When same name file having diffrent contect in a diffrent branches, if you do merge data is conflict
 
-> **Note**
-
-we can merge data to difrent branches and files, data can conflict.   
+> **we can merge data to difrent branches and files, data can conflict.**   
 
 - git merge <branch name> ( from this command we can merge brach to another branch)
 - git log ( we can verify git log)
