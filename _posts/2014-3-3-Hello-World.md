@@ -104,9 +104,7 @@ All OS related component stuffed as a single module of a kernal, all services ar
 
 Monolithic Kernal :- Linux,Unix,Dos
 
-> **We can Understand monolithik kernal form this iamages**
-
-![This is images of monolithik kernal](../images/Monokernal.png)
+![This is images of monolithik kernal](../images/mono.jpeg)
 
 > **What is SSID :-**
 
