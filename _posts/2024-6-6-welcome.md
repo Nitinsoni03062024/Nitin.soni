@@ -5,10 +5,10 @@ title: This is Basic About Git/GitHub (05/06/2024 And 05/06/2024).
 
 > **About of Git ?**
 
-Original author:- Linus Torvalds
-Operating system:- POSIX (Linux, macOS, Solaris Windows)
-Initial release:- 7 April 2005; 19 years ago
-Programming languages:- Python, C, C++, Perl, Shell script, Tcl
+- Original author:- Linus Torvalds
+- Operating system:- POSIX (Linux, macOS, Solaris Windows)
+- Initial release:- 7 April 2005; 19 years ago
+- Programming languages:- Python, C, C++, Perl, Shell script, Tcl
 
 Mr Linus Torvalds is devoped Linux OS and Git.
 
