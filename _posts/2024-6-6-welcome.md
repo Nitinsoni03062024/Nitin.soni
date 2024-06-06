@@ -1,6 +1,6 @@
 ---
 layout: post
-title: This is Basic About Git/GitHub (04/06/2024).
+title: This is Basic About Git/GitHub (05/06/2024 And 05/06/2024).
 ---
 
 > **About of Git ?**
