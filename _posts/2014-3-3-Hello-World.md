@@ -106,7 +106,7 @@ Monolithic Kernal :- Linux,Unix,Dos
 
 > **We can Understand monolithik kernal form this iamages**
 
-![This is images of monolithik kernal](../images/mono.jpeg)
+![This is images of monolithik kernal](../images/monolithic.jpg)
 
 > **What is SSID :-**
 
