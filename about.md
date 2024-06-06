@@ -4,7 +4,7 @@ title: DevOps Engineer
 permalink: /about/
 ---
 
-Hello, Nitin Soni
+Welcome to my site friends, My Name is nitin soni I am a graduate in BSC(IT)HONS
 
 ### My Skills
 - Linux (Ubuntu.CentOS,Kali Linux,OpenSuse,RedHat)
