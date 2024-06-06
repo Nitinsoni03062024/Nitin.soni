@@ -42,21 +42,6 @@ shell and kernel are reposable in the backend of whatever Linux is running.
  these are tools are available in the market for automate the task
  Shell/Bash Scripting and Ansible for automate task
 
-> **What is VIM Editor ?**
-
-  VIM Editor it's test editor file, we can edit and modify any existing file and we can create new file accoring to the need.
-  For Example :- If we want to create a new file, vim coredge, vim core, we can take any name
-
-> **Types of Editor in Linux OS,**
-
-- VIM,VI,NANO
-  In VIM Editor, we can use these commands for save,quit,set number etc,
-  1:- Esc+wq! = Enter (file save and quit from the file)
-  2:- Esc+q!
-  3:- I ( press i for eiditing in file)
-  4:- / (we can search any work in file)
-  5:- :set number ( With this coommand can set numnber of test lines), and these are same command we can use it.
-
 > **What is Data Wrangling ?**
 
 Data Wrangling it is kind to transforming or orgnaize you raw data into the same another formate, and wrangling data easy to undersatnd, according to the data wranging we can take a decision on data wranging, RAW data it's a critical data we can't ready and not understable data.
@@ -93,6 +78,8 @@ Stack is a linear data structure. The elements are inserted or removed from the 
 
  Push :- We can upload the data in stack
  pop :- We can remove the data from stack 
+
+ ![You can Understand from this iamges for stack](../images/Stack.png)
 
  > **Private Cloud**
 
