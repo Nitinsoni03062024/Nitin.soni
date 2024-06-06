@@ -79,7 +79,7 @@ Data Wrangling it is kind to transforming or orgnaize you raw data into the same
 Alteryx processes values based on the data type. Alteryx supports string, numeric, date-time, and boolean data types, as well as, spatial objects and Alteryx is used to automate data processes more quickly and efficiently
 - CEO of Alterys :-  Mark Anderson
 - Date founded:- 1997
-- Founder: Dean Stoecker.
+- Founder: Dean Stoecker.  
 
  > **What is Command-line Environment ?**
 
@@ -89,7 +89,6 @@ These are CLI available inm the market for OS,
 Window OS = CMD and and power shell
 Linux OS = Linux itself CLI cammnd line 
 Mac OS = Mac-CLI
-
 We can oprate OS from the CLI method (Window,Mac,Linux).
 
 
