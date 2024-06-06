@@ -124,3 +124,6 @@ The reset command helps you undo an exciting commit. after commit your code is p
 
 - git clean -n (during the deleting file, this commnad ask that you are really you want to delete this file or not)
 - git clean -f  (force fully can delete untrack file).
+
+
+# Keep Learning............
