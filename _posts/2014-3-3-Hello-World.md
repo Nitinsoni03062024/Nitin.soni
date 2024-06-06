@@ -1,6 +1,6 @@
 ---
 layout: DevOps Learning
-title: We have covered same Topics, (DevOps Engineer)
+title: What is shell and shell scripting (DevOps Engineer)
 ---
 
 # (03/06/2024 and 04/06/2024)
