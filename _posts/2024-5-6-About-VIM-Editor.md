@@ -5,14 +5,14 @@ title: We have covered same VIM Editor in Linux (05/06/2024).
 
 # This is About VIM text editor in linux
 
-> **What is VIM Editor ?**
+>  **What is VIM Editor ?**
 
   VIM Editor it's test editor file, we can edit and modify any existing file and we can create new file accoring to the need.
   For Example :- If we want to create a new file, vim coredge, vim core, we can take any name
 
-> **Types of Editor in Linux OS,**
+>  **Types of Editor in Linux OS,**
 
-> **This is a basics command of VIM Editor**
+>  **This is a basics command of VIM Editor**
 
 - VIM,VI,NANO
   In VIM Editor, we can use these commands for save,quit,set number etc,
@@ -28,4 +28,4 @@ title: We have covered same VIM Editor in Linux (05/06/2024).
 - gg : move to the top of the document
 - dw : delete a word
 - 4dd : delete 4 lines
-- cc : change a line ( change is delete and go in insert mode ).
+- cc : change a line ( change is delete and go in insert mode ). 
