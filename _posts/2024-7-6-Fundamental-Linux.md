@@ -1,5 +1,6 @@
 ---
 layout: post
-title: Fundamental of Linux (07/06/2024).
+title: What is Git/GitHub [Basic] (05/06/2024 And 06/06/2024).
 ---
-# Nitin
+
+> **About of Git ?**
