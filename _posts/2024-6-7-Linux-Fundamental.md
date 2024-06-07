@@ -2,6 +2,10 @@
 layout: post
 title: Linux fundamental (07/06/2024)
 ---
+> **This is Image of Linux Logo**
+
+![Logo Of Linux](../images/linuxlogo.png)
+ 
 > **About Linux**
 
 - Developer: Linus Torvalds
@@ -140,9 +144,11 @@ difficult things like partitioning; you can just take the default choices. Howev
 - 9:- Then MBR in the hard disk it refer to the location of the boot loader using DISK priority 
 - 10:- BIOS load and exciutes the MBR boot laoder and give control to MBR
 
-
+**This is a Imges of Booting Process you can understand**
 
 ![This is images if Linux Booting process, for better understranding](../images/Booting.png)
+
+Keep Learning......
 
 
 
