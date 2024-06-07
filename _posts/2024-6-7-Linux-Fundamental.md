@@ -200,12 +200,138 @@ by encrypting the entire communication with SSL.
 - sudo apt update
 - sudo apt install apache2
 - sudo systemctl status apache2
+- sudo systemctl stop apache2
+- sudo systemctl staret apach2
 - Now you can hit in broser "localhost" Output open samething open,
 
 ![Go to any browser and hit "localhost"](../images/localhost.png)
 
+> **Linux File System**
 
+- We can read and write the data from file system, a Linux file system is a structured collection of files on a disk drive or a partition. A partition is a segment of memory and contains some specific data. In our machine, there can be various partitions of the memory. Generally, every partition contains a file system.
 
+The general-purpose computer system needs to store data systematically so that we can easily access the files in less time. It stores the data on hard disks (HDD) or some equivalent storage type. There may be below reasons for maintaining the file system.
+
+> **What is the Linux File System?**
+
+Linux file system is generally a built-in layer of a Linux operating system used to handle the data management of the storage. It helps to arrange the file on the disk storage. It manages the file name, file size, creation date, and much more information about a file.
+
+> **Types of Linux File System**
+
+When we install the Linux operating system, Linux offers many file systems such as Ext, Ext2, Ext3, Ext4, JFS, ReiserFS, XFS, btrfs, and swap.
+
+![We can understand from this image for Linux file system](../images/linuxfile.png)
+
+- Ext :- The file system Ext stands for Extended File System. It was primarily developed for MINIX OS. The Ext file system is an older version, and is no longer used due to some limitations.
+  
+- Ext2 :- Ext2 is the first Linux file system that allows managing two terabytes of data, Individual File Size 16GB-2TB
+  
+- Ext3 :- Ext3 is developed through Ext2; it is an upgraded version of Ext2 and contains backward compatibility Individual File Size 16GB-2TB
+  
+- Ext4 :- Ext4 file system is the faster file system among all the Ext file systems. It is a very compatible option for the SSD (solid-state drive) disks, and it is the default file system in Linux distribution, Individual File Size 16GB-16TB
+  
+- XFS :- XFS is a highly scalable, high-performance file system and size is manage up to 16 exabytes
+  
+- Swap :- Swap memory it a virtual memory in linux, Swap space in Linux is used when the amount of physical memory (RAM) is full. If the system needs more memory resources and the RAM is full And accepts its space from SDD or HDD, according to the need we can extand and reduse swap file system.
+
+> **How to extant swap memory in linux**
+
+- sudo swapon --show
+- free -h
+- df -h
+- sudo fallocate -l 1G /swapfile
+- ls -lh /swapfile
+- sudo chmod 600 /swapfile
+- ls -lh /swapfile
+- sudo mkswap /swapfile
+- sudo swapon /swapfile
+
+> **What is partistion in linux**
+
+- it is a method by which we can break a disk into small small parts, These partition can be use to store OS files and personal data files.
+
+> **In windows:-**
+
+Disk 
+partition  ==>   C:\    D:\    E:\   F:\  .....so on 
+C:\   ==> mandatory Disk and remainigs are optional.
+
+C:\  ==> use to store os file and we can also use it for the data. 
+D:\  E:  F:\ ==> recommened drive to store data .
+
+> **In linux:-**
+
+there is no concept of  C:\  D:\  E:\   F:\  Drive.
+Whole OS will represent by  / 
+ [ root filesystem or root partition or parent directory ]
+
+> **Disk Name in Linux**
+
+1- PATA OR IDE  ===> hda ==> hda1  hda2 hda3   hdb ==> hdb1 hdb2 hdb3 ..etc
+2- SATA         ===> sda ==> sda1  sda2  sda3....etc 
+3- Virtual Disk ===> vda ==> vda1  vda2 
+
+fdisk -l  ==> to find out the details about your disk
+   OR
+lsblk  
+
+Disk  ==> 30 GB ==> During the Installation 
+
+1- Automatic Partition   ==> machine will automatically used this space but we can not mentioned size manually
+2- Custom Partition      ==> we can plan these partition as per needs
+
+> **Types of Partition Creation technology ?**
+
+- Standard Method OR Standard Volume ==> fixed size partition concept 
+- LVM Method [ logical volume manager]     ==> Recomended,
+we can extend or reduce this volume size in future
+
+> **How many partitions requried to install linux OS ?**
+
+1-    /              ==> OS Files + Data files    
+2-    swap partition ==> Virtual memory ==> twice of main memory
+
+> **About linux Partistion**
+
+- Every hard drive always manage by MBR or GPT [GUID partition Table ] technology ?
+- In first sector we have already installed MBR [master boot record ] technology.
+- MBR Basically Bydefault  allow maximum four partition into any disk.
+- MBR basically allow two types of partition .
+
+- Primary partition  <== can be use to store os data and personal data.
+- Extended partition <== 3- Logical partition
+
+> **Primary Limits**
+
+1- Min ==> 1 
+2- MAX ==> 4 
+
+> **Extended Limits  [can be optional ]**
+
+> **What is the Filesystem Hierarchy Standard**
+
+Filesystem hierarchy standard describes directory structure and its content,
+
+- 1:- / (Root)
+- 2:- /bin 
+- 3:- /boot 
+- 4:- /dev 
+- 5:- /etc
+- 6:- /home
+- 7:- /lib
+- 8:- /media
+- 9:- /mnt
+- 10:- /opt
+- 11:- /sbin
+- 12:- /srv
+- 13:- /tmp
+- 14:- /usr
+- 15:- /proc
+
+![This is a linux file system Hierarchy](../images/linuxfilesystemhierarchy.png)
+
+1- Min  ==> 0 
+2- Max  ==> 1
 
 
 # Keep Learning......
