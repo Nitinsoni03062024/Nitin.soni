@@ -148,7 +148,7 @@ difficult things like partitioning; you can just take the default choices. Howev
 
 ![This is images if Linux Booting process, for better understranding](../images/Booting.png)
 
-Keep Learning......
+# Keep Learning......
 
 
 
