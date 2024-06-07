@@ -321,9 +321,8 @@ Filesystem hierarchy standard describes directory structure and its content,
 - 7:- /lib
 - 8:- /media
 - 9:- /mnt
-- 10:- /opt
+- 10: /opt
 - 11:- /sbin
-- 12:- /srv
 - 13:- /tmp
 - 14:- /usr
 - 15:- /proc
@@ -332,6 +331,21 @@ Filesystem hierarchy standard describes directory structure and its content,
 
 1- Min  ==> 0 
 2- Max  ==> 1
+
+> **Switching Users in Ubuntu**
+
+- sudo su (We can switch from another user)
+- poweroff (power off the system with this command)
+- init 0 (reboot the system), and init 1 (power off the system)
+
+> **Recovering Deleted Files**
+
+- Create a new text file on the desktop named coredge.txt, using the graphical file manager
+- Delete the file by sending it to Trash.
+- Verify the file is now in ~/.local/share/Trash, or a subdirectory thereof. NOTE: You will have to get your file browser to show      hidden files and directories, those that start with a .)
+- Recover the file and make sure it is in its original location.
+  
+  
 
 
 # Keep Learning......
