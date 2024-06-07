@@ -3,9 +3,9 @@ layout: DevOps Learning
 title: What is VIM Editor in Linux [Basic] (05/06/2024).  
 ---
 
-# This is About VIM text editor in linux
+> **This is About VIM text editor in linux**
 
-> **What is VIM Editor ?**
+> **What is VIM Editor?**
 
   VIM Editor it's test editor file, we can edit and modify any existing file and we can create new file accoring to the need.
   For Example :- If we want to create a new file, vim coredge, vim core, we can take any name
