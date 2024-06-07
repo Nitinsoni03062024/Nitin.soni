@@ -148,6 +148,66 @@ difficult things like partitioning; you can just take the default choices. Howev
 
 ![This is images if Linux Booting process, for better understranding](../images/Booting.png)
 
+> **What is apache web server and HTTPD Server**
+
+- Apache web server or Apache http server is one of the most widely used on 
+the Internet It is developed and maintained by Apache Software Foundation, Apache is 
+an open source software available for free A web server generally hosts the web content, and responds to requests for 
+this content from web browsers such as Internet explorer, Google chrome 
+and Firefox And httpd is the same as apache2. It depends on the OS you use. For example in 
+RHEL 6.2 it is called httpd and in Ubuntu it is called apache2. 
+
+> **How many web Servers we have in market ?**
+
+- 1- apache web server, 
+- 2- IIS web server 
+- 3- Nginx webserver and litespeed web server. 
+  
+- Beside Apache, IIS and Nginx also among the most common web servers in 
+use today As reported (July 18, 2016) the web server statistics shows that from the 
+entire internet web, there are 46% web server running in Apache, 29% in 
+Microsoft IIS and 19% in Nginx,
+
+-  The http protocol is sent over the wire in clear text, using port 80/TCP by 
+default (though other ports can be used). 
+ There is also a TLS/SSL encrypted version of the protocol called https that 
+uses port 443/TCP by default.
+
+> **Types of website in markets ?**
+
+- 1:- Name based hosting 
+- 2:- IP Based Hosting 
+
+- Package name: httpd (Apache2)
+- Daemon: httpd (Apache2)
+- Port number: 80 { http } and 443 { https } 
+- File : /etc/httpd/conf/httpd.conf OR (etc/apache2/apache2.conf)
+- Log: /var/log/httpd/access.log 
+- /var/log/httpd/error.log 
+- Document root place: /var/www/html 
+
+> **What is HTTPS ?**
+
+- HTTPS stands for Hyper Text Transfer Protocol Secure, It is a protocol for securing the communication between two systems e.g. the 
+browser and the web server, t is the protocol where encrypted HTTP data is transferred over a secure 
+connection. By using secure connection such as Transport Layer Security or 
+Secure Sockets Layer The principal motivations for HTTPS are authentication of the accessed website, 
+and protection of the privacy and integrity of the exchanged data while in transit It uses the port no. 443 for Data Communication. It allows the secure transactions
+by encrypting the entire communication with SSL.
+
+> **How to install webserver in Ubuntu ?**
+
+- sudo apt update
+- sudo apt install apache2
+- sudo systemctl status apache2
+- Now you can hit in broser "localhost" Output open samething open,
+
+![Go to any browser and hit "localhost"](../images/localhost.png)
+
+
+
+
+
 # Keep Learning......
 
 
