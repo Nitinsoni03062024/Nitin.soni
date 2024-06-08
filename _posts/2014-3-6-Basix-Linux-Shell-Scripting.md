@@ -31,6 +31,7 @@ shell and kernel are reposable in the backend of whatever Linux is running.
 
 - vim coredge.sh (#This is coredege file for creating shell scripting, after enter we are gose to the editor)
 - #!/bin/bash (#!, we can say not commaneted and /bin/bash, It means, this is location shell location and The interpreter takes our input and converts it into the - form of 0 and 1 and gives us output.)
+  
 - #!/bin/bash
  mkdir coredge
  touch coredge.io
@@ -41,6 +42,18 @@ shell and kernel are reposable in the backend of whatever Linux is running.
   And if we are run shell scripting file. and We should always know that when we create a shell scripting file, the file must have excution permissions to - - run it. we can run with help of .coredge OR sh .coredge
  these are tools are available in the market for automate the task
  Shell/Bash Scripting and Ansible for automate task
+
+> **What is Kernel ? **
+
+• Kernel is an heart of Linux OS.
+• The Linux kernel is the main component of a Linux operating system (OS) and 
+is the core interface between a computer's hardware and its processes. 
+• It is an interface between Application and computer hardware as well as shell.
+• It manages resource of Linux OS. Resources means facilities available in Linux. 
+• Kernel decides who will use this resource, for how long and when.
+• It runs your programs (or set up to execute binary files).
+• The kernel acts as an intermediary between the computer hardware and various 
+programs/application/shel
 
 > **What is Data Wrangling ?**
 
@@ -74,6 +87,20 @@ Window OS = CMD and and power shell
 Linux OS = Linux itself CLI cammnd line 
 Mac OS = Mac-CLI
 We can oprate OS from the CLI method (Window,Mac,Linux).
+
+#! (Interpretor calling system)
+/bin/bash :- location of shell
+
+> Types of Quotes 
+
+- 1:- Single Quotes :- ' ' (Print As it is)
+- 2:- Double Quates :- " " (We can print message and values as well)
+- 3:- Back Quotes :-   ` (ti is use to print output of any commad ony)\
+
+date :- +%A
+date :- +%H:%M
+
+date --help
 
 
 # Keep Learning........
