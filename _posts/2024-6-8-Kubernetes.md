@@ -1,3 +1,5 @@
-layout:- post
-title :- Kubernetes for DevOps, (08/06/2024).
+---
+layout: post
+title: Kubernetes for DevOps, 08/06/2024
+---
 
