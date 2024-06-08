@@ -697,6 +697,8 @@ SOA   ( server of authority)   ==>  define your DNS server machine name.
 
 
 
+
+
   
 
 
