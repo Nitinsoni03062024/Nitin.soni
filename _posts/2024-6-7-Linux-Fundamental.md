@@ -345,7 +345,364 @@ Filesystem hierarchy standard describes directory structure and its content,
 - Verify the file is now in ~/.local/share/Trash, or a subdirectory thereof. NOTE: You will have to get your file browser to show      hidden files and directories, those that start with a .)
 - Recover the file and make sure it is in its original location.
   
+> **Networking Fundamental of Linux**
+
+- What do you mean by networking?
+- 
+Networking is the process of making connections and building relationships. These connections can provide you with advice and contacts, which can help you make informed career decisions.
+
+> **Types of  Address on every machine ?**
+
+1- Physical Address  ==>  MAC address or Ethernet address or hardware address or LAN Card add 
+
+2- Logical address   ==> IP-V And IP-V6 .
+
+> **MAC address  ==> media access control**
+
+Address  ==> Hexadecimal ( 0-9, A-F)
+Total Block ==> 6 Block and each block seperated by colon symbol
+
+> **Type Of IP**
+
+IP - V4
+IP - V6 
+
+> **IP-V4**
+
+- IP-V4
+
+Address  ==> decimal ( 0-9 )
+Total Block ==> 4 Block and each block seperated by dot symbol .
+
+> **IPV6**
+
+- IP-V6
   
+Address  ==> Hexa-decimal ( 0-9, A-F )
+Total Block ==> 8 Block and each block seperated by colon symbols
+
+> **Class Range**
+
+- A    ==>    0 - 126
+- B    ==>  128 - 191
+- C    ==>  192 - 223
+- D    ==>  224 - 239
+- E    ==>  240 - 255
+
+> **Subnet Mask      default subnet mask**
+
+- A   ==>  N.H.H.H    ==> 255.0.0.0
+- B   ==>  N.N.H.H    ==> 255.255.0.0
+- C   ==>  N.N.N.H    ==> 255.255.255.0
+  
+  
+- 1-  /etc/hosts        ==> to connect machine with name without any dns server   
+- 2-  /etc/resolv.conf  ==> to configure my machine as a DNS Client.
+  
+> **These are same command for network**
+
+- ifconfig (We can IP address details)
+- hostnamectl set-hostname coredge.io@example.com (To set the localhostname)
+- hostname (Check hostname)
+- ip a (Check IP)
+  
+> **Types of Login User ?**
+
+1- Super user      ==> root               ==> #    ==> Full Power
+2- Normal users    ==> amit deepak sumit  ==> $    ==> Limited Power
+
+- Useradd coredge (we can create user in linux)
+- passwd coredge (we can provide the password of linuc normal user)
+  
+> **How to switch useer in linux**
+
+- su <usernmae>
+- exit (Exit from current user)
+  
+> **How to create file and find the file from particular location**
+
+- touch /tmp/coredge (we can create file)
+- find / -name <Filename> (We can find any file from intire root)
+- mkdir core
+- find / -name <filename> (We can find any directory from intair machine and root)
+  
+- touch  ==> blank file creation  
+- mkdir  ==> directory creation 
+- cd     ==> change directory
+- ls     ==> to check data listing 
+- cd ..  ==> to go on one level back 
+- cd ../..  ==> two level back
+- echo  ==> use to print any mesg on the screen 
+- cat   ==> use to read content of  any file on the screen 
+- ;       ===> to run or execute multiple command in a sequencing order 
+- |       ===> to join muiltiple commands to acheive any special types of output 
+
+- head   ==> It display or prints by defaults 10 lines from top of any file or from any commands output
+  
+- head /etc/passswd (You can take any file)
+
+- tail   ==> It display or prints by defaults 10 lines from bottom of any file or from any commands output.
+  
+- tail /etc/passwd (You can take any file)
+  
+> **This is advance concept from head and tail, sed command can be perform print opration in particilar words **
+
+- sed:-  It also use to print any lines from any file or from any command outputs
+- sed '1p' /etc/passwd ( this command print all line)
+- sed -n '1p' /etc/passwd (this command print only one line)
+- sed -n '1,5p' /etc/passwd (this cammnd print 1 to 5 line)
+- sed -n '1p,10p' /etc/shodow (this cmmand print only 1 line and 10 line, not print 1 line number to 10 line number)
+- sed -n '$p' /etc/passwd (This command print last line of the file)
+- sed -n ''1p;10p /etc/passwd (This command print 1 line and 10 line)
+
+> **We can find any particular word line**
+
+- cat /etc/passwd | grep sbin (The line number containing sbin will print all the lines.)
+  
+> **Controlling Services**
+>  There are 7 types of runlevel in Linux OS ?.
+  
+- 1:-  init	0		[ poweroff the machine ]
+
+- 2:-  init	1 		[ Single user mode OR Troubleshooting Mode ]
+
+- 3:-  init	2 		[ Multi user mode without Networking ]
+
+- 4:-  init	3		[ Full Multi user mode with network OR CLI mode only OR Text Mode Only ]
+
+- 5:-  init	4		[ un-used ] or [ Blank ]
+
+- 6:-  init 5		[ Full Multi User mode with GUI + CLI  OR  X-windows ]
+
+- 7:-  init	6 		[ Reboot the machine ]
+
+> Note-   At a time we can run any machine only on any single  runlevel number.
+
+- How to check current runlevel number in any machine  ?
+  
+*  who  -r
+  
+- How to switch or change runlevel on temporary basis ?
+  
+* init 3       [ to move in CLI mode ]
+*  init 5       [ to again come back in GUI mode ]
+  
+
+> **How to Manage Users account in Linux  OS**
+
+> **Who is user ?**
+
+- 1- A user is a person which has uniq identity to enter 
+   into any server machine.
+
+- 2- With this username he/she can easily operate , configure
+   and monitor any live servers.
+
+**By default during the OS installation time ==>  root user 
+will be automatically created only**
+
+> Objective:- 
+
+- useradd  <options>    <username> 
+- usermod  <options>	<username>
+- userdel  <options>	<username>
+- passwd  <options>   <username>
+- id   username 
+- su  -  <username>
+- groups  <username>
+- exit
+  
+- useradd  sachin
+- passwd   sachin
+
+Type Password: 123
+Retype Passowrd: 123
+
+> **Users Related information files ?**
+
+- 1- UID                   ====>  User ID  
+- 2- GID                   ====>  Group ID
+-3- /home/sachin/         ====>  Default Home directory place for all normal users.
+-4- /etc/passwd  	 ====>  It contains all  user's related information.       
+-5- /etc/group            ====>  It contains all group's related information.    
+-6- /etc/shadow           ====>  It contains all  users password in encrypted format. <== x
+-7- /etc/gshadow          ====>  It contains all group password in encrypted format.  <== x
+-8- /var/spool/mail/sachin====>  default place for mail alerts. 
+
+ cat  /etc/default/useradd    ==> HOME=/home
+ cat  /etc/login.defs 
+
+UID and GID Range  ==>  [ 0 - 60000 ]   ==> It devide into three parts
+UID   ==>  0  -  60000
+GID   ==>  0  -  60000
+
+> **Types of Users ?**
+
+- 1:- Super user       ===>  root 
+
+      UID  ==>  0
+      GID  ==>  0
+
+- 2:- System defined users or service defined users  
+   ==> ftp, dns, games, ldap ..etc 
+  [ will generate automatically after 
+  installing any application or services  ]
+
+    UID   ==>  1 - 999
+    GID   ==>  1 - 999
+
+- 3:- Normal users or custom users   ===>  deepak , sumit  ,  rahul
+ 
+ created by any super user or any sudo admin user ]
+
+    UID   ==> 1000  - 60000
+    GID   ==> 1000  - 60000
+
+cat  /etc/login.defs
+
+ls  /home
+
+cat  /etc/default/useradd    <== HOME=/home 
+
+Note:   we can change user home directory location if we want.
+
+> **cat   /etc/passwd     ===>    7 Fields**
+
+   root    :    x    :    0  :    0    :    root   :    /root   :   /bin/bash
+
+-1- Username
+-2- password Pointer  ==>  /etc/shadow 
+-3- UID
+-4- GID
+-5- Comment OR Fullname OR GECOS OR Profilename
+-6- home directory
+-7- Login Shell 
+
+> ** cat  /etc/group      ==>  4 fields**
+
+ groupname : x :  GID Number :  Secondary Members Name
+
+
+-1- groupname
+-2- password pointer == /etc/gshadow
+-3- GID Number
+-4- Members name 
+
+> ** groupadd  tcs**
+
+ cat  /etc/group 
+tcs:x:1001: 
+
+> **cat  /etc/shadow      ==>    9 Fields**
+
+ username : Encrypted-password :  next seven -- password policy 
+
+> **File and directory based basic permissions**
+
+Types of permissions in linux ?
+
+1- file and directory based permissions   ==> read write execute  ==> file or directory
+2- Command execution based permissions    ===> SUDO 
+
+Types of users ?
+
+1- Super user   ==> root               ==> home directory [rwx]  +  public place  [rwx]
+2- Normal user  ==> amit deepak sumit  ==> home directory [rwx]  +  public place  [read only] or as per defined
+
+* touch coredge (We can create file) by default permisson of file 6 4 4 
+* mkdir coredge (we can create directory) bu default permission of direcotry 7   5   5 
+  
+> **Permissions alwats managed by these three attributes**
+
+
+read           ===>    r                  ===>   4
+
+write          ===>    w                  ===>   2
+
+execute        ===>    x                  ===>   1
+
+> Default permissions   ==> if you creating data with super user account ?
+
+root    ==>   directory    ==>    7   5   5     OR       rwx   r-x   r-x 
+root    ==>   file         ==>    6   4   4     OR       rw-   r--   r--
+
+> **What is DNS And Networking of DNS Server**
+
+DNS server basically provide naming resolution service from name to ip and ip to name.
+Types of domain ?
+
+1- Local domain   ==>  example.com   training.com    xyz.training.com    anuj.com
+
+2- Global domain  ==> www.redhat.com   yahoo.com
+
+- 1-  /etc/hosts         ===> without any DNS server - naming connectivity in that case we can use this file
+
+- 2-  /etc/resolv.conf   ===> With any DNS server 
+  
+vim   /etc/hosts
+
+machine-ip    machine-name   alias-name 
+
+> **Types of DNS Server ?**
+
+1- Primary DNS or Master DNS  ==> It is contains main records of all machines.
+
+2- Secondary DNS or Slave DNS ==> It is replica server of Master DNS machine.
+
+> **Types of Zone File  ?**
+
+1- Forward Zone   ==>   convert all request from name to IP.
+
+2- Reverse Zone   ==>   convert all querry from IP to name.
+
+> **FQ . DN**
+
+example.com  ==> domain name 
+
+machine1.example.com
+machine2.example.com
+machine3.example.com
+
+> **Service Profile**
+
+Server Side
+
+Package     :  bind 
+Daemon      :  named
+port number :  53
+main file   :  /etc/named.conf
+Zone file   :  /var/named/forward.zon
+Log files  /var/named/reverse.zone
+
+Log         :  /var/log/messages 
+
+> **Types of DNS Records ?**
+
+A      ( Address )          ==>  It maps all Querry from Name to IP ==> use in IP-V4
+
+PTR    ( Pointer )          ==>  It maps all querry from IP to Name.
+
+CNAME ( canonical name )    ==>  can be use to define alias name of any machine name or domain name.
+
+MX    ( Mail Exchange )     ==>  use in mail server concept.
+
+AAAA  ( address )           ==>  use in IP-V6
+
+SOA   ( server of authority)   ==>  define your DNS server machine name.
+      ( start of authority )   ==>
+
+
+
+
+
+
+
+  
+
+
+
+
+
 
 
 # Keep Learning......
