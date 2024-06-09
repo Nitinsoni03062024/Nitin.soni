@@ -3,7 +3,7 @@ layout: post
 title: Kubernetes for DevOps, 08/06/2024
 ---
 
-> **What is kubernetes.**
+# What is kubernetes
 
 Kubernetes it's a orchestration tool, With the help of Kubernetes we can manage multiple containers at a time If one of our containers failed for same reaion, then we can automatically create another container with the same configuration, Kubernetes provide me same featuer like and Kubernetes is a system for application deployment that enables efficient use of the containerized infrastructure that powers modern applications, You can also run Kubernetes on-premises or within the public cloud. AWS, Azure and Google Cloud Platform (GCP) offer managed Kubernetes solutions to help you start quickly and efficiently operating K8s apps. Kubernetes also makes apps much more portable, so IT can move them more easily between different clouds and internal environments Kubernetes is the most popular open-source project from the Cloud Native Computing Foundation (CNCF), with active engagement and contribution from many enterprises, large and small we can login multuile node from a one place.
 
@@ -72,7 +72,7 @@ C :- Cri (Redhat/Ibm)
 
 ![This is a images](../images/Kubernetes-Work.png)
 
-> **How to install kubernetes in ubuntu machine**
+# How to install kubernetes in ubuntu machine
 
 > Master Ubuntu
 - apt-get update
@@ -111,11 +111,30 @@ C :- Cri (Redhat/Ibm)
 
 > **What is kubernetes namespace(Project)**
 
-Kubernetes namespace means that according to which user is working in which namespace, every user has a particular area which the user can do only by logging in with his user, multipule team can work easily and also we can seprate workload team wise based on the project we can provide priviliges for users and we can provide CPU/Memory/storage use for team.
+Kubernetes namespace means that according to which user is working in which namespace, every user has a particular area which the user can do only by logging in with his user, multipule team can work easily and also we can seprate workload team wise based on the project we can provide priviliges for users and we can provide CPU/Memory/storage use for team ,
+
+To easiy explain, namespace and project in simple language, if we open any account of our AWS or cloud, not everyone can see our dashboard, all user has their own account which one user can see his dashboard. Other users cannot see
+
 
 > - kubectl get ns (show all namespaces in kuberneres)
 
-> How to pod create in kubernetes. 
+# How to pod create in kubernetes
+
+> **There are 2 types of pod**
+ 
+- 1:- Pod Creation (Simple/Orphan pod)
+- 2:- Controlller pod
+  
+# How to create simple/orphan pod in kubernetes.
+
+> - kubectl get ns (Show namespace)
+> - kubectl run test --image=docker.io/nginx (To this cammand create test pod)
+> - kubectl get pod (show pods)
+> - kubectl get pod -o wide (show details of pod)
+> - kubectl exec -it test bash (login in test pod)
+> - exit (exit from pod)
+> - kubectl get event (to sell logs of container API)
+> 
 
 
 
