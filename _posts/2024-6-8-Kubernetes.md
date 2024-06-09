@@ -72,27 +72,30 @@ C :- Cri (Redhat/Ibm)
 
 ![This is a images](../images/Kubernetes-Work.png)
 
+First you can go to docker website, (Install ubuntu-20.04)
+
 # How to install kubernetes in ubuntu machine
 
 > Master Ubuntu
-- apt-get update
-- apt-get install -y apt-transport-https ca-certificates curl
-- curl -fsSLo /usr/share/keyrings/kubernetes-archive-keyring.gpg https://packages.cloud.google.com/apt/doc/apt-key.gpg
-- echo "deb [signed-by=/usr/share/keyrings/kubernetes-archive-keyring.gpg] https://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee /etc/apt/sources.list.d/kubernetes.list
-- apt install containerd
-- apt-get install -y kubelet kubeadm kubectl
-- kubeadm init
-- kubeadm init --ignore-preflight-errors=all
-- cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
-- mkdir .kube
-- cp /etc/kubernetes/admin.conf .kube/config
-- kubectl get pod -A
-- curl https://raw.githubusercontent.com/projectcalico/calico/v3.24.0/manifests/calico.yaml -O
-- kubectl create -f calico.yaml
-- kubectl get nodes
-- kubeadm  token create --print-join-command
-- kubectl get nodes
-  
+
+- sudo apt-get update
+- sudo apt-get install ca-certificates curl
+- sudo install -m 0755 -d /etc/apt/keyringspackages.cloud.google.com/apt/doc/apt-key.gpg
+- sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
+- sudo chmod a+r /etc/apt/keyrings/docker.asc
+- echo \
+  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
+  $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
+  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+- sudo apt-get update
+- sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+- sudo apt-get update
+- sudo apt-get install -y apt-transport-https ca-certificates curl gpg
+- curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.30/deb/Release.key | sudo gpg --dearmor -o /etc/apt/keyrings/kubernetes-apt-keyring.gpg
+- echo 'deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.k8s.io/core:/stable:/v1.30/deb/ /' | sudo tee /etc/apt/sources.list.d/kubernetes.list
+- sudo apt-get update
+- sudo apt-get install -y kubelet kubeadm kubectl
+
 > Worker Node
 
 - apt-get update
