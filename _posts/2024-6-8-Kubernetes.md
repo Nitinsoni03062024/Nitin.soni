@@ -111,6 +111,14 @@ First you can go to docker website, (Install ubuntu-20.04)
  - Kubelet :- Agent
  - kubeadm :- Installtion Utility
  - kubectl :- API command interface
+  
+
+> **Note**
+- /etc/container (we can deleteing one file)
+- mkdir .kube
+- cp /etc/kubernetes/admin.conf .kube/config
+
+
 
 > **What is kubernetes namespace(Project)**
 
