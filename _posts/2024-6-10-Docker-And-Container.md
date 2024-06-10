@@ -192,6 +192,25 @@ Note :- If you images is delete then also we can access your images from backend
 
 ![You can undersatnd from this docker images file system](../images/FileSystemDocker.png)
 
+> **Image Build**
+when we need costom image creation from existing images, then we need to costom image
+
+- 1. Step :- Raw Image
+- 2. Step :- Deploy container using Raw images
+- 3. Step :- Installtion the application related software
+- 4 Step :- To commit container images
+  
+> **Now we are createing RAW image**
+
+- 1:- docker pull ubuntu
+- 2:- docker run -it --name=demo ubuntu
+
+Note :- After login in Raw Image then we are install same software (packages) 
+
+- 3:- docker commit demo(Container name ) apach2 (New image)
+- 4:- docker images 
+  
+# Docker Volume.
 
 
 
