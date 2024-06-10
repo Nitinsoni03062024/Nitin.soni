@@ -167,6 +167,11 @@ attach existing  bash process. i dont start  new  bash process .)
 17. docker pull ubuntu (pull raw image)
 18. docker run -d --name=demo ubuntu bash (log and create container)
 
+> **How to insatll database in docker, mysql,nariadb**
+
+19. docker pull mysql
+20. docker logs containername (you can find logs)
+21. 
 
 # Note :-
 
