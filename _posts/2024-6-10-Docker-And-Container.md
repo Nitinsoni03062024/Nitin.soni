@@ -171,7 +171,8 @@ attach existing  bash process. i dont start  new  bash process .)
 
 19. docker pull mysql
 20. docker logs containername (you can find logs)
-21. 
+21. docker images inspect ubuntu CON1 | grep -i upper ( you can find upper diretory)
+22. docker images inspect ubuntu CON1 | grep -i Lower ( we can find lower diretory)
 
 # Note :-
 
@@ -187,7 +188,11 @@ attach existing  bash process. i dont start  new  bash process .)
 
 Note :- If you images is delete then also we can access your images from backend, /var/lib/docker/overlay2/28ec896513d30aa0239577151b227f7111867d9df041ed1a1e15077008e1ad73/diff/
 
-  
+> **This is a image of Docker file system**
+
+![You can undersatnd from this docker images file system](../images/FileSystemDocker.png)
+
+
 
 
 # Keep Learning......
