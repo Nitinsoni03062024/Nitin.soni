@@ -692,6 +692,160 @@ SOA   ( server of authority)   ==>  define your DNS server machine name.
       ( start of authority )   ==>
 
 
+# NFS Server (Network file share).
+
+> **NFS  Server & NFS Client**
+
+inux File sharing Concept between the machines, Network File System (NFS) is a networking protocol for distributed file sharing. A file system defines the way data in the form of files is stored and retrieved from storage devices, such as hard disk drives, solid-state drives and tape drives. NFS is a network file sharing protocol that defines the way files are stored and retrieved from storage devices across networks.
+
+> **Data access?**
+
+- 1- Copy     ==> scp and rsync
+- 2- Link     ==> ln ==> one place to another place but with in the machine
+- 3- downloading  ==> FTP
+- 4- uploading    ==> FTP
+- 5- mounting  or data sharing  ==> NFS ==> between the machines
+
+NFS:- Network File system OR Sharing  OR  File sharing 
+
+- 1:- NFS Server basically use for file and directory sharing over the network.
+
+- 2:- with the help of nfs server we can mount any shared directory on client -- machine.
+
+- 3:- NFS  server always work with PORTMAP service to create Virtual tunnel between
+   server and client machine with the help of RPC service. [ Remote Procedure Call ]
+
+> **Types of Storage Concept  ?**
+
+- 1:-  DAS ==> Direct Attached Storage  ==> floppy, cdroom, dvd, hardrive, USB hardrive are the examples of DAS.
+
+- 2:-  NAS ==> Network Attached Storage ==>  File Sharing Concept ==> NFS Server and SAMBA are the example of NAS.
+
+- 3:-  SAN ==> Storage Area network     ==>  Block Device Sharing ==>  SCSI + ISCSI
+  
+> **Server Side**
+
+- 1:- service   nfs restart
+- 2:- systemctl start nfs-server
+- 3:- systemctl enable nfs-server 
+- 4:- File:    /etc/sysconfig/nfs
+- 5:- data sharing file:    /etc/exports  <=== Blank
+- 6:- Log:   /var/log/messages
+- 7:- port number:   2049 [NFS]
+- 8:- 111  { Portmap } ==> already running 
+
+> **Clinet Side**
+
+Types of NFS mounting method  ?
+
+- 1- Temporary using mount command 
+- 2- permanent mounting in  /etc/fstab file
+
+> ** SAMBA  OR SMB [ Server message block ] Server**
+
+- 1- SAMBA  Server is mainly use for file and printer shaing between windows and linux machines.
+
+- 2- SAMBA Server  use SMB protocol to browse any shared files on any browser.  smb://
+
+- 3- Samba always CIFS { common internet file system } file system to mount any shared directory; 
+
+> **Features of samba server  ?**
+
+1- File and printer sharing between windows and linux machines.
+2- printing
+3- browsing  
+4- mounting 
+5- downloading
+6- uploading  
+7- network based security
+8- username and password based security 
+9- can be use in integration for AD and LDAP authentication.
+
+> **Service - profile**
+
+- package:   samba 
+- daemon :   smb 
+- port number:  445  (TCP) 
+              139  (UDP)
+
+- File:    /etc/samba/smb.conf   ==> data sharing  file  
+
+- log:   /var/log/samba/log.smbd    OR   /var/log/samba/smbd.log 
+
+> **Client Side ?**
+
+Types of samba server accessing method  ?
+
+- 1- browser       ===>   smb://192.168.0.10
+- 2  downloading   +  uploading   ===>  smbclient  ==> package  ==>  samba-client 
+- 3- mounting      ==> package ==>  cifs-utils
+  
+# DNS server and Client Configuration 
+
+
+DNS ==> DNS server basically provide naming resolution service from name to ip and ip to name.
+
+Types of domain ?
+
+- 1- Local domain   ==>  example.com   training.com    xyz.training.com    anuj.com
+
+- 2- Global domain  ==> www.redhat.com   yahoo.com
+
+> **Networking class  ==>**
+
+- 1-  IP to IP  ==> connect 
+
+- 2-  Name to Name  ==> can not connected until unless we don't have two solutions ?
+
+- 3-  /etc/hosts         ===> without any DNS server - naming connectivity in that case we can use this file
+
+- 4-  /etc/resolv.conf   ===> With any DNS server
+  
+> **Types of DNS Server ?**
+
+1- Primary DNS or Master DNS  ==> It is contains main records of all machines.
+
+2- Secondary DNS or Slave DNS ==> It is replica server of Master DNS machine.
+
+> **Types of Zone File  ?**
+
+1- Forward Zone   ==>   convert all request from name to IP.
+
+2- Reverse Zone   ==>   convert all querry from IP to name.
+
+> **Server Side**
+
+- Package     :  bind 
+- Daemon      :  named
+- port number :  53
+- main file   :  /etc/named.conf
+- Zone file   :  /var/named/forward.zone
+               /var/named/reverse.zone
+
+- Log         :  /var/log/messages 
+
+> **Client Side**
+
+- 1-  /etc/resolv.conf
+        OR
+- 2-  /etc/sysconfig/network-scripts/ifcfg-ens160 
+  
+> **Types of DNS Records ?**
+
+- A      ( Address )          ==>  It maps all Querry from Name to IP ==> use in IP-V4
+
+- PTR    ( Pointer )          ==>  It maps all querry from IP to Name.
+
+- CNAME ( canonical name )    ==>  can be use to define alias name of any machine name or domain name.
+
+- MX    ( Mail Exchange )     ==>  use in mail server concept.
+
+- AAAA  ( address )           ==>  use in IP-V6
+
+- SOA   ( server of authority)   ==>  define your DNS server machine name.
+      ( start of authority )   ==>
+
+
 
 
 

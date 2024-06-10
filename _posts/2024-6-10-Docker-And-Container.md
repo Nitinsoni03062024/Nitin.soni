@@ -179,6 +179,15 @@ attach existing  bash process. i dont start  new  bash process .)
 
 2. docker run -d it --name=rawcon (if we are runing this command then conatienr is runing and login because we can fire command with -d option -d mean that direct login contaienr and create container deamon mode)
 
+# Docker File System,
+
+> **Images/Container file system**
+
+1.  /var/lib/docker/overlay2  =>  This is path of container writing layer, all details are available in this diretory Overlayfs allows one, usually read-write, directory tree to be overlaid onto another, read-only directory tree. All modifications go to the upper, writable laye. we can access file with run the command with help of /var/lib/docker/overlay2/28ec896513d30aa0239577151b227f7111867d9df041ed1a1e15077008e1ad73/diff/.
+
+Note :- If you images is delete then also we can access your images from backend, /var/lib/docker/overlay2/28ec896513d30aa0239577151b227f7111867d9df041ed1a1e15077008e1ad73/diff/
+
+  
 
 
 # Keep Learning......
