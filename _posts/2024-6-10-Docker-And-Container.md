@@ -15,7 +15,7 @@ Docker is a set of platform as a service products that use OS-level virtualizati
 
 > **What is provisoning**
 
-It’s a method to providing VMs with some application installation. It's a requirement of field company.
+It’s a method to providing VMs with some application installation.
 
 > **Provisioning Method**
 
@@ -26,8 +26,15 @@ It’s a method to providing VMs with some application installation. It's a requ
 
 > **Virtualization**
 
+1. H/w Based Virtualization (Hypervisor)
+2. OS Virtulization 
+
 Virtualization is a technology by which we can run multiple machines on a 
 hardware simultaneously. 
+
+> You can understand from this image,
+
+![Thi is images](../images/Hypervisor.png)
 
 > **OS Virtualization**
 
