@@ -150,7 +150,13 @@ To easiy explain, namespace and project in simple language, if we open any accou
 > - kubectl exec -it test bash (login in test pod)
 > - exit (exit from pod)
 > - kubectl get event (to sell logs of container API)
-> 
+> - kubectl delete pod podname (delete pod)
+> - kubectl get pod
+
+# How to create controller pod in kubernetes.
+
+
+
 
 
 
