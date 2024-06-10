@@ -64,7 +64,7 @@ Free available: CE
 Red hat also provide their docker images.
 but need subscription: registry.access.redhat.com
 
-2. Custom Image:- 
+2. **Custom Image:-**
 
 We can configure our offline Docker registry and we can import some ready to use images.
 
@@ -114,6 +114,70 @@ Note: We can deploy multiple container using same docker image.
 - /]# exit
 - docker ps [you will not see any container listed here]
 - docker ps -a [to list all containers]
+  
+> **Basics command about the Images/containers**
+
+1. systemctl is-acitve docker (docker runing or not)
+2. docker info (all deatils is show of docker)
+3. ls /var/lin/docker (all folder are available for docker)
+4. docker images (show all images)
+5. docker pull images (httpd) (pull images from docker resitory)
+6. docker search (we can search image, in docker machine)
+7. docker system df (how many space consume from docker machine)
+8. docker rmi httpd:2.2 (remove images, untaga)
+9. docker tag 356125da0595 httpd:latest (Tag images from docker)
+10. docker pull ubuntu (You can pull raw images)
+
+> **Two Types of images are available in docker**
+
+1. Service image (mysql,nginx,httpd,apaceh, etc)
+
+2. Raw images (minor footprint, Packed same services, In a raw images same normal command are avalable, like:- ls, mkdir,touch etc.), Raw images when we want to create costom images then we need raw images, with help of raw images we can create images, we can't create any images with raw image.
+
+> **How to create container images in docker**
+
+1. docker ps (how many container runiung)
+2. docker images
+3. docker run -d(deamon) --name=con1 nginx (Create container con1 from nginx images)
+4.  ls /var/lib/docker/containers/ (Container data is available in this diretory)
+5.  docker exec -it con1 bash (we can log in container)
+6.  exit
+7.  docker rm container-name (delete container name)
+8.  docker rm -f image id (delete image)
+   
+- docker run  -d   (Daemon Container)
+- docker run -it   (Raw Image deploy container)
+
+- docker exec 
+              1. Login
+              2. any command you can run inside the container from docker host
+
+- docker attach con1  
+(also provide login in container but only  raw containers.
+attach existing  bash process. i dont start  new  bash process .)
+
+9. docker stop CON1 (stop and kill process container)
+10. docker ps -a (show all container)
+11. docker start CON1 (start container)
+12. ps -ef (how many process is runing in system)
+13. dockr inspect CON1 (all information about the container)
+14. docker stats CON1 (information about memory and network)
+15. docker top CON1 (how many process is runing in container)
+16. docker logs CON1 (log how about container)
+17. docker pull ubuntu (pull raw image)
+18. docker run -d --name=demo ubuntu bash (log and create container)
+
+
+# Note :-
+
+1. docker run -d --name=rawcon (if we are using this commnd, after run this command your process by defautl killed itself just because RAW container does not have its own processing)
+
+2. docker run -d it --name=rawcon (if we are runing this command then conatienr is runing and login because we can fire command with -d option -d mean that direct login contaienr and create container deamon mode)
+
+
+
+# Keep Learning......
+
 
 
 
