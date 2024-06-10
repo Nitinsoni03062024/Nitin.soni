@@ -76,7 +76,12 @@ First you can go to docker website, (Install ubuntu-20.04)
 
 # How to install kubernetes in ubuntu machine
 
-> Master Ubuntu
+> **for setup kubernetes atleast required 3 machine,**
+- 1:- Master node (ubuntu)
+- 2:- Worker node (ubuntu)
+- 3:- Workder node (ubuntu)
+> Master Ubuntu (ubuntu)
+
 
 - sudo apt-get update
 - sudo apt-get install ca-certificates curl
