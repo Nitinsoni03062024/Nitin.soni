@@ -846,11 +846,23 @@ Types of domain ?
       ( start of authority )   ==>
 
 
+# What is Rsync and SCP,
 
+> Rsync ,
 
+We can copy the data between two machine, Rsync is a versatile file synchronization tool designed to efficiently copy and sync files between different systems. Born out of the need for intelligent and bandwidth-efficient transfers, Rsync has become a go-to solution for users seeking to keep their files in perfect harmony. What sets Rsync apart is its ability to transfer only the parts of files that have changed, minimizing data sent over the network and significantly speeding up the process. 
 
+- 1. rsync --version 
+- 2. sudo apt install rsync
+- 3. rsync -avz /path/to/local/directory username@remote_server:/path/on/remote/server 
 
+> SCP ,
 
+SCP, on the other hand, stands for “Secure Copy Protocol.” It operates over SSH, providing a secure method for copying files between a local machine and a remote server. SCP’s simplicity lies in its straightforward command-line interface, making it accessible to users of all levels of expertise. As a secure alternative, SCP ensures that your data remains confidential during transit, addressing the paramount concern of data security.
+
+- 1. scp --version
+- 2. sudo apt install openssh-client 
+- 3. scp /path/to/local/file username@remote_server:/path/on/remote/server 
 
 
   
