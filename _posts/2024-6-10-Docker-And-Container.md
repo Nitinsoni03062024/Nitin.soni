@@ -292,7 +292,92 @@ When we are require that, we want to reach container outside the network, that t
 - 2. netstat -tunlp | grep -w 8080 (This port number is free or not)
 - 3. docker run -d --name-web1 -p 8080:80 nginx (this container reach outside the docker host) **Daynamic Port forwordinf**
 - 4. docker run -d --name-web1 -P nginx **Dynamic Port forwording**
-- 
+  
+
+> **Host Network And None Network**
+
+**Host Network**
+
+The container they directly attache docker machine OR docker system IP, 
+They are not part of bridge network we can access such contianer from external world using docker IP's and no need configure port forwarding but there is concern if we deploy one nginx container which work on 80 port that meant we can't nginx container using host network on 80 port.
+
+**How we can create Host network**
+
+1. docker pull nginx
+2. docker run -d --name=web1 --network host nginx (Create container waith host network)
+3. docker network ls
+
+AND None Network,
+
+none network in docker means when you don't want any network interface for your container. If you want to completely disable the networking on a container
+
+**How we can create None network**
+
+None network not any itself IP, and we can use only testing purpose we can not use for deployment.
+
+1. docker pull nginx
+2. docker run -d --name=web1 --network none nginx (create none network)
+3. docker network ls 
+
+# What is Docker File And Why we need Docker file.
+
+Docker file is a file, we have put all estraction for create container automaticly , with the help of docker file we can create container automatic.
+
+Note :- When we create a Docker file, it is mandatory to name the Dockerfile.
+Example :- vim > dockerfile (this is docker file name)
+
+**2 Types are available creating container,**
+
+1. Automatic 
+2. Manual
+  
+> How to create docker file,
+
+** we will follow this Steps**
+
+- 1:- BaseImage (Raw images/service image)
+- 2:- create container
+- 3:- installtion software 
+- 4:- commit 
+- 5:- New Image
+  
+**These are same parametter and valuse are available in docker file**
+
+- 1:- FROM
+- 2:- MAINTAINER (LABEL)
+- 3:- RUN
+- 4:- ADD
+- 5:- COPY
+- 6:- WOERKDIR 
+- 7:- ENV 
+- 8:- VOLUME
+- 9:- USER
+- 10:- CMD
+- 11:- ENTRYPOINT
+  
+1:- **FROM :-**
+
+it contains base image refrense and it's a software base image, this a mendotory option, more then 2 FROM parametter we can use (advance concept).
+
+2:- **MAINTAINER (LABEL)**
+
+we can put image lavel information,
+Example:- who is creat images, author name, mail i'd , persion name, etc.
+
+3:- **RUN**
+
+With the help of RUN parametter, it excute command which want use for installtions, RUN parametter can come multipule time in docker file. 
+
+If we are use multipule RUN parametter, it increase image layer aned size
+
+- \ (This option we can in RUN parametter for, line is not terminate we continew )
+- && (we can perform more then 2 command at a time)
+
+Note :- With this option we can reduse number of size and number of layer. (\ And &&).
+
+4:- **COPY**
+
+They are used for copy data inside image.
 
 
 
