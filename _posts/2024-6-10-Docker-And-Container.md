@@ -212,6 +212,88 @@ Note :- After login in Raw Image then we are install same software (packages)
   
 # Docker Volume.
 
+According to the need we can create disk amd make the directory and mount from disk for data writing and reading, we can create volume in docker machine, and this is backend file for volume, => /var/lib/docker/volume.
+
+> Note :- If you are deleting container due to same rasion but your data is not lose, you can create again new container from same images and again we can mount same volume.
+
+> 2 Type volume we can add 
+
+- 1. Hostpath volume
+- 2. Docker Native Volume
+  
+> How to create voulme and attache from diretory in docker. (This techique is not use in dockerm mchine)
+
+- 1. lsblk
+- 2. mkfs -t /xfs /dev/sdb
+- 3. mkdir /Nitin
+- 4. mount /dev/sdb /Nitin
+- 5. docker pull mysql 
+- 6. docker run -d --name=DB -v /Nitin:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=redhat@123 mysql (Attached volume from this command with particular diretory)
+  
+> - 2.  Docker Native Volume
+
+> **How to create native volume in docker(this is most uses tecqunic  in  docker )**
+
+- 1. docker volume ls (show all volumes in docker)
+- 2. docker volume create nitin (we can create new volumne)
+- 3. docker run -d -v vol1:/usr/share/nginx/html --name=demo nginx
+  
+# Docker Networking?.
+
+Docker netwokring we can manage network, and we can allow and blog any particilar IP, and traffice can mamage in docker, we can create costom bridge netork for saprate assign IP for conatainer
+
+- 1. Each container should have the uniqu IP Address (Ture)
+- 2. Two container should have the communicate form each container (True)
+- 3. container shold go to out side the docker network (True)
+  
+> Note :- 
+
+- 1:- Container network by default work bridge network concept
+- 2:- Bridge network it's a sosftwatre define network which work to L2 switch container 
+- 3:- During the installtion bridge plugin alredy has installed
+- 4:- Docker system alredy has created one bridge after installtion with 172.17.0.0/16 subnet renge
+  
+> When we are install docker, that time 3 network is created,
+
+- 1. Bridge Network
+- 2. Host network
+- 3. None network
+  
+
+- > **Bridge Network**
+- > **These are same command of docker network**
+
+- 1. docker network ls
+- 2. docker network inspect bridge 
+- 4. rount -n (show network realted insformation)
+  
+**Creating Bridge Network**
+
+- docker network create --subnet 192.16810.24/24(you can take any IP) --driver bridge(type bridge netwoek) frontnd(Bridge network name)
+- docker network ls
+- docker pull ubuntu
+- docker run -it --name=DB1 --network backend(netowrk name) ubuntu
+- docker network connect frontend app (we are connecting network from frontend bridge netwoek)
+-  docker network disconnect frontend app (disconnet network from container)
+-  docker network rm frontend (delete bridge)
+  
+> **Container Expose(We are access container outside the network)**
+
+When we are require that, we want to reach container outside the network, that time we are creating container expose.
+
+> External users want to reach your container,
+
+- Port Forwarding,
+-  1:- Static Port Forwarding (We are define port forwording for reach container from outside the network) 
+  
+-  2:- Dynaminc Port forwarding (Docker, itself kept port from container and according to conatiner port contianer reach)
+  
+- 1. docker pull nginx
+- 2. netstat -tunlp | grep -w 8080 (This port number is free or not)
+- 3. docker run -d --name-web1 -p 8080:80 nginx (this container reach outside the docker host) **Daynamic Port forwordinf**
+- 4. docker run -d --name-web1 -P nginx **Dynamic Port forwording**
+- 
+
 
 
 # Keep Learning......
