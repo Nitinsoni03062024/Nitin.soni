@@ -375,11 +375,31 @@ If we are use multipule RUN parametter, it increase image layer aned size
 
 Note :- With this option we can reduse number of size and number of layer. (\ And &&).
 
-4:- **COPY**
+4:- **COPY And AND**
 
-They are used for copy data inside image.
+> COPY:-
+
+     - They are used for copy data inside image, COPY parametter can donwload only which data are available in local system only, 
+     we can't copy or downlaod from the internet, EXMP (httpd,apache, etc), COPY parametter, copy data only local system to image layer only.
+
+> ADD:-
+
+     - ADD parametter, can downlaod internet data and ADD parametter can copy with extract directory, ADD parametter does not change source permission.
+  
+5:- **WORKDIR**
+
+It use for change current working direcotry
+
+6:- **ENV**
+
+it use for injecting new verialble 
+
+7:- **EXPOSE**
 
 
+
+
+            
 
 # Keep Learning......
 
