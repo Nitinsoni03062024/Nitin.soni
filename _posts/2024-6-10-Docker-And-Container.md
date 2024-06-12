@@ -396,6 +396,17 @@ it use for injecting new verialble
 
 7:- **EXPOSE**
 
+We can menstion port number for application
+
+8:- **VOLUME**
+
+We can add volume from contianer.
+
+We are define container user, Wherever we use the user parameter, whatever user mentions from that user executes the command.
+
+9:- **CMD**
+
+it use to excute command on the container bootup time, we are menstion only process related commands (Systemctl/service/stop/start)
 
 
 
