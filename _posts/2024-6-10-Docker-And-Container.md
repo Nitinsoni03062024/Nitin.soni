@@ -411,7 +411,60 @@ it use to excute command on the container bootup time, we are menstion only proc
 11:- **ENTRYPOINT**
 
 We can't user this parametter 2 times, when we required any command from the user end, then requred this parametter
+
+
+> **This is a example of docker file**
+
+{% highlight ruby %}
+dfgdfdf
+{% endhighlight %}
+
+# What is Docker Compose.
+
+Container creation activity, container deletion,modification.
+
+we are represent 2 name of docker compose,
+1. docker-compose.yaml 
+2. docker-compose.yml
             
+Docker compose basically work on yaml formate, we can put instractions and run command with help of yaml language, and yaml it's support only 3 formate,
+
+1. Keys
+
+- string
+- listing
+- mapping
+
+> 1. String :- 
+
+-  - key : Value
+  
+> 2. Listing :- 
+
+-   key:
+-    - value1
+-    - value2
+-    - value3
+  
+> Mapping :- 
+
+-   - Key:-
+-      - key:value1
+-      - key:value2
+  
+> **Now we are creating docker compose file**
+
+- 1. First, we are create docker compose file,
+  - Exmaple,
+  
+  vim docker-compose.yml (This formate is must for docker compose file) , if you will take a diffrent file then, docker compose file will not run.
+
+And, docker-compose up -d (From this command we will run docker compose file)
+
+
+
+    
+
 
 # Keep Learning......
 
