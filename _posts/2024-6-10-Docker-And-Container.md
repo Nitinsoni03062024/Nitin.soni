@@ -382,34 +382,35 @@ Note :- With this option we can reduse number of size and number of layer. (\ An
      - They are used for copy data inside image, COPY parametter can donwload only which data are available in local system only, 
      we can't copy or downlaod from the internet, EXMP (httpd,apache, etc), COPY parametter, copy data only local system to image layer only.
 
-> ADD:-
+5 ADD:-
 
      - ADD parametter, can downlaod internet data and ADD parametter can copy with extract directory, ADD parametter does not change source permission.
   
-5:- **WORKDIR**
+6:- **WORKDIR**
 
 It use for change current working direcotry
 
-6:- **ENV**
+7:- **ENV**
 
 it use for injecting new verialble 
 
-7:- **EXPOSE**
+8:- **EXPOSE**
 
 We can menstion port number for application
 
-8:- **VOLUME**
+9:- **VOLUME**
 
 We can add volume from contianer.
 
 We are define container user, Wherever we use the user parameter, whatever user mentions from that user executes the command.
 
-9:- **CMD**
+10:- **CMD**
 
-it use to excute command on the container bootup time, we are menstion only process related commands (Systemctl/service/stop/start)
+it use to excute command on the container bootup time, we are menstion only process related commands (Systemctl/service/stop/start),and CMD parametter we can't use 2 time in docker file
 
+11:- **ENTRYPOINT**
 
-
+We can't user this parametter 2 times, when we required any command from the user end, then requred this parametter
             
 
 # Keep Learning......
