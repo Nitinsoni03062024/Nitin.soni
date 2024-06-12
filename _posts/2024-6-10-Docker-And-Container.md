@@ -375,7 +375,7 @@ If we are use multipule RUN parametter, it increase image layer aned size
 
 Note :- With this option we can reduse number of size and number of layer. (\ And &&).
 
-4:- **COPY And AND**
+4:- **COPY And AND** | **They are use for copy data inside the image**
 
 > COPY:-
 
@@ -641,7 +641,14 @@ services:
             - "./data/db/mysql:/var/lib/mysql"
 {% endhighlight %}
 
-    
+# What is docker registory  
+
+Docker Registory is a server,  we can downlaod and uplaod images in docker registory, after create docker registory, no need to public registory.
+
+**How to push custom images from pulic registory**
+
+- docker images
+- 
 
 
 # Keep Learning......
