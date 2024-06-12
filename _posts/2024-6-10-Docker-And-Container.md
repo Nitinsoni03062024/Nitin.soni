@@ -639,7 +639,7 @@ services:
             - "8989:3306"
         volumes:
             - "./data/db/mysql:/var/lib/mysql"
-{% endhightlight %}
+{% endhighlight %}
 
     
 
