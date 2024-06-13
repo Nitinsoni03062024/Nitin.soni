@@ -54,6 +54,34 @@ This is a Images,
 
 > Kube-controller (Port of Kubelet , 10250) :- it maintain comminicate with worker node and provide instructor to worker nodes.
 
+# How install kubernetes in ubuntu- 20.04 version ,
+
+{% highlight ruby %}
+    1  hostname
+    2  sudo apt-get update
+    3  sudo apt-get install -y apt-transport-https ca-certificates curl gpg
+    4  curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.30/deb/Release.key | sudo gpg --dearmor -o /etc/apt/keyrings/kubernetes-apt-keyring.gpg
+    5  echo 'deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.k8s.io/core:/stable:/v1.30/deb/ /' | sudo tee /etc/apt/sources.list.d/kubernetes.list
+    6  sudo apt-get update
+    7  apt install containerd
+    8  sudo apt-get install -y kubelet kubeadm kubectl
+    9  kubeadm init
+   10  kubeadm init --ignore-preflight-errors=all
+   11  kubectl get nodes
+   12  cd /etc/console-setup/
+   13  cd
+   14  mkdir .kube/config
+   15  mkdir .kube
+   16  cd .kube/
+   17  touch config
+   18  ls
+   19  cdd
+   20  cd
+   21  cp /etc/kubernetes/admin.conf .kube/config
+   22  kubectl get nodes
+
+{% endhighlight %}
+
 > **These are same service is runing in Node side**
 
 - CRI/containerd/dockerd :- it's a sercvices for runing worker node/conatainer We need a socket to run a container and CRI socket do not understand directly kubernetes language
