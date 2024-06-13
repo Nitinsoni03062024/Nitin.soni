@@ -215,6 +215,11 @@ To easiy explain, namespace and project in simple language, if we open any accou
 
 # How to create pod by using file method (yaml) kubernetes.
 
+> - kubectl run core1 --image=nginx --dry-run -o yaml (show with yaml file)
+> - kubectl run core1 --image=nginx --dry-run -o yaml > pod.yaml (save file in pod.yaml)
+> - kubectl create -f pod.yaml (create pod from pod.yaml file)
+
+![This is yaml bases file for refrence](../images/yml.png)
 
 
 
