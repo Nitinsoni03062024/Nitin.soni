@@ -199,18 +199,18 @@ To easiy explain, namespace and project in simple language, if we open any accou
 # How to create simple/orphan pod by command line in kubernetes.
 
 {% highlight ruby%}
-> - kubectl get ns (Show namespace)
-> - kubectl run test --image=docker.io/nginx (To this cammand create test pod)
-> - kubectl get pod (show pods)
-> - kubectl get pod -o wide (show details of pod)
-> - kubectl exec -it test bash (login in test pod)
-> - exit (exit from pod)
-> - kubectl get event (to sell logs of container API)
-> - kubectl delete pod podname (delete pod)
+> - kubectl get ns 
+> - kubectl run test --image=docker.io/nginx 
+> - kubectl get pod
+> - kubectl get pod -o wide 
+> - kubectl exec -it test bash 
+> - exit 
+> - kubectl get event
+> - kubectl delete pod podname 
 > - kubectl get pod
 > - kubectl create ns nitin
-> - kubectl run demo1 --image=docekr.io/nginx -n nitin (pod is create inside the nitin  namespace)
-> - kubectl run dem2 --image=docker.io nginx (if we not menting any name space during the ceating container then this pod is created inside the bydefalut namespace)
+> - kubectl run demo1 --image=docekr.io/nginx -n nitin 
+> - kubectl run dem2 --image=docker.io nginx
 {% endhighlight %}
 
 # How to create controller pod in kubernetes.
