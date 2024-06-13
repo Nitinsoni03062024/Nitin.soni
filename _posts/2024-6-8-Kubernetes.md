@@ -54,7 +54,11 @@ This is a Images,
 
 > Kube-controller (Port of Kubelet , 10250) :- it maintain comminicate with worker node and provide instructor to worker nodes.
 
-# How install kubernetes in ubuntu- 20.04 version ,
+# How install kubernetes in ubuntu- 20.04 version , (Install kubernete-Master Server)
+
+> Note **3 Server required for kubernetes server and master, 1st for kubernetes master and 2ad and 3ad kubernetes-node server **
+
+> **This is for kubernetes server**
 
 {% highlight ruby %}
     1  hostname
@@ -81,8 +85,36 @@ This is a Images,
    22  kubectl get nodes
   23 curl https://raw.githubusercontent.com/projectcalico/calico/v3.28.0/manifests/calico.yaml -O
    38  kubectl create -f calico.yaml
+   39  curl https://raw.githubusercontent.com/projectcalico/calico/v3.28.0/manifests/calico.yaml -O (Download the Calico networking manifest for the Kubernetes API datastore)
+   40 apt install calico -y
+   41  kubeadm token create --print-join-command (to create token for join kubernetes nod)
+
 
 {% endhighlight %}
+
+> **This is fro kubernetes-node server**
+>
+{% highlight ruby%}
+ sudo apt-get update
+    1  sudo apt-get install -y apt-transport-https ca-certificates curl gpg
+    2  curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.30/deb/Release.key | sudo gpg --dearmor -o /etc/apt/keyrings/kubernetes-apt-keyring.gpg
+    3  echo 'deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.k8s.io/core:/stable:/v1.30/deb/ /' | sudo tee /etc/apt/sources.list.d/kubernetes.list
+    4  sudo apt-get update
+    5  apt install containerd
+    6 sudo apt-get update
+    7 sudo apt-get install -y kubelet kubeadm kubectl
+    8 sudo apt-mark hold kubelet kubeadm kubectl
+    9 kubeadm join 172.31.40.85:6443 --token 6jxmip.jcbwjv50beo7a4v4 --discovery-token-ca-cert-hash sha256:eae5c3eccedd332263cc7a8c76a9960b3d9a02108fcefdf44c37b72c57bdfa9a --ignore-preflight-errors=all (For join worker node)
+
+
+{% endhighlight%}
+
+> **How to join kubernetes node server**
+
+{% highlight ruby%}
+   1.
+1. 
+{% endhighlight%}
 
 > **These are same service is runing in Node side**
 
