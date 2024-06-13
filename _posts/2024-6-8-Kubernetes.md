@@ -109,13 +109,6 @@ This is a Images,
 
 {% endhighlight%}
 
-> **How to join kubernetes node server**
-
-{% highlight ruby%}
-   1.
-1. 
-{% endhighlight%}
-
 > **These are same service is runing in Node side**
 
 - CRI/containerd/dockerd :- it's a sercvices for runing worker node/conatainer We need a socket to run a container and CRI socket do not understand directly kubernetes language
