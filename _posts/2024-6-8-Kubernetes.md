@@ -189,15 +189,16 @@ To easiy explain, namespace and project in simple language, if we open any accou
 
 > - kubectl get ns (show all namespaces in kuberneres)
 
-# How to pod create in kubernetes
+# How to create Pod in kubernetes
 
 > **There are 2 types of pod**
  
 - 1:- Pod Creation (Simple/Orphan pod)
 - 2:- Controlller pod
   
-# How to create simple/orphan pod in kubernetes.
+# How to create simple/orphan pod by command line in kubernetes.
 
+{% highlight ruby%}
 > - kubectl get ns (Show namespace)
 > - kubectl run test --image=docker.io/nginx (To this cammand create test pod)
 > - kubectl get pod (show pods)
@@ -207,6 +208,10 @@ To easiy explain, namespace and project in simple language, if we open any accou
 > - kubectl get event (to sell logs of container API)
 > - kubectl delete pod podname (delete pod)
 > - kubectl get pod
+> - kubectl create ns nitin
+> - kubectl run demo1 --image=docekr.io/nginx -n nitin (pod is create inside the nitin  namespace)
+> - kubectl run dem2 --image=docker.io nginx (if we not menting any name space during the ceating container then this pod is created inside the bydefalut namespace)
+{% endhighlight %}
 
 # How to create controller pod in kubernetes.
 
