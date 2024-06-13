@@ -213,7 +213,9 @@ To easiy explain, namespace and project in simple language, if we open any accou
 > - kubectl run dem2 --image=docker.io nginx
 {% endhighlight %}
 
-# How to create controller pod in kubernetes.
+# How to create pod by using file method (yaml) kubernetes.
+
+
 
 
 
