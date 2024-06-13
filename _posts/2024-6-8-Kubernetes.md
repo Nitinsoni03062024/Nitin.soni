@@ -79,6 +79,8 @@ This is a Images,
    20  cd
    21  cp /etc/kubernetes/admin.conf .kube/config
    22  kubectl get nodes
+  23 curl https://raw.githubusercontent.com/projectcalico/calico/v3.28.0/manifests/calico.yaml -O
+   38  kubectl create -f calico.yaml
 
 {% endhighlight %}
 
