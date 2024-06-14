@@ -214,10 +214,14 @@ To easiy explain, namespace and project in simple language, if we open any accou
 {% endhighlight %}
 
 > **How to create pod by using file method (yaml) kubernetes.**
+> 
+{% highlight ruby %}
 
 > - kubectl run core1 --image=nginx --dry-run -o yaml (show with yaml file)
 > - kubectl run core1 --image=nginx --dry-run -o yaml > pod.yaml (save file in pod.yaml)
 > - kubectl create -f pod.yaml (create pod from pod.yaml file)
+
+{% endhighlight %}
 
 ![This is yaml bases file for refrence](../images/yml.png)
 
@@ -225,13 +229,21 @@ To easiy explain, namespace and project in simple language, if we open any accou
 
 >> **Note**
 
+{% highlight end%}
+
 **all parametter already defined for yaml file,
 and we can see all formates from these commands**
   
 > - kubectl api-resources (Show all resources)
-> - kubectl explain pod (telling that How we can careate yml file for creating yml file.)
-> - kubectl explain pod.metadatakubectl (telling that, what we write insde the metadata section)
+> - vim rc.yml  (telling that How we can careate yml file for creating yml file.)
+> - kubectl describe pod nitin-7sp6k | grep -i controller 
+> - kubectl scale --replicas=4 rc nitin (we can reduse and Extand replica of pod)
+> - kubectl delete rc nitin (delete rc)
+>- kubectl get rc
 
+
+
+{% endhighlight %}
 
 # How to create pod using API Controller.
 
