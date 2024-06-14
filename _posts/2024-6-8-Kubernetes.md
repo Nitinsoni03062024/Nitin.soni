@@ -321,6 +321,9 @@ Label and sector are at 2 places in the RC pod file, 1st **top of spac** section
 > - kubectl get rc --show-labels (show label with rc file)
 > - kubectl get rc (show all rc file) 
 > - kubectl delete rc -l tier=web (delete rc with define label)
-> - 
+
+**This is a example of top label in file**
+
+![This is a file](../images/lable-topof%20spec.png)
 
 {% endhighlight %}
