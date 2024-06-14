@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Kubernetes for DevOps, 08/06/2024
+title: Kubernetes for DevOps
 ---
 
 # What is kubernetes
@@ -213,7 +213,7 @@ To easiy explain, namespace and project in simple language, if we open any accou
 > - kubectl run dem2 --image=docker.io nginx
 {% endhighlight %}
 
-# How to create pod by using file method (yaml) kubernetes.
+> **How to create pod by using file method (yaml) kubernetes.**
 
 > - kubectl run core1 --image=nginx --dry-run -o yaml (show with yaml file)
 > - kubectl run core1 --image=nginx --dry-run -o yaml > pod.yaml (save file in pod.yaml)
@@ -221,10 +221,47 @@ To easiy explain, namespace and project in simple language, if we open any accou
 
 ![This is yaml bases file for refrence](../images/yml.png)
 
+> **In yaml file most important the resources**
+
+>> **Note**
+
+**all parametter already defined for yaml file,
+and we can see all formates from these commands**
+  
+> - kubectl api-resources (Show all resources)
+> - kubectl explain pod (telling that How we can careate yml file for creating yml file.)
+> - kubectl explain pod.metadatakubectl (telling that, what we write insde the metadata section)
 
 
+# How to create pod using API Controller.
 
+> Purpise of API Controller pod.
 
+   -  Maintain pod stat   (Hight availability)
+   -  scalability.
+              1. Manual (Horizontal)
+
+1. **RC (Replication Controller) :-**
+
+it's privide high availability and scalability for pod, if pod is crased and failed to automatic pod is create in horizonatal form.
+
+We can't create RC method by command line, onyl we can create file method.
+that the reasion we are going to kubernetes offial page, and in search option we can search , **Replication Controller**, after you can see RC based yaml file.
+
+{% highlight ruby%}
+
+> RC Yaml file, we can edit according to the need and company
+
+> - kubectl delete pod --all (delete all pod)
+> - vim rc.yml (all parametter is available in this file)
+**For Example**
+ ![This is example for RC file](../images/RC.png)
+> - kubectl create -f rc.yml (Create RC file from this command)
+> - kubectl get rc (Display RC)
+
+{% endhighlight %}
+
+> - 
 
 
 

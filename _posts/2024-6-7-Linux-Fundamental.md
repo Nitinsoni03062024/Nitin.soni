@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Linux fundamental (07/06/2024) And (08/06/2024).
+title: Linux
 ---
 
 > **This is Image of Linux Logo**
