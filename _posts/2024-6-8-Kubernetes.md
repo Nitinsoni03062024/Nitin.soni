@@ -225,7 +225,7 @@ To easiy explain, namespace and project in simple language, if we open any accou
 
 ![This is yaml bases file for refrence](../images/yml.png)
 
-> **In yaml file most important the resources**
+> **In yaml file most important the resources and how to create pod by using file method**
 
 >> **Note**
 
@@ -235,12 +235,16 @@ To easiy explain, namespace and project in simple language, if we open any accou
 and we can see all formates from these commands**
   
 > - kubectl api-resources (Show all resources)
-> - vim rc.yml  (telling that How we can careate yml file for creating yml file.)
-> - kubectl describe pod nitin-7sp6k | grep -i controller 
-> - kubectl scale --replicas=4 rc nitin (we can reduse and Extand replica of pod)
-> - kubectl delete rc nitin (delete rc)
->- kubectl get rc
-
+> - kubectl explain pod  (telling that How we can careate yml file for creating yml file.)
+> - kubectl explain pod.metadata (telling that How we can careate yml file for creating yml file.)
+> - vim rc.yml (yml file)
+> - kubctl create -f rc.yml (create RC pod)
+> - kubectl get rc  (see RC in kubernetes)
+> - kubectl get pod (we can see pod)
+> - kubectl get pod -o wide (show all detail for pod)
+> - kubectl describe pod nitin-c65ws | grep -i controller (who is controller of this pod or not)
+> - kubectl delete pod coredge-hzgq5 (if you are delete RC pod then by automatic one RC pod will create, maintain desiered state of pod)
+> 
 
 
 {% endhighlight %}
@@ -262,7 +266,7 @@ that the reasion we are going to kubernetes offial page, and in search option we
 
 {% highlight ruby%}
 
-> RC Yaml file, we can edit according to the need and company
+> **RC Yaml file, we can edit according to the need and company**
 
 > - kubectl delete pod --all (delete all pod)
 > - vim rc.yml (all parametter is available in this file)
@@ -270,13 +274,53 @@ that the reasion we are going to kubernetes offial page, and in search option we
  ![This is example for RC file](../images/RC.png)
 > - kubectl create -f rc.yml (Create RC file from this command)
 > - kubectl get rc (Display RC)
+> - kubectl scale --replicas=7 rc coredge (we can extand and reduse rc pod by using this command)
+> - kubectl delete rc core (delete rc pod)
+**Note**
+
+> after create rc pod, and now you want to extand rc pod from insdie the rc file, we can extand rc pod number and run billow command for apply,
+
+> - vim rc.yml
+> - kubectl apply -f rc-yml (after update in rc file, we requried this command, and from this command rc pod is extand, without this command pod is not extand)
+> - kubectl get rc
+> - kubectl describe rc coredge | grep -i image (we can check, which from image pod is created)
+> - kubectl describe rc coredge | grep -i image (show version of rc pod, if are we wnat to change veriosn of application from yml file but because of same resion veriosn is not reflact)
+> - kubectl describe rc coredge | grep -i image (hare is showing version,)
+> - kubectl delete pod --all (delete pod for reflect verion of applciation)
+> - kuebctl get pod (how we can check appliction version)
+> - kubectl describe pod coredge-9pwcz | grep -i image (how version will show)
 
 {% endhighlight %}
 
+# What is Label and Selector in kubernetes Resources.
+> **In case pod only**
+
+for example you have to a multipule pod with labels, and you you find pod from label level, the we need to label
+
+{% highlight ruby %}
+
+> - vim nitin.yml
+> - kubectl create -f nitin.yml
+> - kubectl get pod
+> - kubectl get pod --show-labels (show label of pod)
+> - kubectl get pod -l env-qa (show pod from envirement level)
+> - kubectl delete -l tier=nitin (delete pod, which name of this teri)
+> - kubectl get pod --show-labels (show all labels of pod)
+> - kubectl label pod coredge-9pwcz type=B (we can define label in rungin pod)
+
+{% endhighlight %}
+
+> **Now, we are set lable in RC pod file**
+
+> **Note**
+
+Label and sector are at 2 places in the RC pod file, 1st **top of spac** section and 2ad **billow of the spec**
+
+{% highlight ruby %}
+> - vim rc.yml
+> - kubectl get rc --show-labels (show label with rc file)
+> - kubectl get rc (show all rc file) 
+> - kubectl delete rc -l tier=web (delete rc with define label)
 > - 
 
-
-
-
-
-
+{% endhighlight %}
