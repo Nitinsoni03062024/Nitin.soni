@@ -520,4 +520,4 @@ We can decide which role to run in which node, according to the need, if one nod
 12. kubectl get pod -o wide -n nitin (check details of nitin node)
 13. kubectl get pod -o wide -n nitin (who pods in nitin namespace)
 
-{% endhight %}
+{% endhighlight %}
