@@ -340,10 +340,17 @@ In replica set, work on set bases,
 
 # Application And Rollback
 
-> **Deplyment Stretegy**
+> **Deplyment Provided feature**
+
   1. Desired State maintain
   2. Scalalibilty
-  3. Rollout And Rollback
+  3. Rollout And Rollback 
+   
+> **3 types methood available for Application Deployment stretagy**
+
+1. Blue And Gree Stretagy (by default)
+2. Recreate Stretagy
+3. Canary Deployment.
    
 > Deployment pod by command line.
 
@@ -354,9 +361,9 @@ In replica set, work on set bases,
 3. kubectl delete pod nitin-75f6b7bf46-k6dz7 (if same reasion you one pod is delted, then by default one pod will create)
 4. kubectl get pod
 5.kubectl scale --replicas=4 deploy nitin (exatant pod with this command)
-6. kubectl get pod
-7. kubectl delete deploy nitin (delete deplo, witj app pods)
-8. kubectl get pod
+1. kubectl get pod
+2. kubectl delete deploy nitin (delete deplo, witj app pods)
+3. kubectl get pod
 
 **Fiel Method**
 
@@ -386,5 +393,37 @@ spec:
 
 9. kubectl create -f deployment.yml
 10. kubectl get pod --show-labels
+   
+{% endhighlight %}
+
+> **Now Will cover Rolllout First**
+
+In Deployment stretagy follow to blue green stretagy,  when we are upgarde appllication version to old version to new version with downtime.
+
+> Old version :- Blue Deployment Stretagyy
+> New Version :- Green Deployment stretagy
+
+> **Nte**
+
+Deployment Stretgy follow to Blue,Green formolla rule, first available 25% and unable 25%, but it's default rule, we can chenge this rule for deployment stretagy.
+
+. Unavailable (delete)
+. available (creation)
+
+**You can understand from this image for deployment stretagy**
+
+![This is a image of, how to work Blue,Green stretagy](../images/Deployment.png)
+
+{% highlight ruby %}
+
+1. kubectl create deploy nitin --image=nginx:1.14 --replicas=10 (create deployment pod by command line)
+2. watch kubectl get pod (we can watch process of upgradtion stretagy)
+3. kubectl describe deploy nitin | grep -i max (we can see stretagy)
+4. kubectl edit deploy nitin (going to yml file of deployment,and we can modify this file according to the need)
+5. kubectl describe pod nitin-86d775cc94-kckbh | grep -i image (we can applicaiton version from this command)
+6. kubectl rollout history deploy nitin (we can check rollout histoy)
+7. kubectl rollout history deploy nitin --revision=2 (check details of application)
+8. kubectl rollout undo deploy nitin --to-revision=2 (we can move back in previous verison application from this commnad)
+9. kubectl describe deploy nitin | grep -i image (we can applcaition versio)
 
 {% endhighlight %}
