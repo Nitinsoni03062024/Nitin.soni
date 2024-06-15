@@ -348,11 +348,13 @@ In replica set, work on set bases,
    
 > **3 types methood available for Application Deployment stretagy**
 
-1. Blue And Gree Stretagy (by default)
+1. Blue And Gree Stretagy (by default), Save yor downtime
 2. Recreate Stretagy
 3. Canary Deployment.
    
 > Deployment pod by command line.
+
+**Blue And Gree Stretagy**
 
 {% highlight ruby %}
 
@@ -425,5 +427,43 @@ Deployment Stretgy follow to Blue,Green formolla rule, first available 25% and u
 7. kubectl rollout history deploy nitin --revision=2 (check details of application)
 8. kubectl rollout undo deploy nitin --to-revision=2 (we can move back in previous verison application from this commnad)
 9. kubectl describe deploy nitin | grep -i image (we can applcaition versio)
+
+{% endhighlight %}
+
+**Recreate stretagy**
+
+In This stretagy old veriso directoly is deleted and then new version is created,
+
+1. vim deploy.yml
+2. kubectl create -f deploy.yml
+
+**Canary Deployment**
+
+It's a teknic for both application is runing, When both the applications were run, we could see a difference in both version application.
+
+# pod Shedulling.
+
+1. Node Name based shedulling 
+2. Node label and selector based schedulling
+3. tait and toleration based schedulling
+4. Affinity And Anti-Affinity based schedulling.
+
+**Node Name based shedulling**
+
+We tell the node that this deployment should run on that node. (worker-node1 , worker-node-2) ,
+
+.But there is also a dropback, once we give the name of the node, the deployment will run on that node, and if no resources in node then pod will crashed and not create pod in kubernetes,
+
+{% highlight ruby %}
+
+1. kubectl create deploy nitin --image=nginx --dry-run -o yaml > deploy.yml (create one deployment)
+2. kubectl get node (show node in kubernetes)
+3. vim deploy.yml (open deploy file)
+   
+   We can understand this image,
+   ![This is node based schedulling](../images/nodebaseschedulling.png)
+
+
+
 
 {% endhighlight %}
