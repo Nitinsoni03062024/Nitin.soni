@@ -530,5 +530,7 @@ Billow of metadata:-
 
 {% endhighlight %}
 
+**this image refrensh of namespace edit**
+
 ![This is iamge of add valumes in namespcace](../images/namescpaceedit.png)
 
