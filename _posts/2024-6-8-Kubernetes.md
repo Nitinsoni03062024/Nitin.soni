@@ -441,14 +441,14 @@ In This stretagy old veriso directoly is deleted and then new version is created
 
 It's a teknic for both application is runing, When both the applications were run, we could see a difference in both version application.
 
-# pod Shedulling.
+# Pod Shedulling.
 
 1. Node Name based shedulling 
 2. Node label and selector based schedulling
 3. tait and toleration based schedulling
 4. Affinity And Anti-Affinity based schedulling.
 
-**Node Name based shedulling**
+> **Node Name based shedulling**
 
 We tell the node that this deployment should run on that node. (worker-node1 , worker-node-2) ,
 
@@ -471,7 +471,7 @@ We will change in **spac section** for node base shedulling and menstion node na
 5. kubectl get pod
 6. kubectl get pod -o wide
 
-**Node label and selector based schedulling**
+> **Node label and selector based schedulling**
 
 We can decide which role to run in which node, according to the need, if one node is down due to some reasion, then going itself to another node. 
 
@@ -533,4 +533,7 @@ Billow of metadata:-
 **this image refrensh of namespace edit**
 
 ![This is iamge of add valumes in namespcace](../images/namescpaceedit.png)
+
+
+> **Tait and toleration based schedulling**
 
