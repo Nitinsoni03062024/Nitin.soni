@@ -462,5 +462,61 @@ We tell the node that this deployment should run on that node. (worker-node1 , w
 
 {% endhighlight %}
 
+We will change in **spac section** for node base shedulling and menstion node name, for exmaple, bollow this image.
+
  We can understand this image,
    ![This is node based schedulling](../images/nodebaseschedulling.png)
+
+4. kubectl create -f deploy.yml (create pod)
+5. kubectl get pod
+6. kubectl get pod -o wide
+
+**Node label and selector based schedulling**
+
+We can decide which role to run in which node, according to the need, if one node is down due to some reasion, then going itself to another node. 
+
+**We can understand this imgages** 
+
+![This is a image of lablel and selector based schedulling](../images/labelandselectorbnasescheddulling.png)
+
+**How we can in command line**
+
+{% highlight ruby %}
+
+1. kubectl label node kube-clien-1 nitin=nitinsoni gagan=gaggi buti=lallu (we can define label in node)
+2. kubectl label node kube-client-2 roll=rool1 abc=web --overwrite (If we accidentally assign a roll to the wrong node then we can overwrite it. )
+3. kubectl get node --show-labels (show label in node)
+4. kubectl get node -l roll=rool1 (we can check role of node)
+
+{% endhighlight %}
+
+**This is image of, how to create label bases schedulling**
+
+![This is a image](../images/node.png)
+
+5. kubectl get node -l role=web (check role)
+6. kubectl create -f deploy.yml
+7. kubectl get pod -o wide
+
+> Selector:-
+     1. Deployment (deploment file only)
+     2. Namespaces (Deplyment on namesapce levelfrom node)
+   
+**cd /etc/kubernetes/manifests/ (control 4 servics)**
+
+{% highlight ruby%}
+
+1. etcd.yaml  
+2. kube-apiserver.yaml  
+3. kube-controller-manager.yaml  
+4. kube-scheduler.yaml
+5. kubectl get ns
+6. kubectl create ns nitin
+7. kubectl edit ns nitin
+8. kubectl label node kube-clien-1 env=nitin (given lable of node)
+9. kubectl create deploy home --image=nginx -n nitin (deployment with niitn name namesapce)
+10. kubectl create ns nitin
+11. kubectl create deploy web --image=nginx -n nitin (create deploy from web name in nitin namespace)
+12. kubectl get pod -o wide -n nitin (check details of nitin node)
+
+{% endhight %}
