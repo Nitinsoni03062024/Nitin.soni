@@ -21,3 +21,46 @@ it is piesce of softwate when installed on cluster of phisical server offeres th
 3. Open Development
 4. Open Community
 
+![This is a OpenStack Images](../images/openstackiamge.jpg)
+
+**Bare Metal**
+
+In computer networking, a bare-metal server is a physical computer server that is used by one consumer, or tenant only.
+
+**Approx 40 services is avialebl in OpenStack**
+
+![This is same service of open stack](../images/servicesofopenstackl.jpg)
+
+1. **Dashboard Service (HORIZON)** :-
+
+ When we work on any application, the dashboard that we see is what we call horizon in OpenStock. Horizon it's a GUI method of OpenStack service,  
+
+![This is image of horizon server GUI](../images/horizonservice.png)
+
+
+2. **Compute Service (NOVA)** 
+
+The place where we launch Compute VM is called Nova Service.
+
+3. **Block Storage Service (CINDER)**
+
+Block storage, object storage and file storage service is called Cinder in OpenStack.
+
+4. **Network Service (Neutron)**
+
+Network related all service coming under the network services (neutron)
+
+5. **Image Storge Service (Glance)**
+
+Whenever we launch any instance (VM's), to launch that instance or VM we need an ISO image which we call glance in openstack.
+
+6. **Object Storage Service (Swift)**
+   
+   Swift service it's a swift service
+
+7.  **Indentity Service (KeyStone)**
+   
+Keystone is an OpenStack service that provides API client authentication, service discovery, and distributed multi-tenant authorization by implementing OpenStack's Identity AP,
+
+This is a mostinportant service, from the user managment and which service where is runing all over mamanged from keystone service.
+
