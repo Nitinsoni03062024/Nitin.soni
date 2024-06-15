@@ -516,6 +516,8 @@ We can decide which role to run in which node, according to the need, if one nod
 
 (going to this file and edit this varialble **we need the add same value**) 
 
+Billow of metadata:-
+
  -     annotations:
  -        scheduler.alpha.kubernetes.io/node-selector: env=nitin
 
@@ -527,3 +529,6 @@ We can decide which role to run in which node, according to the need, if one nod
 13. kubectl get pod -o wide -n nitin (who pods in nitin namespace)
 
 {% endhighlight %}
+
+![This is iamge of add valumes in namespcace](../images/namescpaceedit.png)
+
