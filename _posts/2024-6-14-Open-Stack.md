@@ -21,7 +21,7 @@ it is piesce of softwate when installed on cluster of phisical server offeres th
 3. Open Development
 4. Open Community
 
-![This is a OpenStack Images](../images/openstackiamge.jpg)
+![This is a OpenStack Images](../images/OpenStack-Architecture.png)
 
 **Bare Metal**
 
