@@ -459,11 +459,8 @@ We tell the node that this deployment should run on that node. (worker-node1 , w
 1. kubectl create deploy nitin --image=nginx --dry-run -o yaml > deploy.yml (create one deployment)
 2. kubectl get node (show node in kubernetes)
 3. vim deploy.yml (open deploy file)
-   
-   We can understand this image,
-   ![This is node based schedulling](../images/nodebaseschedulling.png)
-
-
-
 
 {% endhighlight %}
+
+ We can understand this image,
+   ![This is node based schedulling](../images/nodebaseschedulling.png)
