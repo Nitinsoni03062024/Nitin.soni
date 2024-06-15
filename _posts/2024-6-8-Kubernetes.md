@@ -312,6 +312,8 @@ for example you have to a multipule pod with labels, and you you find pod from l
 
 > **Now, we are set lable in RC pod file**
 
+In RC work on equality base, and if value is machted during the creating 2 container then you one pod will not ceate during the valume match from label and selector.  
+
 > **Note**
 
 Label and sector are at 2 places in the RC pod file, 1st **top of spac** section and 2ad **billow of the spec**
@@ -327,3 +329,62 @@ Label and sector are at 2 places in the RC pod file, 1st **top of spac** section
 **This is a example of top label in file**
 
 ![This is a file](../images/lable-topof%20spec.png)
+
+# Replica Set.
+
+In replica set, work on set bases, 
+
+**thi is image of relica set**
+
+![This is image of replica set](../images/replica-set.png)
+
+# Application And Rollback
+
+> **Deplyment Stretegy**
+  1. Desired State maintain
+  2. Scalalibilty
+  3. Rollout And Rollback
+   
+> Deployment pod by command line.
+
+{% hightlight ruby %}
+
+1. kubectl create deploy nitin --image=nginx --replicas=2 (create two pod)
+2. kubectl get deploy (show pod)
+3. kubectl delete pod nitin-75f6b7bf46-k6dz7 (if same reasion you one pod is delted, then by default one pod will create)
+4. kubectl get pod
+5.kubectl scale --replicas=4 deploy nitin (exatant pod with this command)
+6. kubectl get pod
+7. kubectl delete deploy nitin (delete deplo, witj app pods)
+8. kubectl get pod
+
+**Fiel Method**
+
+vim deploy.yml
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-deployment
+  labels:
+    app: nginx
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:1.14.2
+        ports:
+        - containerPort: 80
+
+9. kubectl create -f deployment.yml
+10. kubectl get pod --show-labels
+
+{% endhighlight %}
