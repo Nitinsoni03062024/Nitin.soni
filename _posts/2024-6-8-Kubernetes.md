@@ -518,5 +518,6 @@ We can decide which role to run in which node, according to the need, if one nod
 10. kubectl create ns nitin
 11. kubectl create deploy web --image=nginx -n nitin (create deploy from web name in nitin namespace)
 12. kubectl get pod -o wide -n nitin (check details of nitin node)
+13. kubectl get pod -o wide -n nitin (who pods in nitin namespace)
 
 {% endhight %}
