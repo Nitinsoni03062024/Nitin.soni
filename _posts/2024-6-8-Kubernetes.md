@@ -513,8 +513,14 @@ We can decide which role to run in which node, according to the need, if one nod
 5. kubectl get ns
 6. kubectl create ns nitin
 7. kubectl edit ns nitin
+
+(going to this file and edit this varialble **we need the add same value**) 
+
+ -     annotations:
+ -        scheduler.alpha.kubernetes.io/node-selector: env=nitin
+
 8. kubectl label node kube-clien-1 env=nitin (given lable of node)
-9. kubectl create deploy home --image=nginx -n nitin (deployment with niitn name namesapce)
+9.  kubectl create deploy home --image=nginx -n nitin (deployment with niitn name namesapce)
 10. kubectl create ns nitin
 11. kubectl create deploy web --image=nginx -n nitin (create deploy from web name in nitin namespace)
 12. kubectl get pod -o wide -n nitin (check details of nitin node)
