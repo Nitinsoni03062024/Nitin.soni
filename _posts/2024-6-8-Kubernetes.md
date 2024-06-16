@@ -535,5 +535,111 @@ Billow of metadata:-
 ![This is iamge of add valumes in namespcace](../images/namescpaceedit.png)
 
 
-> **Tait and toleration based schedulling**
+> **Tait and toleration Based Schedulling**
+
+Test and Tolerance is used only for deidcated hardware requirement for pode, So that no pod can come to that node.
+
+> - Taint :- Node Side
+> - Toleration :- Deployment Side
+
+{% highlight ruby %}
+
+1. kubectl taint node kube-clien-1 monitoringpurpoise:NoSchedule (node is taint from this command)
+2. kubectl create deploy nitinsoniji --image=nginx --replicas=10 (create 10 pod, after taint any node then when we have create any pode, so pod is not going to taint node. )
+3. kubectl describe node kube-clien-1 | grep -i taint (we can find tiant node)
+4. kubectl run dge --image=nginx --dry-run -o yaml > pod.yml
+5. vim pod.yml
+6. kubectl taint node kube-clien-1 monitoringpurpoise- (untant node)
+
+6. kubectl create -f pod.yml 
+7. kubectl get pod -o wide
+
+- We can pass vule for toleration,
+
+![This is image of toleration](../images/taint.png)
+
+
+{% endhighlight %}
+
+> **Type of taint Effect**
+
+1. NoSchedule :- it does not delete (evict), existing pod even the don't have toleration (if any pod is created already, and after pod creation, we have assign tolaretion so dones not effect exiting pod, and upcoming pod does not creaete tolaretion node)
+
+{ %highlight ruby %}   
+
+    - kubectl create deploy tent --image=nginx --replicas=2
+    - kubectl get pod
+    - kubectl get pod -o wide
+    - kubectl get node
+    - kubectl taint node kube-clien-1 tes:NoSchedule
+    - kubectl get pod -o wide
+    - kubectl delete pod tent-5644c9c7bc-l6z8s
+    - kubectl get pod
+   
+{% endhighlight %}
+
+2. NoExcute :- it evict (delete) all pod they don't have toleration
+   
+
+    - kubectl taint node kube-client-2 DB:NoExecute
+    - kubectl get pod -o wide  
+
+> **Type of toleration Effect**
+
+**Operator**
+ 1. Exist :- It only match single string
+    
+    - kubectl taint node kube-clien-1 role=DB:NoExecute ( we can define role of pod)
+   - vim pod.yml
+    **how to add parametter in Exist**
+    ![This is image we can take the refrensh](../images/qual.png)
+
+
+ 2. Qual :- Key and value both matched.
+   
+  - kubectl taint node kube-clien-1 role=DB:NoExecute (we can pass valume during the taint node)
+  - kubectl create -f pod.yml
+  - kuebctl get pod
+
+---
+# Wait
+
+> **Afinity And Anti-Afinity**
+
+- 2 Types of Afinity And Anti-Afinity available,
+  
+  1. Node Level
+          - Afinity
+          - Anti-Afinity
+  2. Pod lavel
+          -  Afinity
+          - Anti-Afinity
+  
+> **How to apply node lavel Afinity And Anti-Afinity**
+
+1. Node Lavel, 
+2. Afinity And Anti-Afinity,
+  
+**Example of Affinity** = disk=sd
+
+---
+
+> **Compute And Resource Quota**
+
+We can manage how many pods will be created on which node or how many resources it will have, You can limit the total sum of compute resources that can be requested in a given namespace. Across all pods in a non-terminal state, the sum of CPU limits cannot exceed this value. Across all pods in a non-terminal state, the sum of memory limits cannot exceed this value
+
+2 Types Quota are availebl,
+
+1. Compute Quota (CPU,MEMORY)
+2. Resource Quota (Objective, In kubernets language, pod,rs,rs,deployment, contollers etc.)
+  
+**Compute Quota**
+
+    - Deployment Level
+    - Project Level (NameSpace)
+  
+  
+
+
+   
 
