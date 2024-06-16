@@ -556,16 +556,16 @@ Test and Tolerance is used only for deidcated hardware requirement for pode, So 
 
 - We can pass vule for toleration,
 
+{% endhighlight %}
+
 ![This is image of toleration](../images/taint.png)
 
-
-{% endhighlight %}
 
 > **Type of taint Effect**
 
 1. NoSchedule :- it does not delete (evict), existing pod even the don't have toleration (if any pod is created already, and after pod creation, we have assign tolaretion so dones not effect exiting pod, and upcoming pod does not creaete tolaretion node)
 
-{ %highlight ruby %}   
+{% highlight ruby %}   
 
     - kubectl create deploy tent --image=nginx --replicas=2
     - kubectl get pod
@@ -635,10 +635,10 @@ We can manage how many pods will be created on which node or how many resources 
   
 **Compute Quota**
 
-    - Deployment Level
+    - Deployment Level,
               - Soft Quota (Requrest Quota)
               - Hard Quota (Limit Quota)
-    - Project Level (NameSpace)
+    - Project Level (NameSpace),
   
 **How to create Deployment Node Quota**
   
