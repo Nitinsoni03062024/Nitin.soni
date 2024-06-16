@@ -641,8 +641,18 @@ We can manage how many pods will be created on which node or how many resources 
     - Project Level (NameSpace),
   
 **How to create Deployment Node Quota**
-  
 
+{% highlight ruby %}
 
-   
+  1. vim deploy.yml
+  2. kubectl create -f deploy.yml
+  3. kubectl get pod -o wide
+  4. kubectl describe node kube-clien-1 | grep -iA5 allocated (check allocated space of node)
+  5. 
+
+{% endhighlight %}
+
+**we can add valumes in deploy file**
+
+![This is a image of compute quota](../images/computequota.png)   
 
