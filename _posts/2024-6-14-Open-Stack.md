@@ -40,9 +40,23 @@ In computer networking, a bare-metal server is a physical computer server that i
 
 2. **Compute Service (NOVA)** 
 
-The place where we launch Compute VM is called Nova Service.
+Nova is the OpenStack project that provides a way provision Compute instance (Aks Virtial Machine), 
+nova support virtial machine, baremetal server and has limited supprt for system containers and nova run as a set of darmons on top of existing linux server to proide that service.
 
-3. **Block Storage Service (CINDER)**
+   > -  **This services is must after nove installtion**
+
+1. KeyStone :- Provide identity and authentication for all OpenStack Services
+   
+2. Galnce :- This provide the compute iamges repository, all instance launch from glance images
+
+3. Neutron :- This is responable for provisioing the virtual physical network that the compute instacne connecct to on boot,
+
+4. Placement :-  This is tracking for inventroy available in a cloud AND assisting which provide og those will be used when creating virtual machine
+
+**How It's work NOVA**
+![This is a Image of NOVA](../images/howworknova.png)
+
+5. **Block Storage Service (CINDER)**
 
 Block storage, object storage and file storage service is called Cinder in OpenStack.
 
@@ -63,4 +77,12 @@ Whenever we launch any instance (VM's), to launch that instance or VM we need an
 Keystone is an OpenStack service that provides API client authentication, service discovery, and distributed multi-tenant authorization by implementing OpenStack's Identity AP,
 
 This is a mostinportant service, from the user managment and which service where is runing all over mamanged from keystone service.
+
+> **hardware Requriment for Deployment of OpenStack**
+
+![This is image of OpenStack](../images/hwreqs.png)
+
+> **Network digram of OpenStack**
+
+![We can understand network of OpenStack](../images/network2-services.png)
 
