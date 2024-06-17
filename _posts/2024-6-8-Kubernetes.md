@@ -748,21 +748,21 @@ Going to kubernete site and copy the sentax for limite rang,
 apiVersion: v1
 kind: PersistentVolume
 metadata:
-  name: pv0003
+  name: pv0003 ==> This is PV name we can take any name, PV should be uniqe
 spec:
   capacity:
     storage: 5Gi
   volumeMode: Filesystem
-  accessModes:
+  accessModes: =====>> 3 Types of access moe billow I have mensioned
     - ReadWriteOnce
-  persistentVolumeReclaimPolicy: Recycle
+  persistentVolumeReclaimPolicy: Recycle ==> 3 Type of volme recycle
   storageClassName: slow
   mountOptions:
     - hard
     - nfsvers=4.1
   nfs:
-    path: /tmp
-    server: 172.17.0.2
+    path: /tmp ==>  (Shared Derectory)
+    server: 172.17.0.2 == > (Server IP)
 
 {% endhighlight %}
   
