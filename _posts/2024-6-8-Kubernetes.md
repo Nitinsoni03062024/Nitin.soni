@@ -704,7 +704,7 @@ Going to kubernete site and copy the sentax for limite rang,
 ![This is image of limitrang difine example](../images/limit1.png)
 
 
-# > Voulme
+# > Voulme for kubernetes 
 
 > 2 Types valume are availanle,
 1. Static Volume
@@ -781,8 +781,49 @@ spec:
                                - 2. Retain, (If PV + Data both available)
 ---
 **This is Work only dynaic provisning**
-                               - 3. Deleted, (PV +Data Lost )
+                               - 3. Deleted, (PV+Data Lost )
   
+> **Status of PV**
+- Available:- (free PV any can use)
+- BOUND:- (PV has claimed, with any namespace)
+- Released
+- Failed.
 
 1. kubectl get pv
-2. 
+2. kubectl create -f pv.yml
+3. kubectl get pv
+4. kubectl create ns nitin (create namespace, and claim namespce to PV )
+5. vim pvc.yml
+   
+**Now we are claim request (claim request yml file available, we can't calim from command line, goto kubernete.io site)**
+
+
+**Thi is sentax of PVC**
+{% highlight ruby %}
+
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: myclaim ==> PVC name (uniqe name in namespace)
+spec:
+  accessModes:
+    - ReadWriteOnce
+  volumeMode: Filesystem
+  resources:
+    requests:
+      storage: 8Gi
+
+{% endhighlight %}
+
+6. kubectl create -f pvc.yml -n nitin (pvc is claimed in nitin namespace)
+7. kubectl get pvc -n nitin
+8. kubectl get pv
+9. kubectl create deploy mysql --image=myqsl:5.6 --dry-run -o yaml > deploy.yml
+10. vim deploy.yml
+  
+> **Edit in yml file**
+
+11. kubectl create -f deploy.yml -n nitin
+12. kubectl get pod -n nitin 
+13. kubectl get pod -o wide
+14. chmod -R 777 /var/nfs
