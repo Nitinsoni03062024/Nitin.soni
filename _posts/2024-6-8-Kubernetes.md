@@ -719,6 +719,12 @@ Going to kubernete site and copy the sentax for limite rang,
 
 > **Static Volume provisoing using NAS (NAF)Server**
 
+          - PV [Persitent Volume] (Object, Commnd line is not availabnle only we can create yml file method)
+  
+          - PVC (Object, Commnd line is not availabnle only we can create yml file method)
+  
+**For PV and PVS creation we requrid yml file from kubernetes officel site**
+  
 >  For this prectical perform, we will setup nfs server first,
 
 1. sudo apt update
@@ -730,3 +736,37 @@ Going to kubernete site and copy the sentax for limite rang,
 7. sudo exportfs -a
 8. sudo systemctl start nfs-kernel-server
 9. sudo systemctl enable nfs-kernel-server
+
+> Now we will configure PV yml file
+
+1. vim pv.yml
+
+**This is exmapl of PV** 
+
+{% highlight ruby %}
+
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: pv0003 ==> This is PV name we can take any name, PV should be uniqe
+spec:
+  capacity:
+    storage: 5Gi
+  volumeMode: Filesystem
+  accessModes:   ==> 3 Type AccessModes available,
+                               -  ReadyWritemany
+                               -  ReadOnlyMany
+                               -  ReadWriteOnce.
+    - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Recycle
+  storageClassName: slow
+  mountOptions:
+    - hard
+    - nfsvers=4.1
+  nfs:
+    path: /tmp
+    server: 172.17.0.2
+
+{% endhighlight %}
+  
+2.
