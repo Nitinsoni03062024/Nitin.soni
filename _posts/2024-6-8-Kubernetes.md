@@ -704,7 +704,7 @@ Going to kubernete site and copy the sentax for limite rang,
 ![This is image of limitrang difine example](../images/limit1.png)
 
 
-# > Voulme for kubernetes 
+#  Voulme for kubernetes 
 
 > 2 Types valume are availanle,
 1. Static Volume
