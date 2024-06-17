@@ -705,7 +705,27 @@ Going to kubernete site and copy the sentax for limite rang,
 
 # > Voulme
 
-> 1. Local Volume
-> 2. Network Based Volume
+> 2 Types valume are availanle,
+1. Static Volume
+2. Dynamic Volume
+
+
+1. Local Volume
+2. Network Based Volume
              > - NAS Based
              > - SAN Based
+
+
+> **Static Volume provisoing using NAS (NAF)Server**
+
+>  For this prectical perform, we will setup nfs server first,
+
+1. sudo apt update
+2. sudo apt install nfs-kernel-server
+3. sudo mkdir -p /var/nfs/general
+4. sudo chown nobody:nogroup /var/nfs/general
+5. vim /etc/exports
+6. /var/nfs/general    client_ip(rw,sync,no_subtree_check) 
+7. sudo exportfs -a
+8. sudo systemctl start nfs-kernel-server
+9. sudo systemctl enable nfs-kernel-server
