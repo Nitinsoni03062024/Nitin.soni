@@ -2,8 +2,9 @@
 layout: post
 title: Kubernetes for DevOps
 ---
-
+---
 # What is kubernetes
+---
 
 Kubernetes it's a orchestration tool, With the help of Kubernetes we can manage multiple containers at a time If one of our containers failed for same reaion, then we can automatically create another container with the same configuration, Kubernetes provide me same featuer like and Kubernetes is a system for application deployment that enables efficient use of the containerized infrastructure that powers modern applications, You can also run Kubernetes on-premises or within the public cloud. AWS, Azure and Google Cloud Platform (GCP) offer managed Kubernetes solutions to help you start quickly and efficiently operating K8s apps. Kubernetes also makes apps much more portable, so IT can move them more easily between different clouds and internal environments Kubernetes is the most popular open-source project from the Cloud Native Computing Foundation (CNCF), with active engagement and contribution from many enterprises, large and small we can login multuile node from a one place.
 
@@ -129,7 +130,9 @@ C :- Cri (Redhat/Ibm)
 
 First you can go to docker website, (Install ubuntu-20.04)
 
+---
 # How to install kubernetes in ubuntu machine
+---
 
 > **for setup kubernetes atleast required 3 machine,**
 - 1:- Master node (ubuntu)
@@ -623,8 +626,8 @@ Test and Tolerance is used only for deidcated hardware requirement for pode, So 
 **Example of Affinity** = disk=sd
 
 ---
-
 > **Compute And Resource Quota**
+---
 
 We can manage how many pods will be created on which node or how many resources it will have, You can limit the total sum of compute resources that can be requested in a given namespace. Across all pods in a non-terminal state, the sum of CPU limits cannot exceed this value. Across all pods in a non-terminal state, the sum of memory limits cannot exceed this value
 
@@ -648,11 +651,61 @@ We can manage how many pods will be created on which node or how many resources 
   2. kubectl create -f deploy.yml
   3. kubectl get pod -o wide
   4. kubectl describe node kube-clien-1 | grep -iA5 allocated (check allocated space of node)
-  5. 
 
 {% endhighlight %}
 
 **we can add valumes in deploy file**
 
+> (Agar ham kise deployment me ja kar CPU ya memory ko chagne karte hai ya fir cpu memory badhate hai and ek hi pod ke duplicate replica banate hai ise ko ham Horizontal scalling bolate hai,)
+
 ![This is a image of compute quota](../images/computequota.png)   
 
+> **How to create Project Level (NameSpace)**
+
+If we fix any limit in the namespace, then we can create as many pods in that namespace as we have given the limit in the namespace.
+
+{% highlight ruby %}
+
+1. kubectl create ns qa
+2. kubectl create quota cka --hard=cpu=400m,memory=400mi -n qa (we have allocated fix space for namespace)
+3. kubectl get quota -n qa
+4. kubectl describe quota -n qa (show name space limits)
+
+{% endhighlight %}
+
+> **Limit Rang**
+
+1. We can define default value for CPU/Memory, 
+2. Max/Min value for cpu/memory. 
+   
+**This is available only yml file not command line**
+
+When we define the limitrange at the namespace level, the pod created after that by default gets the CPU and memory that we have given at the namespace level.
+
+{% highlight ruby %}
+
+Going to kubernete site and copy the sentax for limite rang,
+
+1. vim limit.yml (we can take any name)
+2. kubectl create ns nit (create one namespace)
+3. kubectl create -f limit.yml -n nit (this is creted limitrang, I have attched image for your referensh)
+4. kubectl run test --image=nginx -n nit (create orphan pod)
+5. kubectl describe quota test -n example 
+6. kubectl describe pod test -n nit | less
+7. kubectl get limitrange -n nit (we can check limitrang of namespace)
+8. kubectl delete limitrang xyz -n nit (remove limitrang)
+
+
+{% endhighlight %}
+
+**This is exmaple of limitrang of namepsace level**
+
+![This is image of limitrang difine example](../images/limit1.png)
+
+
+# > Voulme
+
+> 1. Local Volume
+> 2. Network Based Volume
+             > - NAS Based
+             > - SAN Based

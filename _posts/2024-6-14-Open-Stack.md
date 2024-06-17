@@ -45,13 +45,13 @@ nova support virtial machine, baremetal server and has limited supprt for system
 
    > -  **This services is must after nove installtion**
 
-1. KeyStone :- Provide identity and authentication for all OpenStack Services
+1. **KeyStone :-** Provide identity and authentication for all OpenStack Services
    
-2. Galnce :- This provide the compute iamges repository, all instance launch from glance images
+2. **Galnce :-** This provide the compute iamges repository, all instance launch from glance images
 
-3. Neutron :- This is responable for provisioing the virtual physical network that the compute instacne connecct to on boot,
+3. **Neutron :-** This is responable for provisioing the virtual physical network that the compute instacne connecct to on boot,
 
-4. Placement :-  This is tracking for inventroy available in a cloud AND assisting which provide og those will be used when creating virtual machine
+4.**Placement :-**  This is tracking for inventroy available in a cloud AND assisting which provide og those will be used when creating virtual machine
 
 **How It's work NOVA**
 ![This is a Image of NOVA](../images/howworknova.png)
@@ -85,4 +85,5 @@ This is a mostinportant service, from the user managment and which service where
 > **Network digram of OpenStack**
 
 ![We can understand network of OpenStack](../images/network2-services.png)
+
 
