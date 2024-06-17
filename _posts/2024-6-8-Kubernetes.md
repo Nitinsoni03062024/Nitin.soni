@@ -748,30 +748,14 @@ Going to kubernete site and copy the sentax for limite rang,
 apiVersion: v1
 kind: PersistentVolume
 metadata:
-  name: pv0003 ==> This is PV name we can take any name, PV should be uniqe
+  name: pv0003
 spec:
   capacity:
     storage: 5Gi
   volumeMode: Filesystem
-  accessModes:   ==> 3 Type AccessModes available, PV mode means how many worker nodes a node can access at a time.
-
-                               -  **ReadyWritemany** ==> (A PV whose mode is ReadWriteMany can be accessed at a time on multiple worker nodes.)
-                               -  **ReadOnlyMany** 
-                               -  **ReadWriteOnce** 
-                               -  **ReadWriteOncePod** (Only one pod read and write,)
+  accessModes:
     - ReadWriteOnce
   persistentVolumeReclaimPolicy: Recycle
- 
- ---                 
- **This is Work only static provisiong**
-
-                                **3 Type Policy available of persistentVolumeReclaimPolicy,**
-                               - 1. Recycle, (if PVC deleted, Application changes lost but PV will available in cluster so it can be use for another namespca and other deployment)
-                               - 2. Retain, (If PV + Data both available)
----
-**This is Work only dynaic provisning**
-                               - 3. Deleted, (PV +Data Lost )
-  
   storageClassName: slow
   mountOptions:
     - hard
@@ -782,4 +766,23 @@ spec:
 
 {% endhighlight %}
   
-2.
+
+ ==> 3 Type AccessModes available, PV mode means how many worker nodes a node can access at a time.
+
+                               -  **ReadyWritemany** ==> (A PV whose mode is ReadWriteMany can be accessed at a time on multiple worker nodes.)
+                               -  **ReadOnlyMany** 
+                               -  **ReadWriteOnce** 
+                               -  **ReadWriteOncePod** (Only one pod read and write,)
+                              - ReadWriteOnce                
+ **This is Work only static provisiong**
+
+                                **3 Type Policy available of persistentVolumeReclaimPolicy,**
+                               - 1. Recycle, (if PVC deleted, Application changes lost but PV will available in cluster so it can be use for another namespca and other deployment)
+                               - 2. Retain, (If PV + Data both available)
+---
+**This is Work only dynaic provisning**
+                               - 3. Deleted, (PV +Data Lost )
+  
+
+1. kubectl get pv
+2. 
