@@ -642,6 +642,7 @@ We can manage how many pods will be created on which node or how many resources 
               - Soft Quota (Requrest Quota)
               - Hard Quota (Limit Quota)
     - Project Level (NameSpace),
+              - For limitrand for pod, if any pod is comming in namepsce.
   
 **How to create Deployment Node Quota**
 
