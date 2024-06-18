@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Open Stack for DevOps,
+title: OpenStack Cloud ?
 ---
 
 # About Open Stack

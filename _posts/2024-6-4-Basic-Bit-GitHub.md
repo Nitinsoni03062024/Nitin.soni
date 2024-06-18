@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Git/GitHub,
+title:  What is Git/GitHub and About Git/GitHub,
 ---
 
 > **About of Git ?**

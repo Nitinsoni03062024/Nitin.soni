@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Linux
+title: What is Linux Operating System, Fundamental
 ---
 
 > **This is Image of Linux Logo**
