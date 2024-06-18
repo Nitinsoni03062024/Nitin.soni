@@ -1024,9 +1024,91 @@ Monolithic Kernal :- Linux,Unix,Dos
 
 SSID (Service set identifier), When we install Wi-Fi at home, and after installing Wi-Fi, we receive a name which is called SSID when we login to the wifi by entering the password.
 
+# Crontab OR Job Scheduling
 
+Crontab is use to schedule any task on any time with the help of cronta we can run any command and scripts on any time as per demand.
 
+- Package:   crontabs 
+- Daemon name or  service name:   crond 
+- File:    /etc/crontab  
+- Log:   /var/log/cron  
   
+{% highlight ruby %}
+
+Minutes        ===> [ 0 - 59 ]
+Hours          ===> [ 0 - 23 ]
+Day of month   ===> [ 1 - 31 ]
+Month          ===> [ 1 - 12 ]
+Days of week   ===> [ 0 - 6 OR 1 - 7 ]  where 0 and 7 ==> Sunday
+
+{% endhighlight %}
+
+- crontab   -l    { list ==> to check all crontab details in my account }
+
+- crontab    -e   { edit ==> to apply crontab }
+
+- crontab   -r    { Remove ==> to remove all cron jobs from my account }
+  
+- Minutes    Hours    Day-of-Month   Month    days-of-week
+
+- (0 - 59)   (0-23)     (1-31)      (1-12)    (0 - 6 OR 1 - 7 ) [Where 0 and 7 => sunday]
+  
+  ![This is a image for refrensh](../images/crontab.jpg)
+
+# Firewall  Concept And What is firewalls in linux ?
+
+Firewall basically use to allow or deny any request on server machine,
+With the help of firewall we can set allow and deny rules to access any services.
+
+**Types of firewall  ?**
+
+1. hardware based firewall
+2. Software based firewall
+
+In linux we have os defined firewalls inbuilt in OS....
+
+1. TCP - Wrappers
+2. IP-Tables ===> Till rhel-6 
+3. 3- IPtables replaced with firewalld ( new firewall concept in rhel-7 + rhel- 8 )
+
+**TCP - Wrappers**
+
+1. IT is an example of software firewalls .
+
+2. with the help of tcp wrappers we can apply only incomming based rules on server machine 
+   to allow or deny any traffic coming to the server side.
+
+- Types of Rules :-   1-  Incoming    2- Outgoing   3- forwarding 
+
+Note:   with the help iptables and firewalld we can apply any types of rules in linux OS.
+
+3.  TCP-wrappers always works only on these two files:-   note:   syntax are same in both files. 
+
+      1-    /etc/hosts.deny     ==> to apply deny rules
+
+      2-   /etc/hosts.allow     ==> to apply Allow rules
+
+
+**IP-Tables**
+
+1. IP-Tables is also an example of Software firewalls.
+2. With the help of IP-Tables we can apply incomming , outgoing and port forwarding based rules.
+
+     Package :    iptables  
+     Daemon  :    iptables  
+     File    :    /etc/sysconfig/iptables    <=== Rules are store here
+     Command :    iptables  <options> 
+
+       ACCEPT    ==> Traffic is allowed.
+
+       REJECT    ==> Traffic is block and error mesg send to END user.
+
+       DROP      ==> Traffic is block but no error mesg send to END user.
+
+       REDIRECT  ==> It always use in Port Forwarding Based Examples.
+
+![This is image of IP-table](../images/IP-Tables-Example.PNG)
+
 
 
 
