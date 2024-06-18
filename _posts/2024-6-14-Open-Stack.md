@@ -58,7 +58,15 @@ Nova is the OpenStack project that provides a way provision Compute instance (Ak
 
 3. **KeyStone :-** Provide identity and authentication for all OpenStack Services
    
-4. **Galnce :-** This provide the compute iamges repository, all instance launch from glance images
+4. **Galnce :-** 
+   
+   This provide the compute iamges repository, all instance launch from glance images
+
+- Image service
+- Stores and retrieves disk images (virtual machine templates)
+- Supports Raw, QCOW, VMDK, VHD, ISO, OVF & AMI/AKI
+- Backend storage : Filesystem, Swift, Gluster, Amazon S3
+
 
 5. **Neutron :-** This is responable for provisioing the virtual physical network that the compute instacne connecct to on boot,
 
