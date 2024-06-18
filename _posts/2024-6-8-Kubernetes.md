@@ -87,7 +87,7 @@ This is a Images,
   23 curl https://raw.githubusercontent.com/projectcalico/calico/v3.28.0/manifests/calico.yaml -O
    38  kubectl create -f calico.yaml
    39  curl https://raw.githubusercontent.com/projectcalico/calico/v3.28.0/manifests/calico.yaml -O (Download the Calico networking manifest for the Kubernetes API datastore)
-   40 apt install calico -y
+   40 kubectl create -f calico.yaml
    41  kubeadm token create --print-join-command (to create token for join kubernetes nod)
 
 
@@ -840,4 +840,51 @@ https://github.com/kubernetes-sigs/nfs-subdir-external-provisioner/tree/master
 (This is github site of kubernetes, which is available manifect of dynamic provisoing yml file)
 
 
+#  Pod Networking for kubernetes
 
+1. Each pod should have seprate IPaddress (True)
+2. Two pod should be commucnicate to each on same host (True)
+3. Two pod should be communicate to each other every they on diffrence host (True)
+4. Two tier intregation in kubernetes/service directory micro serivce inttergation 
+5. laod distribustion access the pod
+
+NOTE:- Pod netwoek on SDN techonology OR CNI concept 
+
+**Flavor of SDN/CNI**
+
+1. Weave
+2. flannel
+3. calico
+  
+**Calico**
+
+It's a software define network which provide L3 layer networking for kubernetes pod, and act as L3 layter switch on each kubernetes nodes and calico basically designed by BGP (Border getway Protocal )protocol,
+calico also configured routuing for pod , that is why remote pod they are able to reach.
+
+- During the installtion calico has configured one default subnet, 192.168.0.0/16
+  
+![This is basic networking image](../images/net.png)
+
+{% highlight ruby %}
+
+
+1. kubectl get ds -n kube-system
+2. kubectl get ippool
+3. kubectl get deploy test --image=nginx --replicas=3
+4. kubectl get pod -o wide
+  
+**NOTE**
+
+- Now we are installing calico.
+  
+1. curl -O -L https://github.com/projectcalico/calicoctl/releases/download/v3.14.0/calicoctl
+2. chmod +xcalicoctl
+3. mv /usr/local/bin
+4. vim calicoctl.cfg
+  
+5. calico get ippoolc
+6. calico get ippool -o yaml
+7. 
+
+
+{% endhighlight %}
