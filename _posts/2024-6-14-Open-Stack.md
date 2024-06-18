@@ -46,6 +46,8 @@ In computer networking, a bare-metal server is a physical computer server that i
 
 2. **Compute Service (NOVA)** 
 
+Nova is the OpenStack project that provides a way provision Compute instance (Aks Virtial Machine), nova support virtial machine, baremetal server and has limited supprt for system containers and nova run as a set of darmons on top of existing linux server to proide that service.
+
 - Compute Nodes – hypervisors that run virtual machines
 - Supports multiple hypervisors KVM, Xen, LXC, Hyper-V and ESX
 - Distributed controllers that handle scheduling, API calls, etc
