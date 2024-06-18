@@ -1,4 +1,4 @@
 ---
 layout: post
-title: AWS Cloud (Amazon Web Service) ?
+title: AWS, Public Cloud (Amazon Web Service) ?
 ---
