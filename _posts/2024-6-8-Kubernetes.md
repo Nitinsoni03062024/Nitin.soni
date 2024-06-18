@@ -878,6 +878,12 @@ calico also configured routuing for pod , that is why remote pod they are able t
                                         Snod      Dnode 
                                               IP
 
+**How does work netwoek between pod and node**
+
+This is image,
+
+![For understanding](../images/packet.png)
+
 {% highlight ruby %}
 
 1. kubectl get ds -n kube-system (deaom set, they don't need ceate replica valume of node by defautl according to the node network replica IP is created)
