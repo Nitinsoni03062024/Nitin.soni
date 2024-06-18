@@ -29,11 +29,17 @@ In computer networking, a bare-metal server is a physical computer server that i
 
 **Approx 40 services is avialebl in OpenStack**
 
-![This is same service of open stack](../images/servicesofopenstackl.jpg)
+![This is same service of open stack](../images/oen.png)
 
 1. **Dashboard Service (HORIZON)** :-
 
  When we work on any application, the dashboard that we see is what we call horizon in OpenStock. Horizon it's a GUI method of OpenStack service,  
+
+ Dashboard
+- Provides simple self service UI for end-users
+- Basic cloud administrator functions
+- Define users, tenants and quotas
+- No infrastructure managemen
 
 ![This is image of horizon server GUI](../images/horizonservice.png)
 
@@ -60,9 +66,20 @@ nova support virtial machine, baremetal server and has limited supprt for system
 
 Block storage, object storage and file storage service is called Cinder in OpenStack.
 
+Block Storage (Volume) Service
+- Provides block storage for virtual machines (persistent disks)
+- Similar to Amazon EBS service
+- Plugin architecture for vendor extensions
+eg. NetApp driver for Cinde
+
 4. **Network Service (Neutron)**
 
 Network related all service coming under the network services (neutron)
+
+Network Service 
+- Provides framework for Software Defined Network (SDN)
+- Plugin architecture 
+- Allows integration of hardware and software based network solutions
 
 5. **Image Storge Service (Glance)**
 
@@ -70,6 +87,11 @@ Whenever we launch any instance (VM's), to launch that instance or VM we need an
 
 6. **Object Storage Service (Swift)**
    
+-  Object Storage service
+- Modeled after Amazon's S3 service
+- Provides simple service for storing and retrieving arbitrary data
+- Native API and S3 compatible API
+
    Swift service it's a swift service
 
 7.  **Indentity Service (KeyStone)**
@@ -77,6 +99,21 @@ Whenever we launch any instance (VM's), to launch that instance or VM we need an
 Keystone is an OpenStack service that provides API client authentication, service discovery, and distributed multi-tenant authorization by implementing OpenStack's Identity AP,
 
 This is a mostinportant service, from the user managment and which service where is runing all over mamanged from keystone service.
+
+8. **OpenStack Orchestration (HEAT)**
+   
+- Provides template driven cloud application orchestration
+-  Modeled after AWS CloudFormation
+- Targeted to provide advanced functionality such as high availability 
+and autoscaling
+
+9. **OpenStack Monitoring and Metering (CEILOMETER)**
+
+- Goal: To provide a single infrastructure to collect measurements from an entire OpenStack infrastructure; eliminate need for multiple agents attaching to multiple OpenStack projects
+- Primary targets metering and monitoring; 
+provides extensibility
+
+10. ****
 
 > **hardware Requriment for Deployment of OpenStack**
 

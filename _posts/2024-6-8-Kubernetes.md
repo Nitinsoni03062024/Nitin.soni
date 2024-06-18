@@ -710,6 +710,7 @@ Going to kubernete site and copy the sentax for limite rang,
 1. Static Volume
 2. Dynamic Volume
 
+> **Static Volume Deployment**
 
 1. Local Volume
 2. Network Based Volume
@@ -827,3 +828,16 @@ spec:
 12. kubectl get pod -n nitin 
 13. kubectl get pod -o wide
 14. chmod -R 777 /var/nfs
+  
+
+> **Dynamic Volume Deployment**
+
+- **StorageClass**
+- **StorageProvisinor Agent :- Pof NFS Client**
+  
+https://github.com/kubernetes-sigs/nfs-subdir-external-provisioner/tree/master
+
+(This is github site of kubernetes, which is available manifect of dynamic provisoing yml file)
+
+
+
