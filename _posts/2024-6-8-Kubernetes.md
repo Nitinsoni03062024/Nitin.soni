@@ -844,8 +844,8 @@ https://github.com/kubernetes-sigs/nfs-subdir-external-provisioner/tree/master
 1. Each pod should have seprate IPaddress (True)
 2. Two pod should be commucnicate to each on same host (True)
 3. Two pod should be communicate to each other every they on diffrence host (True)
-4. Two tier intregation in kubernetes/service directory micro serivce inttergation 
-5. laod distribustion access the pod
+4. calico basically create route table as well on each worker
+5. all node's calico switch's are connected to the tun10 ports
 
 NOTE:- Pod netwoek on SDN techonology OR CNI concept 
 
@@ -862,30 +862,32 @@ calico also configured routuing for pod , that is why remote pod they are able t
 
 - During the installtion calico has configured one default subnet, 192.168.0.0/16
   
-![This is basic networking image](../images/net.png)
+![This is basic networking image](../images/IPkube.png)
+
+> Kubernetes API basically breack your network inbto small small network, then it pul on each worker node API baically does subnet  based on /26 CIDR according it place small network on each worker node
+
+
+**What is packet flov, when same node will communicate the same pod**
+        Pod ===> Calico (Beidge Network) ===> Pod
+
+****What is packet flov, when 2 node will communicate the difrent pod****
+        pod-A ==> Calico ==> Tun10 ==> (Packet Encapsulate) ==> Network ==> Tun10 ==> Calico ==> Pod-B
+                                        Spod      Dpod
+                                        Snod      Dnode 
+                                              IP
 
 {% highlight ruby %}
 
-
-1. kubectl get ds -n kube-system
+1. kubectl get ds -n kube-system (deaom set, they don't need ceate replica valume of node by defautl according to the node network replica IP is created)
 2. kubectl get ippool
-3. kubectl get deploy test --image=nginx --replicas=3
-4. kubectl get pod -o wide
-  
-**NOTE**
-
-- Now we are installing calico.
-  
-1. curl -O -L https://github.com/projectcalico/calicoctl/releases/download/v3.14.0/calicoctl
-2. chmod +xcalicoctl
-3. mv /usr/local/bin
-4. vim calicoctl.cfg
-  
-5. calico get ippoolc
-6. calico get ippool -o yaml
+3. kubectl get ippool default-ipv4-ippool -o yaml (Show network details)
+4. route -n
+5. ip  route
+6. route -n | grep tun10 (who's node which pod from connected)
 7. 
 
-
 {% endhighlight %}
+
+
 
 # Keep Learning.....
