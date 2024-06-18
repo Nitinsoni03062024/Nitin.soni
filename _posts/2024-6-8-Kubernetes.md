@@ -872,6 +872,7 @@ calico also configured routuing for pod , that is why remote pod they are able t
 
 ****What is packet flov, when 2 node will communicate the difrent pod****
         pod-A ==> Calico ==> Tun10 ==> (Packet Encapsulate) ==> Network ==> Tun10 ==> Calico ==> Pod-B
+        
                                         Spod      Dpod
                                         Snod      Dnode 
                                               IP
