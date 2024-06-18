@@ -1,6 +1,6 @@
 ---
 layout: post
-title: OpenStack Cloud ?
+title: OpenStack Cloud (Private Cloud) ?
 ---
 
 # About Open Stack
