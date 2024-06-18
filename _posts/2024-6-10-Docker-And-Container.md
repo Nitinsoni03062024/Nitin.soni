@@ -649,8 +649,6 @@ Docker Registory is a server,  we can downlaod and uplaod images in docker regis
 **How to push custom images from pulic registory**
 
 - docker images
-- 
-
 
 # Keep Learning......
 

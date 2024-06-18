@@ -1111,11 +1111,6 @@ Note:   with the help iptables and firewalld we can apply any types of rules in 
 
 
 
-
-
-
-
-
 # Keep Learning......
 
 
