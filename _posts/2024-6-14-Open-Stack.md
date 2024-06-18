@@ -56,19 +56,19 @@ Nova is the OpenStack project that provides a way provision Compute instance (Ak
 
    > -  **This services is must after nove installtion**
 
-1. **KeyStone :-** Provide identity and authentication for all OpenStack Services
+3. **KeyStone :-** Provide identity and authentication for all OpenStack Services
    
-2. **Galnce :-** This provide the compute iamges repository, all instance launch from glance images
+4. **Galnce :-** This provide the compute iamges repository, all instance launch from glance images
 
-3. **Neutron :-** This is responable for provisioing the virtual physical network that the compute instacne connecct to on boot,
+5. **Neutron :-** This is responable for provisioing the virtual physical network that the compute instacne connecct to on boot,
 
-4.**Placement :-**  This is tracking for inventroy available in a cloud AND assisting which provide og those will be used when creating virtual machine
+6. **Placement :-**  This is tracking for inventroy available in a cloud AND assisting which provide og those will be used when creating virtual machine
 
 **How work NOVA**
 
 ![This is a Image of NOVA](../images/howworknova.png)
 
-5. **Block Storage Service (CINDER)**
+7. **Block Storage Service (CINDER)**
 
 Block storage, object storage and file storage service is called Cinder in OpenStack.
 
@@ -78,7 +78,7 @@ Block Storage (Volume) Service
 - Plugin architecture for vendor extensions
 eg. NetApp driver for Cinde
 
-4. **Network Service (Neutron)**
+8. **Network Service (Neutron)**
 
 Network related all service coming under the network services (neutron)
 
@@ -87,11 +87,11 @@ Network Service
 - Plugin architecture 
 - Allows integration of hardware and software based network solutions
 
-5. **Image Storge Service (Glance)**
+9. **Image Storge Service (Glance)**
 
 Whenever we launch any instance (VM's), to launch that instance or VM we need an ISO image which we call glance in openstack.
 
-6. **Object Storage Service (Swift)**
+10. **Object Storage Service (Swift)**
    
 -  Object Storage service
 - Modeled after Amazon's S3 service
@@ -100,20 +100,20 @@ Whenever we launch any instance (VM's), to launch that instance or VM we need an
 
    Swift service it's a swift service
 
-7.  **Indentity Service (KeyStone)**
+11.  **Indentity Service (KeyStone)**
    
 Keystone is an OpenStack service that provides API client authentication, service discovery, and distributed multi-tenant authorization by implementing OpenStack's Identity AP,
 
 This is a mostinportant service, from the user managment and which service where is runing all over mamanged from keystone service.
 
-8. **OpenStack Orchestration (HEAT)**
+12. **OpenStack Orchestration (HEAT)**
    
 - Provides template driven cloud application orchestration
 -  Modeled after AWS CloudFormation
 - Targeted to provide advanced functionality such as high availability 
 and autoscaling
 
-9. **OpenStack Monitoring and Metering (CEILOMETER)**
+13. **OpenStack Monitoring and Metering (CEILOMETER)**
 
 - Goal: To provide a single infrastructure to collect measurements from an entire OpenStack infrastructure; eliminate need for multiple agents attaching to multiple OpenStack projects
 - Primary targets metering and monitoring; 
