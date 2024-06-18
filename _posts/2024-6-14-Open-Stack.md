@@ -114,20 +114,11 @@ Keystone is an OpenStack service that provides API client authentication, servic
 
 This is a mostinportant service, from the user managment and which service where is runing all over mamanged from keystone service.
 
-12. **OpenStack Orchestration (HEAT)**
-   
-- Provides template driven cloud application orchestration
--  Modeled after AWS CloudFormation
-- Targeted to provide advanced functionality such as high availability 
-and autoscaling
-
-13. **OpenStack Monitoring and Metering (CEILOMETER)**
+1.  **OpenStack Monitoring and Metering (CEILOMETER)**
 
 - Goal: To provide a single infrastructure to collect measurements from an entire OpenStack infrastructure; eliminate need for multiple agents attaching to multiple OpenStack projects
 - Primary targets metering and monitoring; 
 provides extensibility
-
-10. ****
 
 > **hardware Requriment for Deployment of OpenStack**
 
@@ -136,5 +127,7 @@ provides extensibility
 > **Network digram of OpenStack**
 
 ![We can understand network of OpenStack](../images/network2-services.png)
+
+
 
 
