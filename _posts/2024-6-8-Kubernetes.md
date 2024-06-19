@@ -1007,10 +1007,38 @@ It,s a kubernetes manifect packege manger
 
 1. helm create nginx
 2. ls nginx/
-3. 
-
+3. cd /tml/wordpress
+- These are 4 files and directory of wordpress :- Chart.yaml  charts  templates  values.yaml
+4. 
 
 {% endhighlight %}
+
+**Helm Directory Structure**
+
+1. Chart.Yaml => it contains chart details, Like :- Version details , dependencies 
+   
+2. charts :- it contencs depends chart.
+   
+3. Templates :- it contains all manifast which run this projects.
+   
+4. values.yaml :- it contains user define values
+   
+
+# Resource Monitoring in Kubernetes,
+
+2 Types of monitoring is available in kubernetes,
+
+1. Resoures Monitoring :- 
+            - Prometheus (Metrics Server, But not provide grafical interface)
+            - Grafana (Provide GUI Interface)
+2. Logs Monitoring :- 
+            - Elastic Search (Log Server, And It's not GUI interface)
+            - Kibana  (GUI)
+            - Fluentd/Logstash (Agent)
+
+EFK (Elastic fluentd kibana)
+ELK (Elastic Search logstash kibana)
+
 
 
 # Keep Learning.....
