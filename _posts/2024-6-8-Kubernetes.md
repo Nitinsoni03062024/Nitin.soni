@@ -1039,8 +1039,8 @@ It,s a kubernetes manifect packege manger
             - Kibana  (GUI)
             - Fluentd/Logstash (Agent)
 
-EFK (Elastic fluentd kibana)
-ELK (Elastic Search logstash kibana)
+- EFK (Elastic fluentd kibana)
+- ELK (Elastic Search logstash kibana)
 
 
 
