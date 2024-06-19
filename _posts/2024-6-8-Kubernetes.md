@@ -896,6 +896,121 @@ This is image,
 
 {% endhighlight %}
 
+# Proxy Server.
+
+- Pod IP is not static, and proxy/Service IP is provided static ip for pod proxy discover pod endpoint/IP dyanmic through API, Expose for and micro services and proxt it provided reserved IP for each deployment so now forntend microservice can reach backend through static IP address service IP can distribute load accross the pod, if multiupule pod accossiate with service IP, kube proxy also act as a internal level network lead balencer.
+  
+
+**How work ServiceIP/ProxyIP in kubernetes**
+
+![from this image we can undersatnd](../images/ServiceIP.png)
+
+{% highlight ruby %}
+
+1. kubectl create deploy app --image=nginx
+2. kubectl create deploy db --image=nginx
+3. kubectl get pod -o wide
+4. kubectl expose deploy db --port=8080 --target-port=80 --name=my-service (expose ip in DB pod and port with name)
+5.  kubectl get service
+6.  echo I am nitin soni and this is my DB > /usr/share/nginx/html/index.html
+7.  exit
+8.  curl 10.103.210.143:8080
+9.  kubectl describe service my-service
+10. kubectl delete pod db-6b7cdcbfc6-v92pn
+11. kubectl get pod
+12. kubectl get pod -o wide 
+
+{% endhighlight %}
+
+
+
+> **How to expose pod from external word**
+
+1. Port forwording
+2. Ingress Controller 
+
+> **Port forwording**
+
+    1. Pod Level (Not Recomded)
+    2. Servie IP level
+
+> **Network Policy**
+
+- **Types of policy**
+  
+   1. Ingress Rules
+   2. Egress Rules
+   
+Policy ==> Set of Rules
+Rules ==> they are basically 3 criteria
+
+   1. Network based
+   2. namespace based
+   3. pod label
+
+> **And / OR**
+   1. AND :- all criteria should be satisfied
+   2. OR :- one of them
+   
+> **Only allow policy**
+
+based on criteria match traffic is allowed expext deny
+
+
+# Helm ( Kubernetes Manifect manger)
+
+It,s a kubernetes manifect packege manger
+
+1. **Helm Repo** (there are folder(storage) which contenc helm chart)
+   
+      1. Internet Based
+      2. Local Based
+   
+2. **Helm Chart** (it's packaged of kubernetes manifect resources)
+  
+     1. Community Based
+     2. Custom Based
+   
+{% highlight ruby%}
+
+==> We Are Installing helm pakage <===
+
+1. curl https://baltocdn.com/helm/signing.asc | gpg --dearmor | sudo tee /usr/share/keyrings/helm.gpg > /dev/null
+2. sudo apt-get install apt-transport-https --yes
+3. echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/helm.gpg] https://baltocdn.com/helm/stable/  debian/ all main" | sudo tee /etc/apt/sources.list.d/helm-stable-debian.list
+4. sudo apt-get update
+5. sudo apt-get install helm
+
+==> Now we are hire helm command<==
+
+6. helm repo list
+7. helm repo add wp https://charts.bitnami.com/bitnami (add repo)
+8. helm search repo wp (find total packges in helm repo)
+
+**We are setup wordpress with helm**
+
+9. helm search repo wp | grep wordpress
+10. kubectl create ns example
+11. helm install nitin wp/wordpress -n example
+12. kubectl get all -n example
+13. helm list -n example (how many deploymnent is runing)
+14. helm uninstall nitin -n example (unistall all appliction form exmaple namespace)
+15. unintall pvc
+16. cd .cache/helm/repository/
+17. cp wordpress-22.4.12.tgz /tmp/
+18. cd /tml
+19. tar -xzf  wordpress-22.4.12.tgz
+20. rm -rf Chart.lock values.schema.json README.md
+  
+
+**Craating Custom Bundol**
+
+1. helm create nginx
+2. ls nginx/
+3. 
+
+
+{% endhighlight %}
 
 
 # Keep Learning.....
