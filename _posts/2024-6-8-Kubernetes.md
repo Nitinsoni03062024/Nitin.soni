@@ -1029,9 +1029,12 @@ It,s a kubernetes manifect packege manger
 2 Types of monitoring is available in kubernetes,
 
 1. Resoures Monitoring :- 
+   
             - Prometheus (Metrics Server, But not provide grafical interface)
             - Grafana (Provide GUI Interface)
+  
 2. Logs Monitoring :- 
+   
             - Elastic Search (Log Server, And It's not GUI interface)
             - Kibana  (GUI)
             - Fluentd/Logstash (Agent)
