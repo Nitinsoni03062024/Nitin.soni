@@ -1,6 +1,6 @@
 ---
 layout: post
-title: RHCSA LINUX (Red Hat Certified System Administrator)
+title: RHCSA Linux (Red Hat Certified System Administrator)
 ---
 
 > **This is Image of Linux Logo**
