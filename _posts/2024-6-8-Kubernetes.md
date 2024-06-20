@@ -1042,7 +1042,63 @@ It,s a kubernetes manifect packege manger
 - EFK (Elastic fluentd kibana)
 - ELK (Elastic Search logstash kibana)
   
-# RBAC (Role Based Access Controller)
+# RBAC (Role Based Access Controller).
+
+1. Authentication
+2. Authorozation
+
+Command ==> Authenticatio ==> Authorization ==> Admimission Control
+
+**Authentication** :- It's check identity .
+**Authorization** :- It's check role access .
+
+> User
+> Group
+> Role 
+
+         (resources+verb=roles => which allow to permission of user for managing kubernetes resources, [pod,deplymenet,rc.rs,afinity,anti-afinity, limit, quota etc,pv,pvc])
+
+         Verbs:- list/update/pathc/delete
+
+         Role are  2 Types :-
+
+        - Default role :- during the installtion it has created alredy
+        - custom role :- we can create own role as well
+  
+        - Spoce :- 
+        - 1. cluster scope
+        - 2. namespace scope
+  
+         Resources :-
+         - 1. clusterwide :- PV
+         - 2. namespace wide :- Pod
+  
+         Rolebinding :- when we map role to user it become binding.
+
+         - 1. Cluster level
+         - 2. namespace level
+
+  
+> Rolebinding
+> Service Account
+
+> **Authentication**
+
+There are many types of authonticatin for login API in kubernetes,
+
+Kubernetes.admin (by default user of super user)
+
+- SSL Based authentication (by default kubernetes super user, he is login based on the certificate)
+- Service account based authentication
+- static token file based  
+- webhook based authenticati
+- OpenID bassed authentication
+
+**Installtion of Bation Node (New server machine ubuntu)**
+
+**Note**
+
+If we are copy then file of admin.conf kubernetes file to another server so second server act as a kubernetes master node server,
 
 
 
