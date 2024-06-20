@@ -1100,6 +1100,15 @@ Kubernetes.admin (by default user of super user)
 
 If we are copy then file of admin.conf kubernetes file to another server so second server act as a kubernetes master node server,
 
+# Custom Role in kubernetes,
+
+1. Resources :- API object like , RC,RS,PV,PVC etc
+2. Verbs :- Verbs mean that, List,describe,delete etc
+  
+We can create 2 Types of costom role,
+- Cammond line
+- Manifact (yml files)
+  
 
 
 
