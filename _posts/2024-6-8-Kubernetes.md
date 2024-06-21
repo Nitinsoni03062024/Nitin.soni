@@ -3,17 +3,32 @@ layout: post
 title:  Kubernetes Orchestration ?
 ---
 
-# What is kubernetes
+# What is kubernetes (9 September 2014)
 
 Kubernetes it's a orchestration tool, With the help of Kubernetes we can manage multiple containers at a time If one of our containers failed for same reaion, then we can automatically create another container with the same configuration, Kubernetes provide me same featuer like and Kubernetes is a system for application deployment that enables efficient use of the containerized infrastructure that powers modern applications, You can also run Kubernetes on-premises or within the public cloud. AWS, Azure and Google Cloud Platform (GCP) offer managed Kubernetes solutions to help you start quickly and efficiently operating K8s apps. Kubernetes also makes apps much more portable, so IT can move them more easily between different clouds and internal environments Kubernetes is the most popular open-source project from the Cloud Native Computing Foundation (CNCF), with active engagement and contribution from many enterprises, large and small we can login multuile node from a one place.
 
+> **Introduction of Kubernetes**
+
+1. **Centralized Managment for cluster Host**
+  
+  Now we are able to managed to all docker mahine/container host from single Host
+
+2. **Cluster Arch/Failover**
+  
+  Now container can migrate one machine to another machine
+
+3. **Scalability**
+
+Now we can add container more existing runing application .
+
 > **These are most popular feature of kubernetes**
 
-> - 1:- Centralized managment for conatiner host :- We are able to all conatainer mahcine/  Container host from the single host
-> - 2:- Cluster Failer :- Kubernetes also provide cluster failer feature container can migrate one machine to another machine
-> - 3:- Scalability :- We can add contianer for exisring runing applications
-                   - A:- Vertical Scalling
-                   - B :- Horizontal Scalling
+1. Centralized managment for conatiner host :- We are able to all conatainer mahcine Container host from the single host
+2. Cluster Failer :- Kubernetes also provide cluster failer feature container can migrate one machine to another machine
+> - 3. Scalability :- We can add contianer for exisring runing applications
+
+- A:- Vertical Scalling
+- B :- Horizontal Scalling
 
 > A:- Vertical Scalling:- We can describes adding additional resources to a system increase or decrease the power of a system to handle increased or reduced workload Add or reduce the CPU or memory capacity of the existing VM
 
@@ -21,17 +36,17 @@ Kubernetes it's a orchestration tool, With the help of Kubernetes we can manage 
 
 ![This is a vertial scalling images you can understand from this images](../images/vertical.webp)
 
-> B :- Horizontal Scalling :- Horizontal scaling is the ability for an application to automatically scale by adding/reducing computing nodes as the workload increases/decreases. This is in contrast to vertical scaling, which means that you scale by adding more power (CPU, RAM) to an existing machine.
+> B:- Horizontal Scalling :- Horizontal scaling is the ability for an application to automatically scale by adding/reducing computing nodes as the workload increases/decreases. This is in contrast to vertical scaling, which means that you scale by adding more power (CPU, RAM) to an existing machine.
 
 > This is Horizontal Image, you can undersatand from this image.
 
 
 ![This is a Horizontal Image, you can understrand from this image](../images/horizontal.webp)
 
-- 4:- Multi-cloud flexibility
-- 5:- Effective migration to the cloud
+4. Multi-cloud flexibility
+5. Effective migration to the cloud
   
-> - 4:- ROllout and Rollback :- We can rollout and rollback of conatiner application with out downtime, kubernetes it'saying that we can distroy and deploy new containter in zero downtime, we can upgrade you application in new conatiner, and there is same issue in new conatainer then rollback to previous version conatiner.
+4. ROllout and Rollback :- We can rollout and rollback of conatiner application with out downtime, kubernetes it'saying that we can distroy and deploy new containter in zero downtime, we can upgrade you application in new conatiner, and there is same issue in new conatainer then rollback to previous version conatiner.
 
 > **How does work kubernetes**
 
