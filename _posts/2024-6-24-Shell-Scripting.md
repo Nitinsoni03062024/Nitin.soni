@@ -47,9 +47,8 @@ Shell scripting is a set of command, with the help of shell scripting we can aut
   apt install apache2 
   systemctl restart apache2 
   echo “Hello Everyone” (This is normal basic shell scripting) 
-  
 
-  {% endhightlight %}
+  {% endhighlight %}
 
 And if we are run shell scripting file. and We should always know that when we create a shell scripting file, the file must have excution permissions to - - run it. we can run with help of .coredge OR sh .coredge these are tools are available in the market for automate the task Shell/Bash Scripting and Ansible for automate task.
 
