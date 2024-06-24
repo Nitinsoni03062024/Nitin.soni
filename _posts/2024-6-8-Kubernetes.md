@@ -618,9 +618,6 @@ Test and Tolerance is used only for deidcated hardware requirement for pode, So 
   - kubectl create -f pod.yml
   - kuebctl get pod
 
----
-# Wait
-
 > **Afinity And Anti-Afinity**
 
 - 2 Types of Afinity And Anti-Afinity available,
