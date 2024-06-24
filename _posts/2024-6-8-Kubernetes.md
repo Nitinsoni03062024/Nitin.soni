@@ -30,13 +30,17 @@ Now we can add container more existing runing application .
 - A:- Vertical Scalling
 - B :- Horizontal Scalling
 
-> A:- Vertical Scalling:- We can describes adding additional resources to a system increase or decrease the power of a system to handle increased or reduced workload Add or reduce the CPU or memory capacity of the existing VM
+> A:- Vertical Scalling:- 
+
+We can describes adding additional resources to a system increase or decrease the power of a system to handle increased or reduced workload Add or reduce the CPU or memory capacity of the existing VM
 
 > This is a vertical iamge, You can undersatnd from this iamge.
 
 ![This is a vertial scalling images you can understand from this images](../images/vertical.webp)
 
-> B:- Horizontal Scalling :- Horizontal scaling is the ability for an application to automatically scale by adding/reducing computing nodes as the workload increases/decreases. This is in contrast to vertical scaling, which means that you scale by adding more power (CPU, RAM) to an existing machine.
+> B:- Horizontal Scalling :- 
+
+Horizontal scaling is the ability for an application to automatically scale by adding/reducing computing nodes as the workload increases/decreases. This is in contrast to vertical scaling, which means that you scale by adding more power (CPU, RAM) to an existing machine.
 
 > This is Horizontal Image, you can undersatand from this image.
 
@@ -87,14 +91,10 @@ This is a Images,
     9  kubeadm init
    10  kubeadm init --ignore-preflight-errors=all
    11  kubectl get nodes
-   12  cd /etc/console-setup/
-   13  cd
-   14  mkdir .kube/config
    15  mkdir .kube
    16  cd .kube/
    17  touch config
    18  ls
-   19  cdd
    20  cd
    21  cp /etc/kubernetes/admin.conf .kube/config
    22  kubectl get nodes
@@ -126,17 +126,21 @@ This is a Images,
 
 > **These are same service is runing in Node side**
 
-- CRI/containerd/dockerd :- it's a sercvices for runing worker node/conatainer We need a socket to run a container and CRI socket do not understand directly kubernetes language
+- CRI/containerd/dockerd :- 
+
+it's a sercvices for runing worker node/conatainer We need a socket to run a container and CRI socket do not understand directly kubernetes language
   
-- kubelet :- If we have to manage any container or node through kubernetes then we have to install kubectl agent with Cri socket on the front node side of kubernetes, it is kubernetes agent which take command from kube-controller
+- kubelet :- 
+  
+If we have to manage any container or node through kubernetes then we have to install kubectl agent with Cri socket on the front node side of kubernetes, it is kubernetes agent which take command from kube-controller
 
 > **What Runing from worker node side**
 
-1:- Container run time :- 
+1. Container run time :- 
 
-A :- Dockerd
-B :- Contianerd
-C :- Cri (Redhat/Ibm)
+1. Dockerd
+2. Contianerd
+3. Cri-o (Redhat/Ibm)
 
 > This is a images of working process to kubernetes maste node to worker node
 
@@ -149,9 +153,11 @@ First you can go to docker website, (Install ubuntu-20.04)
 ---
 
 > **for setup kubernetes atleast required 3 machine,**
+
 - 1:- Master node (ubuntu)
 - 2:- Worker node (ubuntu)
 - 3:- Workder node (ubuntu)
+
 > Master Ubuntu (ubuntu)
 
 
@@ -216,6 +222,7 @@ To easiy explain, namespace and project in simple language, if we open any accou
 # How to create simple/orphan pod by command line in kubernetes.
 
 {% highlight ruby%}
+
 > - kubectl get ns 
 > - kubectl run test --image=docker.io/nginx 
 > - kubectl get pod
@@ -231,7 +238,7 @@ To easiy explain, namespace and project in simple language, if we open any accou
 {% endhighlight %}
 
 > **How to create pod by using file method (yaml) kubernetes.**
-> 
+
 {% highlight ruby %}
 
 > - kubectl run core1 --image=nginx --dry-run -o yaml (show with yaml file)
@@ -243,8 +250,6 @@ To easiy explain, namespace and project in simple language, if we open any accou
 ![This is yaml bases file for refrence](../images/yml.png)
 
 > **In yaml file most important the resources and how to create pod by using file method**
-
->> **Note**
 
 {% highlight end%}
 
@@ -261,14 +266,12 @@ and we can see all formates from these commands**
 > - kubectl get pod -o wide (show all detail for pod)
 > - kubectl describe pod nitin-c65ws | grep -i controller (who is controller of this pod or not)
 > - kubectl delete pod coredge-hzgq5 (if you are delete RC pod then by automatic one RC pod will create, maintain desiered state of pod)
-> 
-
 
 {% endhighlight %}
 
 # How to create pod using API Controller.
 
-> Purpise of API Controller pod.
+> Purpose of API Controller pod.
 
    -  Maintain pod stat   (Hight availability)
    -  scalability.
