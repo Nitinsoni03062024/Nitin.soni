@@ -113,5 +113,44 @@ date --help
 {% endhighlight %}
 
 
+> **This is basic Script for practice**
+
+
+{% highlight ruby %}
+
+!#/bin/bash
+
+clear
+echo "Hello EveryOne How are You"
+date +%A
+cal
+date +%H:%M
+echo "My machine name is $`hostname`" # OR $(hosname) both commmand are same
+echo "Hello everyone my name is nitin soni I am working coredge.io india private limited company as a DevOps Engineer Trenee"
+echo "What is my current path $(pwd)"
+mkdir /home/nitinsoni-$(date +%H:%M)
+cal
+expr 10 + 10
+expr 10 - 4
+expr 10 / 5
+expr 10 \* 2
+
+#date --help
+
+echo ""
+echo ""
+
+a=10
+b=10
+expr $a + $b
+<<nitin
+
+My name is nitin soni and i am learning basic
+shell scripting
+
+nitin
+
+
+{% endhighlight %}
 
 # Keep Learning.......
