@@ -118,6 +118,8 @@ date --help
 
 {% highlight ruby %}
 
+vim nitin.sh
+
 !#/bin/bash
 
 clear
@@ -150,6 +152,63 @@ shell scripting
 
 nitin
 
+
+{% endhighlight %}
+
+> **Taking input from user**
+
+read <var_name> (read it's a commmand)
+
+OR (Both command are same)
+
+read -p "your name" NAME (we can print value)
+
+{% highlight ruby %}
+
+echo "What is your name"
+read name
+
+{% endhighlight %}
+
+> **If-Else for condistions uses**
+
+if [ $age -eq 18 ]
+then 
+    echo "you are eligibal to vote"
+else 
+    echo "sorry you are not eligibal to vote"
+fi
+
+[This is example]
+
+{% highlight ruby %}
+
+age=20
+if [ $age -eq 18]
+then
+        echo "you can vote"
+else
+        echo "you can't vote"
+fi #close 
+
+{% endhighlight %}
+
+> **ELIF, multipule condistion uses**
+
+{% highlight ruby %}
+
+#!/bin/bash
+
+read -p "enter your contry" contry
+if [ $country = "india"]
+then
+        echo "you are from indian"
+elif [ $country = "nepal"]
+then
+        echo "you are from nepal"
+else
+        echo "you are form south indian"
+fi
 
 {% endhighlight %}
 

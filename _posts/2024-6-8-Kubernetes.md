@@ -1123,8 +1123,6 @@ If we are copy then file of admin.conf kubernetes file to another server so seco
 We can create 2 Types of costom role,
 - Cammond line
 - Manifact (yml files)
-  
-
 
 
 
