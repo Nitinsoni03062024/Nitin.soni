@@ -3,30 +3,6 @@ layout: post
 title: OpenStack Cloud (Private Cloud) ?
 ---
 
-{% highlight ruby %}
-
-We are covering these topics.
-
-1. About Open Stack
-2. What is OpenStack
-3. Bare Metal
-4. Compute Service, VM (NOVA)
-5. KeyStone (Indetity)
-6. Galnce (Image Storge Service)
-7. Neutron (Network Service)
-8. Placement
-9. How work NOVA*
-10. Block Storage Service (CINDER)
-11. Network Service (Neutron)
-12. Image Storge Service (Glance)
-13. Object Storage Service (Swift)
-14. Indentity Service (KeyStone)
-15. OpenStack Monitoring and Metering (CEILOMETER)
-16. Network digram of OpenStack
-17. Step By Step Instance VM (NOVA) Creation Flow of OpenStack
-
-{% endhighlight %}
-
 # About Open Stack
 
 - Platform: Cross-platform software
