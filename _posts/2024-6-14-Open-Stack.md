@@ -160,7 +160,8 @@ nova boot --flavor m1.small --image centos7 --nic net-id={private_network_id} --
 
 - Step:1 
   
-  The Horizon Dashboard or OpenStack CLI gets user credentials and authenticates with identity service via REST API
+  The Horizon Dashboard or OpenStack CLI gets user credentials and authenticates with identity service via REST API.
+
         - The identity service (Keystone) authenticate the user with the user credentials and then generates and send back an auth-token, that auth-token which will be used for sending the request to other components through REST-Call
   
 - Step:2 
@@ -170,6 +171,7 @@ The Dashboard or OpenStack CLI converts new instance request specified in launch
 -  Step:3 
   
 Then nova-api service gets the request and send that request to the identity service (Keystone) for validation of auth-token and access permission,
+
       - Keystone service validates the token and send the updated authentication headers with roles along with the permissions
   
 - Step:4 
@@ -198,6 +200,7 @@ nova-compute picks the request from the queue and it sends the rpc.call request 
 - Step:9 
   
 nova-conductor takes the request from queue and communicate with nova-database,
+
           - nova-conductor gets the instance information
             now nova-compute picks the instance information from the queue
 
@@ -228,6 +231,7 @@ cinder-api validates the auth-token with keystone and then nova-compute gets the
 - Step:16 
   
 nova-compute generates data for the hypervisor driver and executes the request on the hypervisor using libvirt or API and then finally a VM is created on the hypervior. We can see that VM in Dashboard and also using “nova list” command.
+
 
 
 # Keep Learning....
