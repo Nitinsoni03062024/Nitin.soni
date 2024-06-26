@@ -144,10 +144,6 @@ provides extensibility
 
 ![This is image of OpenStack](../images/hwreqs.png)
 
-> **Network digram of OpenStack**
-
-![We can understand network of OpenStack](../images/network2-services.png)
-
 
 > # Step By Step Instance VM (NOVA) Creation Flow of OpenStack.
 
