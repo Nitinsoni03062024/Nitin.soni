@@ -10,10 +10,10 @@ We are covering these topics.
 1. About Open Stack
 2. What is OpenStack
 3. Bare Metal
-4. Compute Service (NOVA)
-5. KeyStone
-6. Galnce
-7. Neutron
+4. Compute Service, VM (NOVA)
+5. KeyStone (Indetity)
+6. Galnce (Image Storge Service)
+7. Neutron (Network Service)
 8. Placement
 9. How work NOVA*
 10. Block Storage Service (CINDER)
@@ -80,9 +80,9 @@ Nova is the OpenStack project that provides a way provision Compute instance (Ak
 
    > -  **This services is must after nove installtion**
 
-3. **KeyStone :-** Provide identity and authentication for all OpenStack Services
+3. **KeyStone (identity service) :-** Provide identity and authentication for all OpenStack Services
    
-4. **Galnce :-** 
+4. **Galnce (Image service) :-** 
    
    This provide the compute iamges repository, all instance launch from glance images
 
@@ -92,13 +92,9 @@ Nova is the OpenStack project that provides a way provision Compute instance (Ak
 - Backend storage : Filesystem, Swift, Gluster, Amazon S3
 
 
-5. **Neutron :-** This is responable for provisioing the virtual physical network that the compute instacne connecct to on boot,
+5. **Neutron (Network service):-** This is responable for provisioing the virtual physical network that the compute instacne connecct to on boot,
 
 6. **Placement :-**  This is tracking for inventroy available in a cloud AND assisting which provide og those will be used when creating virtual machine
-
-**How work NOVA**
-
-![This is a Image of NOVA](../images/howworknova.png)
 
 7. **Block Storage Service (CINDER)**
 
