@@ -96,7 +96,10 @@ Template based orchestration that support automatic creation of resources stacks
 
 
 
+> **There have two types nodes planning of openstack**
 
+ 1. Single Node
+ 2. Multi Node
 
 # Keep Learning....
 
