@@ -26,9 +26,10 @@ it is piesce of softwate when installed on cluster of phisical server offeres th
 6. Cinder (Volume service)
 7. Hert (Orchestretor)
 8. Ceilometer (Telemeter)
-9.  KeyStone (Identity)
+9. KeyStone (Identity)
 
-1. **Dashboard Service (HORIZON)** :-
+
+9.  **Dashboard Service (HORIZON)** :-
 
  When we work on any application, the dashboard that we see is what we call horizon in OpenStock. Horizon it's a GUI method of OpenStack service,  
 
