@@ -7,31 +7,53 @@ title: OpenStack Cloud (Private Cloud) ?
 
 - Platform: Cross-platform software
 - Developer: Rackspace Technology
-- Initial release: 21 October 2010; 13 years ago
+- Initial release: 21 October 2010 13 years ago
 
 # What is OpenStack
 
 OpenStack is a free, open standard cloud computing platform. It is mostly deployed as infrastructure-as-a-service in both public and private clouds, 
 it is piesce of softwate when installed on cluster of phisical server offeres the users to create , run and manage virtial machine on top of it along with support to attach the connected storage atong with the networking services in a virtual formte knwo as a infrastructure as a service (IAAS).
 
-> **OpenStack has 4 principles**
+> ** These are same composents of OpenStack**
 
-1. Open Soureces
-2. Open Design
-3. Open Development
-4. Open Community
+![This is OpenStack Image](../images/openstack-components.jpg)
 
-![This is a OpenStack Images](../images/OpenStack-Architecture.png)
+1. Horizaon (Dashboerd servaices)
+2. NOVA  (Compute)
+3. Glance (Image Service)
+4. Swift (Object Storage)
+5. Neutron (Network service)
+6. Cinder (Volume service)
+7. Hert (Orchestretor)
+8. Ceilometer (Telemeter)
+9.  KeyStone (Identity)
 
-**Bare Metal**
 
-In computer networking, a bare-metal server is a physical computer server that is used by one consumer, or tenant only.
 
-**Approx 40 services is avialebl in OpenStack**
 
-![This is same service of open stack](../images/oen.png)
 
-1. **Dashboard Service (HORIZON)** :-
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+8. **Dashboard Service (HORIZON)** :-
 
  When we work on any application, the dashboard that we see is what we call horizon in OpenStock. Horizon it's a GUI method of OpenStack service,  
 
