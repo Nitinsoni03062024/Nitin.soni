@@ -29,47 +29,32 @@ it is piesce of softwate when installed on cluster of phisical server offeres th
 9. KeyStone (Identity)
 
 
-1.  **Dashboard Service (HORIZON)** :-
-
- When we work on any application, the dashboard that we see is what we call horizon in OpenStock. Horizon it's a GUI method of OpenStack service,  
-
- Dashboard
+> **Dashboard Service (HORIZON)** :- When we work on any application, the dashboard that we see is what we call horizon in OpenStock. Horizon it's a GUI method of OpenStack service,  
 - Provides simple self service UI for end-users
 - Basic cloud administrator functions
 - Define users, tenants and quotas
 - No infrastructure managemen
 
-2. **KeyStone (identity service) :-** 
-   
-   Provide identity and authentication for all OpenStack Services
+> **KeyStone (identity service) :-** Provide identity and authentication for all OpenStack Services
 
-3. **Compute Service (NOVA)** 
-
-Nova is the OpenStack project that provides a way provision Compute instance (Aks Virtial Machine), nova support virtial machine, baremetal server and has limited supprt for system containers and nova run as a set of darmons on top of existing linux server to proide that service.
+> **Compute Service (NOVA)** Nova is the OpenStack project that provides a way provision Compute instance (Aks Virtial Machine), nova support virtial machine, baremetal server and has limited supprt for system containers and nova run as a set of darmons on top of existing linux server to proide that service.
 
 - Compute Nodes – hypervisors that run virtual machines
 - Supports multiple hypervisors KVM, Xen, LXC, Hyper-V and ESX
 - Distributed controllers that handle scheduling, API calls, etc
 - Native OpenStack API and Amazon EC2 compatible API
 
-4. **Galnce (Image service) :-** 
-   
-   This provide the compute iamges repository, all instance launch from glance images
+> **Galnce (Image service) :-** This provide the compute iamges repository, all instance launch from glance images
 
 - Image service
 - Stores and retrieves disk images (virtual machine templates)
 - Supports Raw, QCOW, VMDK, VHD, ISO, OVF & AMI/AKI
 - Backend storage : Filesystem, Swift, Gluster, Amazon S3
 
-5. **Neutron (Network service):-** 
-   
-   This is responable for provisioing the virtual physical network that the compute instacne connecct to on boot,
+> **Neutron (Network service):-** This is responable for provisioing the virtual physical network that the compute instacne connecct to on boot,
 
 
-6. **Block Storage Service (CINDER)**
-
-Block storage, object storage and file storage service is called Cinder in OpenStack.
-
+> **Block Storage Service (CINDER)** Block storage, object storage and file storage service is called Cinder in OpenStack.
 Block Storage (Volume) Service
 - Provides block storage for virtual machines (persistent disks)
 - Similar to Amazon EBS service
@@ -77,21 +62,21 @@ Block Storage (Volume) Service
 eg. NetApp driver for Cinde
 
 
-7. **Object Storage Service (Swift)**
-   
+>  **Object Storage Service (Swift)**
+ 
 -  Object Storage service
 - Modeled after Amazon's S3 service
 - Provides simple service for storing and retrieving arbitrary data
 - Native API and S3 compatible API
 
 
-8. **OpenStack Monitoring and Metering (CEILOMETER)**
+> **OpenStack Monitoring and Metering (CEILOMETER)**
 
 - Goal: To provide a single infrastructure to collect measurements from an entire OpenStack infrastructure; eliminate need for multiple agents attaching to multiple OpenStack projects
 - Primary targets metering and monitoring; 
 provides extensibility
 
-9. Heat **Orchestration Tool**
+> Heat **Orchestration Tool**
 
 Template based orchestration that support automatic creation of resources stacks
 
