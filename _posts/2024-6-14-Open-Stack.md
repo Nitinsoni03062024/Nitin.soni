@@ -106,7 +106,7 @@ Provide identity and authentication for all OpenStack Services
 3. Triple-O 
 
 
-> **Step by Step Instance Creation Flow in OpenStack**
+> **VM, Instance Creation Flow in OpenStack**
 
 ![This is Working flow of Lauch Instance](../images/OpenStack-VM-Provisioning-Flo.webp)
 
