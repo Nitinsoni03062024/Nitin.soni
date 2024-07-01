@@ -122,7 +122,7 @@ Step:1):-
 
 The Horizon Dashboard or OpenStack CLI gets user credentials and authenticates with identity service via REST API
 
-      - The identity service (Keystone) authenticate the user with the user credentials and then generates and send back an auth-token, that auth-token which will be used for sending the request to other components through REST-Call
+- The identity service (Keystone) authenticate the user with the user credentials and then generates and send back an auth-token, that auth-token which will be used for sending the request to other components through REST-Call
   
 Step:2):- 
 
@@ -148,7 +148,7 @@ Step:7):-
 
 nova-scheduler talks to nova-database to locate an appropriate host using filtering and weighing mechanism,
 
-     - nova-scheduler sends the rpc.cast request to nova compute for launching an instance on the appropriate host
+- nova-scheduler sends the rpc.cast request to nova compute for launching an instance on the appropriate host
   
 Step:8) 
 
@@ -157,8 +157,9 @@ nova-compute picks the request from the queue and it sends the rpc.call request 
 Step:9) 
 
 nova-conductor takes the request from queue and communicate with nova-database,
-     - nova-conductor gets the instance information
-     - now nova-compute picks the instance information from the queue
+
+- nova-conductor gets the instance information
+- now nova-compute picks the instance information from the queue
   
 Step:10):-
 
