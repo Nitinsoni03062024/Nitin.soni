@@ -971,6 +971,24 @@ Rules ==> they are basically 3 criteria
 
 based on criteria match traffic is allowed expext deny
 
+> **Network Policy**
+
+Types of policy
+
+  1. Ingress (Incoming)
+  2. Egress (Outging)
+   
+> Policy => Set of Rules
+> Rule => there are basically 3 criteria
+  1. Network based rule
+  2. Namespace base rule
+  3. Pod label base rule
+   
+>  And / OR 
+
+1. And => Both condistion math
+2. OR => One of them
+
 
 # Helm ( Kubernetes Manifect manger)
 
