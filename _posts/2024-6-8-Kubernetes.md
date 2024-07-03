@@ -642,26 +642,28 @@ Test and Tolerance is used only for deidcated hardware requirement for pode, So 
 1:-Node Lavel Affinity,
 
 > **hard Affinity rules**
+
 - RequriedDuringschedulling+IgnoreDuringExtention :- (first time check lablel and selector of node and afer check, if any user change lable and selector don't matter)
   
 - RequriedDuringschedulling+RequiredDuringExtention :- (Both condistion match label and selector,)
 
 > **Soft affinity rules** 
+
 - prefferedDuringschedulling+IgnoreDuringExtentio ()
   
 > **Oprator**
 
 > **For Affnity**
-  > IN (Agar ek nhi mile to dusre vaule par chale jana)
-  > Exists ()
+ - IN (Agar ek nhi mile to dusre vaule par chale jana)
+ - Exists ()
 
 > **Anti-Affinity**
-  > NotIn
-  > DoesNotExists
+  - NotIn
+  - DoesNotExists
 
 > **This Oprator both work affinity and Anti-affinity**
 
-LT And GT (Less Then and Grator then)
+  - LT And GT (Less Then and Grator then)
 
 ---
 > **Compute And Resource Quota**
