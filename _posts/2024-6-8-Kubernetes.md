@@ -621,7 +621,9 @@ Test and Tolerance is used only for deidcated hardware requirement for pode, So 
   - kubectl create -f pod.yml
   - kuebctl get pod
 
-> **Afinity And Anti-Afinity**
+# Afinity And Anti-Afinity
+
+> **Node lavel (lablel and selector) affinity and Anti-Affnity**
 
 - 2 Types of Afinity And Anti-Afinity available,
   
@@ -665,6 +667,11 @@ Test and Tolerance is used only for deidcated hardware requirement for pode, So 
 
   - LT And GT (Less Then and Grator then)
 
+> **Pod Lavel Anffinity and Anti-Affinity**
+
+1. Pod to Pod Affinity. (When we are runing two microservice in same node, that time we can use pod to pod affinity)
+  
+  
 ---
 > **Compute And Resource Quota**
 ---

@@ -18,6 +18,7 @@ it is piesce of softwate when installed on cluster of phisical server offeres th
 
 ![This is OpenStack Image](../images/openstack-components.jpg)
 
+![We can understand from this iamge](../images/coreservice-1.png)
 
 1. Horizaon (Dashboerd servaices)
 2. NOVA  (Compute)
