@@ -192,7 +192,7 @@ nova-compute generates data for the hypervisor driver and executes the request o
 
 # Installtion Process of DevStack (openStack) in Ubuntu 22.04,
 
-{% hightlight ruby %}
+{% highlight ruby %}
 
 1. sudo useradd -s /bin/bash -d /opt/stack -m stack (create user with directory  and shell)
 2. sudo chmod +x /opt/stack   (excutable permission of user)
