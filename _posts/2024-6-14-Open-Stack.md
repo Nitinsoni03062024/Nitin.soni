@@ -190,7 +190,29 @@ Step:16):-
 
 nova-compute generates data for the hypervisor driver and executes the request on the hypervisor using libvirt or API and then finally a VM is created on the hypervior. We can see that VM in Dashboard and also using “nova list” command.
 
+# Installtion Process of DevStack (openStack) in Ubuntu 22.04,
 
+{% hightlight ruby %}
+
+1. sudo useradd -s /bin/bash -d /opt/stack -m stack (create user with directory  and shell)
+2. sudo chmod +x /opt/stack   (excutable permission of user)
+3. echo "stack ALL=(ALL) NOPASSWD: ALL" | sudo tee /etc/sudoers.d/stack (give root permission of stack user)
+4. sudo -u stack -i (Swith user in stack)
+5. git clone https://opendev.org/openstack/devstack (downlod devstack file and directory)
+6. cd devstack/
+7. ls
+8. ADMIN_PASSWORD=enter you password according to you
+9. ifconfig
+10. apt install net-tools (if, ifconfig command is not run then, we can install net-tools packege)
+11. ls
+12. ./stack.sh (run this file for installion openstack) 
+13. and after run and successful this command then check apache2 sercie nginx serivce proper runing
+14. should be difffrent port number of both package (apache and nginx ) and also firewall is active and add port number of apache2 and nginx
+15. then create vim openrc.conf and vim , clouds.yaml and configure according to your machine and Openstack RC files
+    
+If Any issue then you can drop me mail (prathvisoni2001@gmial.com), please
+
+{% endhighlight %}
 
 # Keep Learning....
 
