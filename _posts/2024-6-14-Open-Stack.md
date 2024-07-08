@@ -112,11 +112,8 @@ Provide identity and authentication for all OpenStack Services
 ![This is Working flow of Lauch Instance](../images/OpenStack-VM-Provisioning-Flo.webp)
 
 
-{% highlight ruby %}
 
 nova boot --flavor m1.small --image centos7 --nic net-id={private_network_id} --security-group norprod_sec_grp  --key-name my_key stack_testvm
-
-{% endhighlight %}
 
 
 Step:1):- 
@@ -190,9 +187,7 @@ Step:16):-
 
 nova-compute generates data for the hypervisor driver and executes the request on the hypervisor using libvirt or API and then finally a VM is created on the hypervior. We can see that VM in Dashboard and also using “nova list” command.
 
-# Installtion Process of DevStack (openStack) in Ubuntu 22.04,
-
-{% highlight ruby %}
+# Installtion Process of DevStack (openStack) in Ubuntu 22.04
 
 1. sudo useradd -s /bin/bash -d /opt/stack -m stack (create user with directory  and shell)
 2. sudo chmod +x /opt/stack   (excutable permission of user)
@@ -212,17 +207,12 @@ nova-compute generates data for the hypervisor driver and executes the request o
     
 If Any issue then you can drop me mail (prathvisoni2001@gmial.com), please
 
-{% endhighlight %}
-
 
 # **These are same commands for openstack realted with explaination**
-
-{% highlight ruby %}
 
 1. openstack image create "Ubuntu" --file ubuntu-20.04.6-live-server-amd64.iso --disk-format iso --container-format bare --public ( we can launch the vm in openstack)
 2. openstack image list ( list the list)
 
-{% endhighlight %}
 
 
 
