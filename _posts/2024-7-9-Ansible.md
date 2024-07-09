@@ -42,7 +42,7 @@ We can automate any task with the help of Ansible with out of any agent of ansib
 1. Shell Scritping
 2. Configuration tool (RHCE-Ansible)
 
-> **Ansible**
+> # Ansible**
 
 It's a opensource IT configureation tool management tool, we can automate IT infra.
 
@@ -51,7 +51,7 @@ It's a opensource IT configureation tool management tool, we can automate IT inf
       - Virtulizztion (EXSI/KVM)
       - Storage Service (SAN/NAS)
     
-> **Ansible Arch**
+> # Ansible Arch**
 
 1. Working Sytle (it's an agent less configuration tool)
 2. Controll Node (we can install ansible in linux Server, bottom of Linux OS)
@@ -63,6 +63,25 @@ It's a opensource IT configureation tool management tool, we can automate IT inf
 8. Playbook (fule method)
 9. Yaml file (we will write yaml playbook file)
 
+> # What is Inventory files and How to create incentory files, ( we can manage controll node and we can contins data of node)
+
+{% highlight ruby %}
+
+1. mkdir inventory (create direcotry)
+2. cd inventory
+3. vim test (add controller nodes in this file)
+4. ls -l /etc/ansible/hosts (This is by default inventory of ansible)
+5. ansible web --list-hosts -i inventory/test (this command is show how many entrys is there in /hosts file)
+6. ansible all --list-hosts -i inventory/
+
+{% endhighlight %}
+
+- ansibe --vesion  (show by default inventory file)
+- vim /etc/ansible/ansible.cf (thi is by default inventory file, we can modifie according to the need)
+- export ANSIBLE_CONFIG=/etc/ansible/ansible.cfg (We are exporting varialble of anible cfg file, we can fire command for ansible from any location, but this is a temprory)
+- vim .bashrc 
+
+       - export ANSIBLE_CONFIG=/etc/ansible/ansible.cfg (this is permant )
 
 
 # keep Learnining.......
