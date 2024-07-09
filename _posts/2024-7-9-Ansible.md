@@ -17,7 +17,7 @@ We can automate any task with the help of Ansible with out of any agent of ansib
 # How to install Ansbile server in ubuntu 22.04
 
 - (EPEL) Extra Packages for Enterprise Linux.
-`
+
 {% highlight ruby %}
 
     -  sudo apt-get update -y && sudo apt-get upgrade -y
@@ -36,6 +36,8 @@ We can automate any task with the help of Ansible with out of any agent of ansib
     -  ansible --version
 
 
+
 {% endhighlight %}
+
 
 # keep Learnining.......
