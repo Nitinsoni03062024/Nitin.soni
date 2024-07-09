@@ -1091,7 +1091,7 @@ It,s a kubernetes manifect packege manger
    
 
 # Resource Monitoring in Kubernetes,
-
+ 
 2 Types of monitoring is available in kubernetes,
 
 1. Resoures Monitoring :- 
@@ -1104,6 +1104,8 @@ It,s a kubernetes manifect packege manger
             - Elastic Search (Log Server, And It's not GUI interface)
             - Kibana  (GUI)
             - Fluentd/Logstash (Agent)
+            - EFK (Elastic fluentd kibana)
+            - ELK (Elastic search login test kibana)
 
 - EFK (Elastic fluentd kibana)
 - ELK (Elastic Search logstash kibana)

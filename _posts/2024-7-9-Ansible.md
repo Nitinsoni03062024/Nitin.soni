@@ -35,9 +35,34 @@ We can automate any task with the help of Ansible with out of any agent of ansib
     -  apt install ansible -y
     -  ansible --version
 
-
-
 {% endhighlight %}
+
+> **Configuration**
+
+1. Shell Scritping
+2. Configuration tool (RHCE-Ansible)
+
+> **Ansible**
+
+It's a opensource IT configureation tool management tool, we can automate IT infra.
+
+      - Server (Linux/Window)
+      - Device (Router/Switch/firewall)
+      - Virtulizztion (EXSI/KVM)
+      - Storage Service (SAN/NAS)
+    
+> **Ansible Arch**
+
+1. Working Sytle (it's an agent less configuration tool)
+2. Controll Node (we can install ansible in linux Server, bottom of Linux OS)
+3. Manage Node (the server deivces, /devices/firewall/switch/router/virtulization)
+4. Connection Plugin (ansible by default runing i SSH service)
+5. Inventory Files (the file which contians about your manage node)
+6. Modules (module is write in python)
+7. Ad Hoc (command line)
+8. Playbook (fule method)
+9. Yaml file (we will write yaml playbook file)
+
 
 
 # keep Learnining.......
