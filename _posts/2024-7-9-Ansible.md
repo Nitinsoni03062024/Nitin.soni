@@ -73,7 +73,7 @@ It's a opensource IT configureation tool management tool, we can automate IT inf
 4. ls -l /etc/ansible/hosts (This is by default inventory of ansible)
 5. ansible web --list-hosts -i inventory/test (this command is show how many entrys is there in /hosts file)
 6. ansible all --list-hosts -i inventory/
-
+ 
 {% endhighlight %}
 
 - ansibe --vesion  (show by default inventory file)
@@ -82,6 +82,32 @@ It's a opensource IT configureation tool management tool, we can automate IT inf
 - vim .bashrc 
 
        - export ANSIBLE_CONFIG=/etc/ansible/ansible.cfg (this is permant )
+
+> # How to set password less authentication in server machine, (how many types of server authentication)
+
+1. Password authentication
+2. Password less authenticaion
+3. file based authentication
+4. SSH based authentication
+
+> **Password less authenticaion**
+
+- ssh-keygen (server side)
+- ls .ssh/ (create private and pulic key in this file)
+- sh-copy-id -i id_rsa.pub ubuntu@13.202.94.27 (copy public file in another server)
+
+
+> # Connection Estabilished with manage node
+
+Authentication:- 
+ 1. key based authentication
+ 2. Password Based authenticaion
+ 3. inventory file based authentication 
+
+
+
+
+
 
 
 # keep Learnining.......

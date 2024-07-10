@@ -213,7 +213,12 @@ If Any issue then you can drop me mail (prathvisoni2001@gmial.com), please
 1. openstack image create "Ubuntu" --file ubuntu-20.04.6-live-server-amd64.iso --disk-format iso --container-format bare --public ( we can launch the vm in openstack)
 2. openstack image list ( list the list)
 
+# How to create project ?
 
+1. source path
+2. openstack project list
+3. openstack project create --domain <domain-name> --description "Project description" <project-name>
+4. 
 
 
 # Keep Learning....
