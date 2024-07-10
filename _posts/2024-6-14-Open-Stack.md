@@ -218,6 +218,12 @@ If Any issue then you can drop me mail (prathvisoni2001@gmial.com), please
 1. source path
 2. openstack project list
 3. openstack project create --domain <domain-name> --description "Project description" <project-name>
+
+# How to add volume to instance ?
+
+1. openstack volume list
+2. openstack volume create --size 10 --description "Test Volume" test-volume
+3. openstack volume list
 4. 
 
 
