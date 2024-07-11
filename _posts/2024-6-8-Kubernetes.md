@@ -3,11 +3,11 @@ layout: post
 title:  Kubernetes Orchestration ?
 ---
 
-# What is kubernetes (9 September 2014)
+> # What is kubernetes (9 September 2014)
 
 Kubernetes it's a orchestration tool, With the help of Kubernetes we can manage multiple containers at a time If one of our containers failed for same reaion, then we can automatically create another container with the same configuration, Kubernetes provide me same featuer like and Kubernetes is a system for application deployment that enables efficient use of the containerized infrastructure that powers modern applications, You can also run Kubernetes on-premises or within the public cloud. AWS, Azure and Google Cloud Platform (GCP) offer managed Kubernetes solutions to help you start quickly and efficiently operating K8s apps. Kubernetes also makes apps much more portable, so IT can move them more easily between different clouds and internal environments Kubernetes is the most popular open-source project from the Cloud Native Computing Foundation (CNCF), with active engagement and contribution from many enterprises, large and small we can login multuile node from a one place.
 
-> **Introduction of Kubernetes**
+> # Introduction of Kubernetes
 
 1. **Centralized Managment for cluster Host**
   
@@ -21,7 +21,7 @@ Kubernetes it's a orchestration tool, With the help of Kubernetes we can manage 
 
 Now we can add container more existing runing application .
 
-> **These are most popular feature of kubernetes**
+> # These are most popular feature of kubernetes
 
 1. Centralized managment for conatiner host :- We are able to all conatainer mahcine Container host from the single host
 2. Cluster Failer :- Kubernetes also provide cluster failer feature container can migrate one machine to another machine
@@ -52,7 +52,7 @@ Horizontal scaling is the ability for an application to automatically scale by a
   
 4. ROllout and Rollback :- We can rollout and rollback of conatiner application with out downtime, kubernetes it'saying that we can distroy and deploy new containter in zero downtime, we can upgrade you application in new conatiner, and there is same issue in new conatainer then rollback to previous version conatiner.
 
-> **How does work kubernetes**
+> # How does work kubernetes
 
 This is a Images,
 
@@ -77,7 +77,7 @@ This is a Images,
 
 > Note **3 Server required for kubernetes server and master, 1st for kubernetes master and 2ad and 3ad kubernetes-node server **
 
-> **This is for kubernetes server**
+> # This is for kubernetes server
 
 {% highlight ruby %}
     1  hostname
@@ -107,7 +107,7 @@ This is a Images,
 
 {% endhighlight %}
 
-> **This is fro kubernetes-node server**
+# This is fro kubernetes-node server
 >
 {% highlight ruby%}
  sudo apt-get update
@@ -203,7 +203,7 @@ First you can go to docker website, (Install ubuntu-20.04)
 
 
 
-> **What is kubernetes namespace(Project)**
+> # What is kubernetes namespace(Project)
 
 Kubernetes namespace means that according to which user is working in which namespace, every user has a particular area which the user can do only by logging in with his user, multipule team can work easily and also we can seprate workload team wise based on the project we can provide priviliges for users and we can provide CPU/Memory/storage use for team ,
 
@@ -212,14 +212,14 @@ To easiy explain, namespace and project in simple language, if we open any accou
 
 > - kubectl get ns (show all namespaces in kuberneres)
 
-# How to create Pod in kubernetes
+> # How to create Pod in kubernetes
 
 > **There are 2 types of pod**
  
 - 1:- Pod Creation (Simple/Orphan pod)
 - 2:- Controlller pod
   
-# How to create simple/orphan pod by command line in kubernetes.
+> # How to create simple/orphan pod by command line in kubernetes.
 
 {% highlight ruby%}
 
@@ -312,7 +312,8 @@ that the reasion we are going to kubernetes offial page, and in search option we
 
 {% endhighlight %}
 
-# What is Label and Selector in kubernetes Resources.
+> # What is Label and Selector in kubernetes Resources.
+
 > **In case pod only**
 
 for example you have to a multipule pod with labels, and you you find pod from label level, the we need to label
@@ -330,11 +331,11 @@ for example you have to a multipule pod with labels, and you you find pod from l
 
 {% endhighlight %}
 
-> **Now, we are set lable in RC pod file**
+ **Now, we are set lable in RC pod file**
 
 In RC work on equality base, and if value is machted during the creating 2 container then you one pod will not ceate during the valume match from label and selector.  
 
-> **Note**
+ **Note**
 
 Label and sector are at 2 places in the RC pod file, 1st **top of spac** section and 2ad **billow of the spec**
 
@@ -350,7 +351,7 @@ Label and sector are at 2 places in the RC pod file, 1st **top of spac** section
 
 ![This is a file](../images/lable-topof%20spec.png)
 
-# Replica Set.
+> # Replica Set.
 
 In replica set, work on set bases, 
 
@@ -461,7 +462,7 @@ In This stretagy old veriso directoly is deleted and then new version is created
 
 It's a teknic for both application is runing, When both the applications were run, we could see a difference in both version application.
 
-# Pod Shedulling.
+> # Pod Shedulling.
 
 1. Node Name based shedulling 
 2. Node label and selector based schedulling
@@ -555,7 +556,7 @@ Billow of metadata:-
 ![This is iamge of add valumes in namespcace](../images/namescpaceedit.png)
 
 
-> **Tait and toleration Based Schedulling**
+> # Tait and toleration Based Schedulling
 
 Test and Tolerance is used only for deidcated hardware requirement for pode, So that no pod can come to that node.
 
@@ -621,7 +622,7 @@ Test and Tolerance is used only for deidcated hardware requirement for pode, So 
   - kubectl create -f pod.yml
   - kuebctl get pod
 
-# Afinity And Anti-Afinity
+> # Afinity And Anti-Afinity
 
 > **Node lavel (lablel and selector) affinity and Anti-Affnity**
 
