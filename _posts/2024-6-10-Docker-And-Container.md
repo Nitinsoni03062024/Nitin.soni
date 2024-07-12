@@ -470,8 +470,6 @@ We can't user this parametter 2 times, when we required any command from the use
 
 > **This is a example of docker file**
 
-{% highlight ruby %}
-#
 # NOTE: THIS DOCKERFILE IS GENERATED VIA "update.sh"
 #
 # PLEASE DO NOT EDIT IT DIRECTLY.
@@ -598,6 +596,7 @@ EXPOSE 80
 STOPSIGNAL SIGQUIT
 
 CMD ["nginx", "-g", "daemon off;"]
+
 {% endhighlight %}
 
 # What is Docker Compose.
