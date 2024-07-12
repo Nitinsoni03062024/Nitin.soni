@@ -319,7 +319,7 @@ Docker netwokring we can manage network, and we can allow and blog any particila
 -  docker network disconnect frontend app (disconnet network from container)
 -  docker network rm frontend (delete bridge)
 
-{% endighlight %}
+{% endhighlight %}
   
 > **Container Expose(We are access container outside the network)**
 
@@ -470,6 +470,8 @@ We can't user this parametter 2 times, when we required any command from the use
 
 > **This is a example of docker file**
 
+{% highlight ruby %}
+
 # NOTE: THIS DOCKERFILE IS GENERATED VIA "update.sh"
 #
 # PLEASE DO NOT EDIT IT DIRECTLY.
@@ -487,7 +489,7 @@ RUN set -x \
 # create nginx user/group first, to be consistent throughout docker variants
 
 
-{% highlight ruby %}
+
 
     && groupadd --system --gid 101 nginx \
     && useradd --system --gid nginx --no-create-home --home /nonexistent --comment "nginx user" --shell /bin/false --uid 101 nginx \
