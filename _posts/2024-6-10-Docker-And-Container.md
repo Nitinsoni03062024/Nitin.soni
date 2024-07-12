@@ -3,22 +3,22 @@ layout: post
 title: Docker And Container ?
 ---
 
-# About Docker (20 March 2013)?
+> # About Docker (20 March 2013)?
 
 - Programming language: Go
 - Initial release: March 20, 2013; 11 years ago
 - Developer: Docker, Inc.
 - Operating system: Linux, Windows, macOS
   
-# What is Docker? 
+> # What is Docker? 
 
 Docker is a set of platform as a service products that use OS-level virtualization to deliver software in packages called containers. The service has both free and premium tiers docker is an open platform for developing, shipping, and running applications, Docker enables you to separate your applications from your infrastructure so you can deliver software quickly And Docker provides the ability to package and run an application in a loosely isolated environment called a container The isolation and security lets you run many containers simultaneously on a given host. Containers are lightweight and contain everything needed to run the application.
 
-> **What is provisoning**
+> # What is provisoning
 
 It’s a method to providing VMs with some application installation.
 
-> **Provisioning Method**
+> # Provisioning Method
 
 - 1) VM/Instance Based: This is example of hardware virtualization.
 - 2) Container Based: This is example of OS base virtualization.
@@ -37,7 +37,7 @@ hardware simultaneously.
 
 ![Thi is images](../images/Hypervisor.png)
 
-> **OS Virtualization**
+> # OS Virtualization
 
 1. Docker Host/Engine: A machine/OS that will run multiple container machines
 
@@ -46,12 +46,12 @@ hardware simultaneously.
 Docker ce: Community Edition
 Docker ee: Enterprise Edition (One month subscription is free with your ID)
 
-> **What is docker client**
+> # What is docker client
 
 Client machine from where we can provision containers. This is just like your client workstation and 
 generally its not recommended to take docker client.
 
-> **What is docker images**
+> # What is docker images
 
 Its light weight image for particular application. To spin the container you should have at least 
 available. It has minimal configuration to deploy any container.
@@ -81,7 +81,7 @@ Note: We can deploy multiple container using same docker image.
 
 > **How to Install Docker community addition**
 
-> **: Create one centos machine in AWS Cloud**
+> # Create one centos machine in AWS Cloud
 
 -  yum install -y yum-utils
 - yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
@@ -92,7 +92,9 @@ Note: We can deploy multiple container using same docker image.
 - systemctl enable docker
 - docker version
   
-> **Docker Image command**
+> # Docker Image command
+
+{% highlight ruby %}
 
 - docker images
 - docker ps
@@ -105,8 +107,13 @@ Note: We can deploy multiple container using same docker image.
 - docker pull centos:7
 - docker images
 - docker history b5b4d78bc90c [to check the history of docker image]
+
+{% endhighlight %}
   
-> **Create first container by using centos image**
+> # Create first container by using centos image
+
+
+{% highlight ruby %}
 
 - hostnamectl set-hostname docker-host
 - bash
@@ -115,8 +122,12 @@ Note: We can deploy multiple container using same docker image.
 - /]# exit
 - docker ps [you will not see any container listed here]
 - docker ps -a [to list all containers]
+
+{% endhighlight %}
   
-> **Basics command about the Images/containers**
+> #Basics command about the Images/containers
+
+{% highlight ruby %}
 
 1. systemctl is-acitve docker (docker runing or not)
 2. docker info (all deatils is show of docker)
@@ -129,13 +140,17 @@ Note: We can deploy multiple container using same docker image.
 9. docker tag 356125da0595 httpd:latest (Tag images from docker)
 10. docker pull ubuntu (You can pull raw images)
 
+{% endhighlight %}
+
 > **Two Types of images are available in docker**
 
 1. Service image (mysql,nginx,httpd,apaceh, etc)
 
 2. Raw images (minor footprint, Packed same services, In a raw images same normal command are avalable, like:- ls, mkdir,touch etc.), Raw images when we want to create costom images then we need raw images, with help of raw images we can create images, we can't create any images with raw image.
 
-> **How to create container images in docker**
+> # How to create container images in docker
+
+{% highlight ruby %}
 
 1. docker ps (how many container runiung)
 2. docker images
@@ -168,12 +183,18 @@ attach existing  bash process. i dont start  new  bash process .)
 17. docker pull ubuntu (pull raw image)
 18. docker run -d --name=demo ubuntu bash (log and create container)
 
-> **How to insatll database in docker, mysql,nariadb**
+{% endhighlight %}
+
+> # How to insatll database in docker, mysql,nariadb
+
+{% highlight ruby %}
 
 19. docker pull mysql
 20. docker logs containername (you can find logs)
 21. docker images inspect ubuntu CON1 | grep -i upper ( you can find upper diretory)
 22. docker images inspect ubuntu CON1 | grep -i Lower ( we can find lower diretory)
+
+{% endhighlight %}
 
 # Note :-
 
@@ -181,9 +202,10 @@ attach existing  bash process. i dont start  new  bash process .)
 
 2. docker run -d it --name=rawcon (if we are runing this command then conatienr is runing and login because we can fire command with -d option -d mean that direct login contaienr and create container deamon mode)
 
-# Docker File System,
+> # Docker File System,
 
 > **Images/Container file system**
+
 
 1.  /var/lib/docker/overlay2  =>  This is path of container writing layer, all details are available in this diretory Overlayfs allows one, usually read-write, directory tree to be overlaid onto another, read-only directory tree. All modifications go to the upper, writable laye. we can access file with run the command with help of /var/lib/docker/overlay2/28ec896513d30aa0239577151b227f7111867d9df041ed1a1e15077008e1ad73/diff/.
 
@@ -193,7 +215,10 @@ Note :- If you images is delete then also we can access your images from backend
 
 ![You can undersatnd from this docker images file system](../images/FileSystemDocker.png)
 
-> **Image Build**
+> # Image Build
+
+{% highlight ruby %}
+
 when we need costom image creation from existing images, then we need to costom image
 
 - 1. Step :- Raw Image
@@ -201,7 +226,11 @@ when we need costom image creation from existing images, then we need to costom 
 - 3. Step :- Installtion the application related software
 - 4 Step :- To commit container images
   
+{% endhighlight %}  
+
 > **Now we are createing RAW image**
+
+{% highlight ruby %}
 
 - 1:- docker pull ubuntu
 - 2:- docker run -it --name=demo ubuntu
@@ -210,8 +239,10 @@ Note :- After login in Raw Image then we are install same software (packages)
 
 - 3:- docker commit demo(Container name ) apach2 (New image)
 - 4:- docker images 
+
+{% endhighlight %}
   
-# Docker Volume.
+> # Docker Volume.
 
 According to the need we can create disk amd make the directory and mount from disk for data writing and reading, we can create volume in docker machine, and this is backend file for volume, => /var/lib/docker/volume.
 
@@ -224,22 +255,30 @@ According to the need we can create disk amd make the directory and mount from d
   
 > How to create voulme and attache from diretory in docker. (This techique is not use in dockerm mchine)
 
+{% highlight ruby %}
+
 - 1. lsblk
 - 2. mkfs -t /xfs /dev/sdb
 - 3. mkdir /Nitin
 - 4. mount /dev/sdb /Nitin
 - 5. docker pull mysql 
 - 6. docker run -d --name=DB -v /Nitin:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=redhat@123 mysql (Attached volume from this command with particular diretory)
+
+{% endhighlight %}
   
 > - 2.  Docker Native Volume
 
 > **How to create native volume in docker(this is most uses tecqunic  in  docker )**
 
+{% highlight ruby %}
+
 - 1. docker volume ls (show all volumes in docker)
 - 2. docker volume create nitin (we can create new volumne)
 - 3. docker run -d -v vol1:/usr/share/nginx/html --name=demo nginx
   
-# Docker Networking?.
+ {% endhighlight %} 
+
+> # Docker Networking?.
 
 Docker netwokring we can manage network, and we can allow and blog any particilar IP, and traffice can mamage in docker, we can create costom bridge netork for saprate assign IP for conatainer
 
@@ -264,11 +303,13 @@ Docker netwokring we can manage network, and we can allow and blog any particila
 - > **Bridge Network**
 - > **These are same command of docker network**
 
+{% highlight ruby %}
+
 - 1. docker network ls
 - 2. docker network inspect bridge 
 - 4. rount -n (show network realted insformation)
   
-**Creating Bridge Network**
+> #Creating Bridge Network
 
 - docker network create --subnet 192.16810.24/24(you can take any IP) --driver bridge(type bridge netwoek) frontnd(Bridge network name)
 - docker network ls
@@ -277,12 +318,16 @@ Docker netwokring we can manage network, and we can allow and blog any particila
 - docker network connect frontend app (we are connecting network from frontend bridge netwoek)
 -  docker network disconnect frontend app (disconnet network from container)
 -  docker network rm frontend (delete bridge)
+
+{% endighlight %}
   
 > **Container Expose(We are access container outside the network)**
 
 When we are require that, we want to reach container outside the network, that time we are creating container expose.
 
 > External users want to reach your container,
+
+{% highlight ruby %}
 
 - Port Forwarding,
 -  1:- Static Port Forwarding (We are define port forwording for reach container from outside the network) 
@@ -294,19 +339,24 @@ When we are require that, we want to reach container outside the network, that t
 - 3. docker run -d --name-web1 -p 8080:80 nginx (this container reach outside the docker host) **Daynamic Port forwordinf**
 - 4. docker run -d --name-web1 -P nginx **Dynamic Port forwording**
   
+{% endhighlight %}
 
 > **Host Network And None Network**
 
-**Host Network**
+> #Host Network
 
 The container they directly attache docker machine OR docker system IP, 
 They are not part of bridge network we can access such contianer from external world using docker IP's and no need configure port forwarding but there is concern if we deploy one nginx container which work on 80 port that meant we can't nginx container using host network on 80 port.
 
 **How we can create Host network**
 
+{% highlight ruby %}
+
 1. docker pull nginx
 2. docker run -d --name=web1 --network host nginx (Create container waith host network)
 3. docker network ls
+
+{% endhighlight %}
 
 AND None Network,
 
@@ -316,11 +366,15 @@ none network in docker means when you don't want any network interface for your 
 
 None network not any itself IP, and we can use only testing purpose we can not use for deployment.
 
+{% highlight ruby %}
+
 1. docker pull nginx
 2. docker run -d --name=web1 --network none nginx (create none network)
 3. docker network ls 
 
-# What is Docker File And Why we need Docker file.
+{% endhighlight %}
+
+> # What is Docker File And Why we need Docker file.
 
 Docker file is a file, we have put all estraction for create container automaticly , with the help of docker file we can create container automatic.
 
@@ -433,6 +487,10 @@ ENV PKG_RELEASE     2~bookworm
 
 RUN set -x \
 # create nginx user/group first, to be consistent throughout docker variants
+
+
+{% highlight ruby %}
+
     && groupadd --system --gid 101 nginx \
     && useradd --system --gid nginx --no-create-home --home /nonexistent --comment "nginx user" --shell /bin/false --uid 101 nginx \
     && apt-get update \
@@ -463,6 +521,9 @@ RUN set -x \
     " \
     && case "$dpkgArch" in \
         amd64|arm64) \
+
+{% endhighlight %}
+
 # arches officialy built by upstream
             echo "deb [signed-by=$NGINX_GPGKEY_PATH] https://nginx.org/packages/mainline/debian/ bookworm nginx" >> /etc/apt/sources.list.d/nginx.list \
             && apt-get update \
@@ -584,6 +645,7 @@ And, docker-compose up -d (From this command we will run docker compose file)
 > **This is example of docker file**
 
 {% highlight ruby %}
+
 version: '3'
 services:
     web:
@@ -640,6 +702,7 @@ services:
             - "8989:3306"
         volumes:
             - "./data/db/mysql:/var/lib/mysql"
+
 {% endhighlight %}
 
 # What is docker registory  
