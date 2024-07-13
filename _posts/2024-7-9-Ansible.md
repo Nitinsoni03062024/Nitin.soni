@@ -61,15 +61,36 @@ It's a opensource IT configureation tool management tool, we can automate IT inf
 
 1. mkdir inventory (create direcotry)
 2. cd inventory
-3. vim test (add controller nodes in this file)
+3. vim test (add controller nodes in this file, thi is a costom invenytory file)
+
+
+              - [web] # This is grouping, if we want to add multule node from ansible server side, then we grouping for identificatio
+              - 192.168.10.1
+              - 192.168.10.1
+              - 192.168.10.1
+
+              - [Database Server]
+              - system1@example.com
+              - system2@example.com
+
+              - [Dev]
+              - exmapple1@nitin.com
+              - example2@nitin.com
+              
+              - [nitinsoni:children] ( we can add group of subgrup, we can run both group at a time)
+              - web
+              - prod
+
+
 4. ls -l /etc/ansible/hosts (This is by default inventory of ansible)
-5. ansible web --list-hosts -i inventory/test (this command is show how many entrys is there in /hosts file)
+5. ansible web:dev --list-hosts -i inventory/test (this command is show how many entrys is there in /hosts file)
 6. ansible all --list-hosts -i inventory/
+7. ansible web --list-hosts -i inventory/test (showing only web group node)
  
 {% endhighlight %}
 
 - ansibe --vesion  (show by default inventory file)
-- vim /etc/ansible/ansible.cf (thi is by default inventory file, we can modifie according to the need)
+- vim /etc/ansible/ansible.cf (this is by default inventory file, we can modifie according to the need)
 - export ANSIBLE_CONFIG=/etc/ansible/ansible.cfg (We are exporting varialble of anible cfg file, we can fire command for ansible from any location, but this is a temprory)
 - vim .bashrc 
 
@@ -92,22 +113,47 @@ It's a opensource IT configureation tool management tool, we can automate IT inf
 > # Connection Estabilished with manage node
 
 Authentication:- 
+
  1. key based authentication
- 2. Password Based authenticaion
+ 2. Password Based authenticaion (-k, password authentication with manage node)
  3. inventory file based authentication 
+
+
+> **inventory file based authentication**
+
+          - [web]
+          - 52.66.88.107    ansible_ssh_user=ubuntu ansible_ssh_pass=Nitin@003
+
+          - [dev]
+          - 43.204.230.252  ansible_ssh_user=ubuntu ansible_ssh_pass=Nitin@003
+
+          ansible all -m ping (when we are putting the password in this file /etc/ansible/hosts, then then don't have any -u option)
 
 > # How to push configuration
 
     - Ad Hoc (Command line)
     - playbook (Write a file and Excute)
 
-[ #ansible targate(where you wnat to push configuration) -m module -a 'key=value']
+           - Be sure that, controlle node will communicate with worker node or not
+
+- ansible targate(where you wnat to push configuration) -m module -a (arguments) 'key=value'
 
 # Example Number-1
 
-> **How to copy contoll node to manage node**
+> **How to copy file contolle node to manage node**
+
+{% highlight ruby %}
+
+- ansible all -m ping (this command will sure that, from the contolle node will communicate with worker node or not)
+- ansible all -m ping -k (if your private key is deleted, then we can access with -k opetion with password)
+- ansible all -m ping -u ubuntu -k (ansible is login from all worker node in ubuntu user, and push tasks)
+- ansible-doc -l (showing all modules in ansible)
+- ansible-doc -l | grep -i win (showing all window modules)
+- ansible-doc -l | grep -i user (showing user relted module)
+- ansible-doc -l copy
 
 
+{% endhighlight %}
 
 
 
