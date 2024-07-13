@@ -151,7 +151,10 @@ Authentication:-
 - ansible-doc -l | grep -i win (showing all window modules)
 - ansible-doc -l | grep -i user (showing user relted module)
 - ansible-doc -l copy
-
+- ansible web -m copy -a 'src=test dest=/tmp/' (copy test file in tmp folder)
+- ansible wall -m copy -a 'src=test dest=/tmp/'
+- ansible dev -m command -a 'id' ( this command excute from worker node and showing owner details)
+- 
 
 {% endhighlight %}
 
