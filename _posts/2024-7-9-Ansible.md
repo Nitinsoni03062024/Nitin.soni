@@ -22,15 +22,7 @@ We can automate any task with the help of Ansible with out of any agent of ansib
 
     -  sudo apt-get update -y && sudo apt-get upgrade -y
     -  sudo apt install alien -y
-    -  alien -V
-    -  wget https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm
-    -  sudo alien -i google-chrome-stable_current_x86_64.rpm
-    -  sudo alien -i google-chrome-stable_current_x86_64.rpm 
-    -  sudo alien -i google-chrome-stable_current_x86_64.rpm --no-force-overwrite
-    -  wget https://rpmfind.net/linux/openmandriva/cooker/repository/x86_64/main/release/firefox-114.0.2-3-omv2390.x86_64.rpm
-    - wget -qO- https://download.webmin.com/jcameron-key.asc | sudo tee -a /etc/apt/trusted.gpg.d/jcameron-key.asc
-    -  ll
-    -  sudo add-apt-repository "deb [arch=amd64] http://download.webmin.com/download/repository sarge contrib"
+    -  sudo add-apt-repository "deb [arch= amd64] http://download.webmin.com/download/repository sarge contrib"
     -  sudo add-apt-repository ppa:ansible/ansible
     -  apt install ansible -y
     -  ansible --version
@@ -104,7 +96,16 @@ Authentication:-
  2. Password Based authenticaion
  3. inventory file based authentication 
 
+> # How to push configuration
 
+    - Ad Hoc (Command line)
+    - playbook (Write a file and Excute)
+
+[ #ansible targate(where you wnat to push configuration) -m module -a 'key=value']
+
+# Example Number-1
+
+> **How to copy contoll node to manage node**
 
 
 
