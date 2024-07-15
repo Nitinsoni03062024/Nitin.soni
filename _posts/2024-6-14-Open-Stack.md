@@ -196,14 +196,17 @@ nova-compute generates data for the hypervisor driver and executes the request o
 5. git clone https://opendev.org/openstack/devstack (downlod devstack file and directory)
 6. cd devstack/
 7. ls
-8. ADMIN_PASSWORD=enter you password according to you
-9. ifconfig
-10. apt install net-tools (if, ifconfig command is not run then, we can install net-tools packege)
-11. ls
-12. ./stack.sh (run this file for installion openstack) 
-13. and after run and successful this command then check apache2 sercie nginx serivce proper runing
-14. should be difffrent port number of both package (apache and nginx ) and also firewall is active and add port number of apache2 and nginx
-15. then create vim openrc.conf and vim , clouds.yaml and configure according to your machine and Openstack RC files
+8. ADMIN_PASSWORD=secret
+9. DATABASE_PASSWORD=$ADMIN_PASSWORD
+10. RABBIT_PASSWORD=$ADMIN_PASSWORD
+11. SERVICE_PASSWORD=$ADMIN_PASSWORD
+12. ifconfig
+13. apt install net-tools (if, ifconfig command is not run then, we can install net-tools packege)
+14. ls
+15. ./stack.sh (run this file for installion openstack) 
+16. and after run and successful this command then check apache2 sercie nginx serivce proper runing
+17. should be difffrent port number of both package (apache and nginx ) and also firewall is active and add port number of apache2 and nginx
+18. then create vim openrc.conf and vim , clouds.yaml and configure according to your machine and Openstack RC files
     
 If Any issue then you can drop me mail (prathvisoni2001@gmial.com), please
 
