@@ -206,9 +206,12 @@ nova-compute generates data for the hypervisor driver and executes the request o
 13. apt install net-tools (if, ifconfig command is not run then, we can install net-tools packege)
 14. ls
 15. ./stack.sh (run this file for installion openstack) 
-16. and after run and successful this command then check apache2 sercie nginx serivce proper runing
-17. should be difffrent port number of both package (apache and nginx ) and also firewall is active and add port number of apache2 and nginx
-18. then create vim openrc.conf and vim , clouds.yaml and configure according to your machine and Openstack RC files
+16. downlaod openrc file from opentack console
+17. then create file like this :- vim openrc.conf
+18. source openrc.conf
+19. and after run and successful this command then check apache2 sercie nginx serivce proper runing
+20. should be difffrent port number of both package (apache and nginx ) and also firewall is active and add port number of apache2 and nginx
+21. then create vim openrc.conf and vim , clouds.yaml and configure according to your machine and Openstack RC files
     
 If Any issue then you can drop me mail (prathvisoni2001@gmial.com), please
 
