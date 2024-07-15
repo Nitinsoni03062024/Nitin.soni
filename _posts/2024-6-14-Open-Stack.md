@@ -189,6 +189,8 @@ nova-compute generates data for the hypervisor driver and executes the request o
 
 # Installtion Process of DevStack (openStack) in Ubuntu 22.04
 
+{% highlight ruby %}
+
 1. sudo useradd -s /bin/bash -d /opt/stack -m stack (create user with directory  and shell)
 2. sudo chmod +x /opt/stack   (excutable permission of user)
 3. echo "stack ALL=(ALL) NOPASSWD: ALL" | sudo tee /etc/sudoers.d/stack (give root permission of stack user)
@@ -196,8 +198,8 @@ nova-compute generates data for the hypervisor driver and executes the request o
 5. git clone https://opendev.org/openstack/devstack (downlod devstack file and directory)
 6. cd devstack/
 7. ls
-8. ADMIN_PASSWORD=secret
-9. DATABASE_PASSWORD=$ADMIN_PASSWORD
+8.  ADMIN_PASSWORD=secret
+9.  DATABASE_PASSWORD=$ADMIN_PASSWORD
 10. RABBIT_PASSWORD=$ADMIN_PASSWORD
 11. SERVICE_PASSWORD=$ADMIN_PASSWORD
 12. ifconfig
@@ -210,6 +212,7 @@ nova-compute generates data for the hypervisor driver and executes the request o
     
 If Any issue then you can drop me mail (prathvisoni2001@gmial.com), please
 
+{% endhighlight %}
 
 # **These are same commands for openstack realted with explaination**
 
