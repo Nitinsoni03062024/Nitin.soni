@@ -275,5 +275,36 @@ Authentication:-
 {% endhighlight %}
 
 
+> **We can write the file in these formate**
+
+1. Single Line Formate
+2. Multi Line Formate
+3. Dictionary Formate
+
+> **Billow example of 3 formate**
+
+{% highlight ruby %}
+
+- hosts: web
+  tasks:
+    - name: This is exmaple of dictionary formate
+    - file:
+       path: /tmp/cloud
+       state: directory
+
+    - name: This is exmaple of single line formate
+      file: path=/tmp/cloud state=directory mode=0777 owner-wheel
+
+
+    - name: This is exmaple of multilne formate
+      file: path=/tmp/cloud
+            state=directory
+            mode=0777
+            owner=root
+            group=root           
+
+{% endhighlight %}
+
+
 # keep Learnining.......
 
