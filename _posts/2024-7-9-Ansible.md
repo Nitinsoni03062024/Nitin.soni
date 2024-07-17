@@ -57,6 +57,11 @@ It's a opensource IT configureation tool management tool, we can automate IT inf
 
 > # What is Inventory files and How to create incentory files, ( we can manage controll node and we can contins data of node)
 
+By default ansible 2 places read the inventory file,
+
+1. /etc/ansible/hosts
+2. /etc/ansible/ansible.cfg
+
 {% highlight ruby %}
 
 1. mkdir inventory (create direcotry)
@@ -159,5 +164,116 @@ Authentication:-
 {% endhighlight %}
 
 
+# Ad Hoc Exmaples
+
+{% highlight ruby %}
+
+1. command module (for OS related)
+- ansible all -m command -a 'uname -r'
+
+2. Raw module (run two command in at a time)
+- ansible all -m raw -a 'uname -m ; uptime'
+
+3. Copy Module (for copy)
+- ansible web -m copy -a 'src=test dest=/tmp/
+
+4. fatch module (for revers, to fatch data from worker node to controller node)
+- ansible all -m fetch -a 'src=/etc/fstab dest=/tmp/backup'
+
+5. synchrone (between the worker node we can copy the file and data)
+
+6. Lineinlife (we can add one line,)
+
+7. Replace 
+
+8. File 
+{% endhighlight %}
+
+# Basic Ansible,
+
+> Name ( should be must that, we are taking the file extenstion .yml OR .yaml file)
+> Path ( anywhere we can write a path)
+
+**What is yml OR Yaml**
+
+> Yaml (ain't another markup language) :- When we are creating any file in linux then we can take the file name extensiton, yml OR yaml formate for example :- "nitin.yml OR nitin.yaml" this is file extension 
+
+- address : c32 ( key: value ) (String type value)
+
+- address:  (List Type Arrey, When the same key has multiple values, there are - )
+        - c1
+        - c2
+        - c3
+        - c3
+
+- Nitin :       ( mapping type arrey, must be take space )
+        skills: 
+            - Python
+            - java
+        number: 3443
+        address: Noida
+
+**Now we are write fist playbook of ansible**
+
+- Task: folder /tmp/cloud
+- Task: /etc/fstab into /tmp/cloud
+- Task: crond restart
+
+
+**This is basic file for anisble**
+
+ {% highlight ruby %}
+
+- hosts:
+    - web
+    - prod
+  tasks:
+    - file:
+       path: /tmp/cloud
+       state: directory
+    - copy:
+       src: /etc/fstab
+       dest: /tmp/cloud
+    - service:
+       name: cron.service
+       state: restarted
+
+ {% endhighlight %}
+
+1. ansible-playbook p1.yml --syntax-check (from this command we are cheking that my file synctax is correct or not)
+2. ansible-playbook p1.yml --check ( we can run or excute yml file, this method we can say dry run)
+3. ansible-playbook p1.yml --C (2 And 3 both command are same)
+4. ansible-playbook p1.yml --step ( task will perform step by step )
+
+
+# How to write multi play in single playbook 
+
+> **we can add multipule host in a single yml file**
+
+{% highlight ruby %}
+
+- hosts: web
+  tasks:
+    - file:
+       path: /tmp/cloud
+       state: directory
+    - copy:
+       src: /etc/fstab
+       dest: /tmp/cloud
+    - service:
+       name: cron.service
+       state: restarted
+
+
+- hosts: prod
+  tasks:
+    - name: Install the package
+      apt:
+        name: ftp
+        state: present              
+
+{% endhightli %}
+
 
 # keep Learnining.......
+
