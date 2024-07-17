@@ -272,7 +272,7 @@ Authentication:-
         name: ftp
         state: present              
 
-{% endhightli %}
+{% endhighlight %}
 
 
 # keep Learnining.......
