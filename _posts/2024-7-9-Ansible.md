@@ -326,7 +326,8 @@ Authentication:-
 2. Command lavel variable
 3. Inventory File lavel variable
 
-# Inventory Lavel Variable Example,
+
+# Inventory Lavel Variable Example
 
 **host invenory file is not allow to write ansible playbook**
 
