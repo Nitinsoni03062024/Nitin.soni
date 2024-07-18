@@ -328,10 +328,9 @@ Authentication:-
 
 # Inventory Lavel Variable Example,
 
+**host invenory file is not allow to write ansible playbook**
 
 {% highlight ruby }
-
-- host invenory file is not allow to write ansible playbook
 
 [web]
 13.202.149.170	web_root=/var/www/www1
