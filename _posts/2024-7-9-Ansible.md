@@ -326,7 +326,21 @@ Authentication:-
 2. Command lavel variable
 3. Inventory File lavel variable
 
+# Inventory Lavel Variable Example,
 
+
+{% highlight ruby }
+
+**host invenory file is not allow to write ansible playbook**
+
+[web]
+13.202.149.170	web_root=/var/www/www1
+
+[prod]
+13.202.95.120	web_root=/var/www/www2
+
+
+{% endhighlight }
 
 
 
