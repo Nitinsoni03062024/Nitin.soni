@@ -331,7 +331,7 @@ Authentication:-
 
 **host invenory file is not allow to write ansible playbook**
 
-{% highlight ruby }
+{% highlight ruby %}
 
 [web]
 13.202.149.170	web_root=/var/www/www1
@@ -340,7 +340,7 @@ Authentication:-
 13.202.95.120	web_root=/var/www/www2
 
 
-{% endhighlight }
+{% endhighlight %}
 
 
 
