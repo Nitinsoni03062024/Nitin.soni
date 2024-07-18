@@ -343,6 +343,154 @@ Authentication:-
 {% endhighlight %}
 
 
+{% highlight ruby %}
+
+[web]
+13.202.149.170	web_root=/var/www/www1
+
+[prod]
+13.202.95.120	web_root=/var/www/www2
+
+
+{% endhighlight %}
+
+
+---
+> **Playbook lavel variable** 
+
+{% highlight ruby %}
+
+- name: Example of playbook lavel variable
+  hosts: web
+  vars_files:
+          - /home/ubuntu/uint04/mycostum.yml # agar hamare play book me multipule variable aate hai to ham variables ki 
+                                              new file bana ke use file yaha par call kar sakte hai.
+  tasks:
+    - name: Install the packages
+      apt:
+        name: "{{web}}" # We are calling variable value of web
+        state: installed
+
+
+    - name: Start "{{web}}" service
+      service:
+        name: "{{web}}"
+        state: started
+        enabled: true
+
+    - name: Create Directory "{{webroot}}"
+      file:
+          path: "{{webroot}}"
+          state: directory
+
+{% endhighlight %}
+
+
+{% highlight ruby %}
+
+- name: Example of playbook lavel variable
+  hosts: web
+  vars:
+    web: httpd
+    web_pkg:
+        - httpd
+        - vsftpd
+        - wget
+    myuser:
+        - name: ram
+          phone: 344354353
+        - name: nitin
+          phone: 2344543
+
+  tasks:
+    - name: add user # We are calling variable of user add
+      user:
+         name:  "{{myuser.name}}"
+    - name: Install the packages
+      apt:
+        name: "{{web}}" # We are calling variable value of web
+        state: installed
+
+
+    - name: Start "{{web_pkg}}" service 
+      service:
+        name: "{{web}}"
+        state: started
+        enabled: true
+
+    - name: Create Directory "{{webroot}}" 
+      file: 
+          path: "{{webroot}}"
+          state: directory
+
+   
+
+{% endhighlight %}
+
+
+
+> **Command lavel variable**
+
+
+{% highlight ruby %}
+
+- name: add user and apply password
+  hosts: web
+  vars_prompt:         # This is prompt variable
+    - name: "myname"
+      prompt: "What is your name"
+    - name: "mypassword"
+      prompt: "What is your password"
+      private: yes
+  tasks:
+    - name: create user and apply password
+      user:
+        name: "{{myname}}"
+        password: "{{mypass}}"
+
+{% endhighlight %}
+
+
+
+{% highlight ruby %}
+
+- hosts: all
+  become: true
+  tasks:
+      - name: create directory
+        file:
+            path: "{{web_root}}"
+            state: directory
+
+
+      - debug:
+          msg: "{{web_root}}"
+
+{% endhighlight %}
+
+**For inventory level variable example, this is allow in indrastry**
+
+1. mkdir goup_vars
+2. mkdir hosts_vars
+
+sudo vim group_vars/web
+
+{% highlight ruby %}
+
+web_root: /var/www/www1  
+
+{% endhighlight %}
+
+---
+
+{% highlight ruby %}
+
+webpkg: apache2   
+
+{% endhighlight %}
+
+
+
 
 # keep Learnining.......
 
