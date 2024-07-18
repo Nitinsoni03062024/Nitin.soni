@@ -326,7 +326,7 @@ Authentication:-
 2. Command lavel variable
 3. Inventory File lavel variable
 
-> 1. **Playbook lavel variable** 
+> **Playbook lavel variable** 
 
 {% highlight ruby %}
 
@@ -398,7 +398,7 @@ Authentication:-
 {% endhighlight %}
 
 
-> 2. **Command lavel variable**
+> **Command lavel variable**
 
 
 
