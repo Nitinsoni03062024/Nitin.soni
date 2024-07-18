@@ -419,60 +419,6 @@ Authentication:-
 {% endhighlight %}
 
 
-# Inventory Lavel Variable Example,
-
-
-{% highlight ruby }
-
-**host invenory file is not allow to write ansible playbook**
-
-[web]
-13.202.149.170	web_root=/var/www/www1
-
-[prod]
-13.202.95.120	web_root=/var/www/www2
-
-
-{% endhighlight }
-
----
-
-{% highlight ruby }
-
-- hosts: all
-  become: true
-  tasks:
-      - name: create directory
-        file:
-            path: "{{web_root}}"
-            state: directory
-
-
-      - debug:
-          msg: "{{web_root}}"
-
-{% endhighlight }
-
-**For inventory level variable example, this is allow in indrastry**
-
-1. mkdir goup_vars
-2. mkdir hosts_vars
-
-sudo vim group_vars/web
-
-{% highlight ruby }
-
-web_root: /var/www/www1  
-
-{% endhighlight %}
-
----
-
-{% highlight ruby }
-
-webpkg: apache2   
-
-{% endhighlight %}
 
 
 
