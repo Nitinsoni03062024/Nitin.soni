@@ -400,25 +400,6 @@ Authentication:-
 
 > **Command lavel variable**
 
-{% highlight ruby }
-
-- name: add user and apply password
-  hosts: web
-  vars_prompt:         # This is prompt variable
-    - name: "myname"
-      prompt: "What is your name"
-    - name: "mypassword"
-      prompt: "What is your password"
-      private: yes
-  tasks:
-    - name: create user and apply password
-      user:
-        name: "{{myname}}"
-        password: "{{mypass}}"
-
-{% endhighlight %}
-
-
 
 
 
