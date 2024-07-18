@@ -398,8 +398,6 @@ Authentication:-
 {% endhighlight %}
 
 
-> **Command lavel variable**
-
 
 
 
