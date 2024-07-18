@@ -328,7 +328,7 @@ Authentication:-
 
 > **Playbook lavel variable** 
 
-{% highlight ruby %}
+{% highlight ruby }
 
 - name: Example of playbook lavel variable
   hosts: web
@@ -356,7 +356,7 @@ Authentication:-
 {% endhighlight %}
 
 
-{% highlight ruby %}
+{% highlight ruby }
 
 - name: Example of playbook lavel variable
   hosts: web
@@ -460,7 +460,7 @@ Authentication:-
 
 sudo vim group_vars/web
 
-{% highlight ruby %}
+{% highlight ruby }
 
 web_root: /var/www/www1  
 
@@ -468,7 +468,7 @@ web_root: /var/www/www1
 
 ---
 
-{% highlight ruby %}
+{% highlight ruby }
 
 webpkg: apache2   
 
