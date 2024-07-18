@@ -306,5 +306,99 @@ Authentication:-
 {% endhighlight %}
 
 
+# We are leaning Variable in ansible
+
+**What is variable** :- Ansible support variable that can be used to store  values that can then ne resued thoughout file in an ansible project, This can simplify the creation and maintain of a project and reduse the number of errors.
+
+< **This is Example of valid and Invailed ansible variable in ansible**
+
+
+          **In valid variable names**                  **Valid variable names**
+              - web server                                 - web_server
+              - renote.file                                - remote_file
+              - 1st file                                   - 1st_file
+              - remotesever$1                              - remote_server_$_1
+
+  
+> **How many places for placing the varianble values in ansible**
+
+1. Playbook lavel variable 
+2. Command lavel variable
+3. Inventory File lavel variable
+
+> **Playbook lavel variable** 
+
+{% highlight ruby %}
+
+- name: Example of playbook lavel variable
+  hosts: web
+  vars_files:
+          - /home/ubuntu/uint04/mycostum.yml # agar hamare play book me multipule variable aate hai to ham variables ki 
+                                              new file bana ke use file yaha par call kar sakte hai.
+  tasks:
+    - name: Install the packages
+      apt:
+        name: "{{web}}" # We are calling variable value of web
+        state: installed
+
+
+    - name: Start "{{web}}" service
+      service:
+        name: "{{web}}"
+        state: started
+        enabled: true
+
+    - name: Create Directory "{{webroot}}"
+      file:
+          path: "{{webroot}}"
+          state: directory
+
+{% endhighlight %}
+
+
+{% highlight ruby %}
+
+- name: Example of playbook lavel variable
+  hosts: web
+  vars:
+    web: httpd
+    web_pkg:
+        - httpd
+        - vsftpd
+        - wget
+    myuser:
+        - name: ram
+          phone: 344354353
+        - name: nitin
+          phone: 2344543
+
+  tasks:
+    - name: add user # We are calling variable of user add
+      user:
+         name:  "{{myuser.name}}"
+    - name: Install the packages
+      apt:
+        name: "{{web}}" # We are calling variable value of web
+        state: installed
+
+
+    - name: Start "{{web_pkg}}" service 
+      service:
+        name: "{{web}}"
+        state: started
+        enabled: true
+
+    - name: Create Directory "{{webroot}}" 
+      file: 
+          path: "{{webroot}}"
+          state: directory
+
+   
+
+{% endhighlight %}
+
+
+
+
 # keep Learnining.......
 
