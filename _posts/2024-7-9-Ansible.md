@@ -489,6 +489,66 @@ webpkg: apache2
 
 {% endhighlight %}
 
+# Ansible Fact ?
+
+ 
+> **setup** :- Setup it's a module, to geathraing system all information from the manage node.
+
+1. ansible web -m setup 
+
+>***Example Number one**
+
+{% highlight ruby %}
+
+- name: Example of fact use case in playbook
+  hosts: all
+  become: true
+  tasks:
+
+{% endhighlight %}
+
+1.  ansible-playbook p5.yml 
+2. ansible all -m setup -a 'filter=*fqdn*' (We can filer from the manage node fully quali fied domain)
+
+{% highlight ruby %}
+
+- name: Example of fact use case in playbook
+  hosts: all
+  become: true
+  tasks:
+    - name: Store Kernal Information
+      copy:
+        content: "This is your kernal versio {{ ansible_kernel }}"
+        dest: /etc/motd
+
+{% endhighlight %}
+
+
+# Register Variable
+
+With the help of register variable, we can store the output in ansible playbook and use the task with variable,
+
+{% highlight ruby }
+
+- hosts: all
+  become: true
+  tasks:
+      - name: Please check H/W mode
+        command: uname -m
+        register: xyz
+
+
+      - debug:
+          var: xyz.stdout
+
+      - name: Store over the all machine
+        copy:
+          content: "hello everyone my name is nitin soni{{ xyz.stdout }}"
+          dest: /etc/motd
+
+{% endhighlight }
+
+
 
 
 
