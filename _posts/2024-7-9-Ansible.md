@@ -528,7 +528,7 @@ webpkg: apache2
 
 With the help of register variable, we can store the output in ansible playbook and use the task with variable,
 
-{% highlight ruby }
+{% highlight ruby %}
 
 - hosts: all
   become: true
@@ -546,7 +546,7 @@ With the help of register variable, we can store the output in ansible playbook 
           content: "hello everyone my name is nitin soni{{ xyz.stdout }}"
           dest: /etc/motd
 
-{% endhighlight }
+{% endhighlight %}
 
 
 
