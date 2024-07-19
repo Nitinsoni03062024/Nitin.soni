@@ -79,7 +79,6 @@ This is a Images,
 
 > # This is for kubernetes server
 
-{% highlight ruby %}
     1  hostname
     2  sudo apt-get update
     3  sudo apt-get install -y apt-transport-https ca-certificates curl gpg
@@ -98,14 +97,12 @@ This is a Images,
    20  cd
    21  cp /etc/kubernetes/admin.conf .kube/config
    22  kubectl get nodes
-  23 curl https://raw.githubusercontent.com/projectcalico/calico/v3.28.0/manifests/calico.yaml -O
+   23 curl https://raw.githubusercontent.com/projectcalico/calico/v3.28.0/manifests/calico.yaml -O
    38  kubectl create -f calico.yaml
    39  curl https://raw.githubusercontent.com/projectcalico/calico/v3.28.0/manifests/calico.yaml -O (Download the Calico networking manifest for the Kubernetes API datastore)
    40 kubectl create -f calico.yaml
    41  kubeadm token create --print-join-command (to create token for join kubernetes nod)
 
-
-{% endhighlight %}
 
 # This is fro kubernetes-node server
 >
@@ -462,7 +459,7 @@ In This stretagy old veriso directoly is deleted and then new version is created
 
 It's a teknic for both application is runing, When both the applications were run, we could see a difference in both version application.
 
-> # Pod Shedulling.
+> # Pod Schedulling.
 
 1. Node Name based shedulling 
 2. Node label and selector based schedulling
