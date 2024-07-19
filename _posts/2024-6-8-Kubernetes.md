@@ -79,29 +79,29 @@ This is a Images,
 
 > # This is for kubernetes server
 
-    1  hostname
-    2  sudo apt-get update
-    3  sudo apt-get install -y apt-transport-https ca-certificates curl gpg
-    4  curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.30/deb/Release.key | sudo gpg --dearmor -o /etc/apt/keyrings/kubernetes-apt-keyring.gpg
-    5  echo 'deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.k8s.io/core:/stable:/v1.30/deb/ /' | sudo tee /etc/apt/sources.list.d/kubernetes.list
-    6  sudo apt-get update
-    7  apt install containerd
-    8  sudo apt-get install -y kubelet kubeadm kubectl
-    9  kubeadm init
-   10  kubeadm init --ignore-preflight-errors=all
-   11  kubectl get nodes
-   15  mkdir .kube
-   16  cd .kube/
-   17  touch config
-   18  ls
-   20  cd
-   21  cp /etc/kubernetes/admin.conf .kube/config
-   22  kubectl get nodes
-   23 curl https://raw.githubusercontent.com/projectcalico/calico/v3.28.0/manifests/calico.yaml -O
-   38  kubectl create -f calico.yaml
-   39  curl https://raw.githubusercontent.com/projectcalico/calico/v3.28.0/manifests/calico.yaml -O (Download the Calico networking manifest for the Kubernetes API datastore)
-   40 kubectl create -f calico.yaml
-   41  kubeadm token create --print-join-command (to create token for join kubernetes nod)
+ 1.  hostname
+ 2.  sudo apt-get update
+ 3.  sudo apt-get install -y apt-transport-https ca-certificates curl gpg
+ 4.  curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.30/deb/Release.key | sudo gpg --dearmor -o /etc/apt/keyrings/kubernetes-apt-keyring.gpg
+ 5.  echo 'deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.k8s.io/core:/stable:/v1.30/deb/ /' | sudo tee /etc/apt/sources.list.d/kubernetes.list
+ 6.  sudo apt-get update
+ 7.  apt install containerd
+ 8.  sudo apt-get install -y kubelet kubeadm kubectl
+ 9.  kubeadm init
+ 10.  kubeadm init --ignore-preflight-errors=all
+ 11.  kubectl get nodes
+ 12.  mkdir .kube
+ 13.  cd .kube/
+ 14.  touch config
+ 15.  ls
+ 16.  cd
+ 17.  cp /etc/kubernetes/admin.conf .kube/config
+ 18.  kubectl get nodes
+ 19. curl https://raw.githubusercontent.com/projectcalico/calico/v3.28.0/manifests/calico.yaml -O
+ 20.  kubectl create -f calico.yaml
+ 21.  curl https://raw.githubusercontent.com/projectcalico/calico/v3.28.0/manifests/calico.yaml -O (Download the Calico networking manifest for the Kubernetes API datastore)
+ 22. kubectl create -f calico.yaml
+ 23.  kubeadm token create --print-join-command (to create token for join kubernetes nod)
 
 
 # This is fro kubernetes-node server
