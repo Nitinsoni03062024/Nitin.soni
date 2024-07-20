@@ -549,7 +549,119 @@ With the help of register variable, we can store the output in ansible playbook 
 {% endhighlight %}
 
 
+# Ansible Vault
 
+
+**With the ansible vault we can encript, ansible playbook**
+
+> This is a example of vault 
+
+{% hightlight ruby %}
+
+- hosts: all
+  become: true
+  vars:
+    mypass: redhat
+  task:
+    - name: Create user name and pasword
+      user:
+        name: nitin
+        password: "{{ mypass}}"
+     
+{% endhightlight %}
+
+after write the playbook then we will fire this cammand,
+
+1. ansible-vault encrypt p1.yml
+2. and give the passowrd of file (form this command your play  book is encrypt and without your, anyone can't anythink to do your file)
+3. ansible-vault edit p1.yml (with this command we can eidt file)
+4. ansible-vault view p1.yml ( we can read the file only owner not another user)
+5. ansible-playbook p1.yml --ask-vault-pass ( we can push the file with vault password)
+6. ansible-vault decrypt p1.yml ( we can decrypt the file with paswword)
+ 
+
+# Costum fact
+
+
+We are engecting the variable in csotum fact, and for run the task then we are creating file firt, and should the extension file, nitin.fact and we can perform same task in repeted 
+
+/etc/ansible/facts.d
+
+> # Ansible Loop ?
+
+When a key has multiple values ​​then we call it loop concept.
+
+> **This is exmaple of without loop yml file**
+
+{% highlight ruby %}
+
+- name: Example of without loop
+  hosts: all
+  tasks:
+    - name: add ravi
+      user:
+          name: ravi
+          state: present
+            
+    - name: add nitin
+      user:
+          name: nitin
+          state: present
+
+
+            
+    - name: add nitin1
+      user:
+          name: nitin
+          state: present
+     
+
+{% endhighlight %}
+
+> **Ansible is provide 3 type loop concept**
+
+1. **Simple/Standard loop (Same FOR Loop in python)**
+2. **List of hash Loop (1st list value is runing with 2ad value, then we can use List type Loop)** 
+3. **Nested Loop (when 1st loop is runing with 2ad list loop continous then  runing nested loop)**
+
+
+
+> **This is Example of Simple/Standard loop (Same FOR Loop in python)**
+
+{% highlight ruby %}
+
+- name: Example of simple loop
+  hosts: all
+  tasks:
+    - name: add users ravi manish syam
+      user:
+           name: "{{item}}" # This is predefine value (itme)
+           state: present
+           group: wheel
+      with_items:            # And item value is point to with_item, with item hold your values
+            - ravi
+            - manish
+            - saym
+            - neha
+            - nitin
+            - soni
+            - gagan
+            - anshu
+            - nikhil
+
+
+    - name: add group tcs kr nitin abc stop guest
+      group:
+          name: "{{item}}"
+          state: present
+      loop:
+          - tcs
+          - nitin
+          - kr
+          - stop
+          - guest
+
+{% endhighlight %}
 
 
 # keep Learnining.......
