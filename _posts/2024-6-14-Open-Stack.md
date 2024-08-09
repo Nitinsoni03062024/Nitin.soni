@@ -80,9 +80,10 @@ Block Storage (Volume) Service
 - Plugin architecture for vendor extensions
 eg. NetApp driver for Cinde
 
-> 7. **Orchestration Tool**
+> 7. **Orchestration Tool  (Heat)**
 
-Template based orchestration that support automatic creation of resources stacks
+ Heat is the main project in the OpenStack Orchestration program. It implements an orchestration engine to launch multiple composite cloud applications based on templates in the form of text files that can be treated like code
+ Template based orchestration that support automatic creation of resources stacks
 
 > 8. **OpenStack Monitoring and Metering (CEILOMETER)**
 

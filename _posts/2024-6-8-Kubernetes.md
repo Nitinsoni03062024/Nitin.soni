@@ -483,7 +483,7 @@ We tell the node that this deployment should run on that node. (worker-node1 , w
 We will change in **spac section** for node base shedulling and menstion node name, for exmaple, bollow this image.
 
  We can understand this image,
-   ![This is node based schedulling](../images/nodebaseschedulling.png)
+   ![This 
 
 4. kubectl create -f deploy.yml (create pod)
 5. kubectl get pod

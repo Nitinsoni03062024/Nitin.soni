@@ -191,9 +191,10 @@ attach existing  bash process. i dont start  new  bash process .)
 
 19. docker pull mysql
 20. docker logs containername (you can find logs)
-21. docker images inspect ubuntu CON1 | grep -i upper ( you can find upper diretory)
-22. docker images inspect ubuntu CON1 | grep -i Lower ( we can find lower diretory)
+21. docker  inspect ubuntu CON1 | grep -i upper ( you can find upper diretory)
+22. docker  inspect ubuntu CON1 | grep -i Lower ( we can find lower diretory)
 
+-
 {% endhighlight %}
 
 # Note :-
