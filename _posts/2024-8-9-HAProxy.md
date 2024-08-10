@@ -33,3 +33,5 @@ From this image we can understand,
   Another, more complex way to load balance network traffic is to use layer 7 (application layer) load balancing. Using layer 7 allows the load balancer to forward requests to different backend servers based on the content of the user’s request. This mode of load balancing allows you to run multiple web application servers under the same domain and port. For more details on layer 7,
 
 ![We can understand from this image](../images/7%20layer.png)
+
+![sdf](../images/Understandig%20of%20Openstack.pdf)

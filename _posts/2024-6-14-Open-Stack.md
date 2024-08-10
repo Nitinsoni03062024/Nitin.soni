@@ -3,6 +3,15 @@ layout: post
 title: OpenStack Cloud (Private Cloud) ?
 ---
 
+> **How many types of Services**
+ 3 Types services is available,
+ 
+ 1. IAAS
+ 2. PAAS
+ 3. SAAS
+
+![We can Understand from this image](../images/IAAS.webp)
+
 # About Open Stack
 
 - Platform: Cross-platform software
@@ -48,6 +57,8 @@ Nova is the OpenStack project that provides a way provision Compute instance (Ak
 - Supports multiple hypervisors KVM, Xen, LXC, Hyper-V and ESX
 - Distributed controllers that handle scheduling, API calls, etc
 - Native OpenStack API and Amazon EC2 compatible API
+
+
 
 > 3. **Galnce (Image service) :-** 
 
