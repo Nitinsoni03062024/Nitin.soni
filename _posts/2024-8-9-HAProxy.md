@@ -1,6 +1,6 @@
 ---
 layout: post
-title: What is HA-Proxy,Loadbalancing And KeepAlived and same leaning topics,
+title: What is HA-Proxy,Loadbalancing And KeepAlived and same learning topics,
 ---
 
 > **What is HA-Proxy**
