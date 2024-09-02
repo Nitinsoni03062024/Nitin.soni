@@ -20,3 +20,12 @@ The following diagram gives you an overview of Grafana Alerting and introduces y
 - Grafana Alerting periodically queries data sources and evaluates the condition defined in the alert rule
 - If the condition is breached, an alert instance fires
 - Firing (and resolved) alert instances are sent for notifications, either directly to a contact point or through notification policies for more flexibility
+
+
+# Installtion of Grafana Prametheus and Node Exporter for Ubuntu-22.04
+
+
+- pramatheus Link :- (https://www.cherryservers.com/blog/install-grafana-ubuntu)
+- Grafan Installtion Link :- (https://www.cherryservers.com/blog/install-grafana-ubuntu)
+- Node Exporter (https://medium.com/@abdullah.eid.2604/node-exporter-installation-on-linux-ubuntu-8203d033f69c)
+
