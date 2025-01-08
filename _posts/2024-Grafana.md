@@ -1,4 +1,4 @@
 ---
 layout: post
-title: Grafana and Prometheus Monitoring Tools ?
+title: Grafana and Prometheus  ?
 ---
