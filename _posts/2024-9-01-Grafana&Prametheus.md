@@ -31,3 +31,18 @@ The following diagram gives you an overview of Grafana Alerting and introduces y
 
 - Node Exporter (https://medium.com/@abdullah.eid.2604/node-exporter-installation-on-linux-ubuntu-8203d033f69c)
 
+
+# How to Install Grafana, Prometheus, and Node Exporter  
+
+Grafana Link:- ( https://www.cherryservers.com/blog/install-grafana-ubuntu ) 
+
+Prometheus Link:- ( https://www.cherryservers.com/blog/install-prometheus-ubuntu ) 
+
+Node Exporter Link :- ( https://medium.com/@abdullah.eid.2604/node-exporter-installation-on-linux-ubuntu-8203d033f69c ) 
+
+Prometheus Node Exporter :- ( https://devopscube.com/monitor-linux-servers-prometheus-node-exporter/ )  
+
+After Install Grafana Prometheus and Node Exporter go to google chrome and request in tap (open Grafana, Prometheus, Node Exporter).
+
+
+

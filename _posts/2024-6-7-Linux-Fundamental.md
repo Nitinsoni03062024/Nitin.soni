@@ -1111,6 +1111,1126 @@ Note:   with the help iptables and firewalld we can apply any types of rules in 
 
 
 
+
+
+**This is same command for knowladge**
+
+  2  cat  /etc/passwd 
+    3  cat  -n   /etc/passwd 
+    4  head -n 5  /etc/passwd
+    5  tail  -n 5  /etc/passwd
+    6  cat  /etc/passw
+    8  sed -n  '1p'  /etc/passwd
+    9  sed -n  '5p'  /etc/passwd
+   10  head  -n 5 /etc/passwd
+   11  sed -n  '1,5p'  /etc/passwd
+   12  sed -n  '1p;5p'  /etc/passwd
+   13  sed -n  '1p'  /etc/passwd
+   14  sed -n  '$p'  /etc/passwd
+   15  useradd soniya  
+   16  sed  -n  '1p'  /etc/passwd
+   17  sed  -n  '$p'  /etc/passwd
+   18  sed  -n  '1p;$p'  /etc/passwd
+   19  sed  -n  '1p;$p'  /etc/passwd  >  /info    
+   20  cat  /info 
+   21  cat  -n  /etc/passwd | sed -n  '1p'
+   22  cat  -n  /etc/passwd | sed -n  '5p'
+   23  cat  -n  /etc/passwd | sed -n  '$p'
+   24  cat  -n  /etc/passwd | sed -n  '1p;$p'
+   25  cat  -n  /etc/passwd | sed -n  '1,5p'
+   26  cat  -n  /etc/passwd | sed -n  '1p;11p;21,25p;41,$p'
+   27  grep  -i -n  workgroup   /etc/samba/smb.conf
+   28  sed  -n '7p'   /etc/samba/smb.conf
+   29  lsblk  
+   30  lsblk   | cat  -n 
+   31  lsblk   | cat  -n  | head  -n  5
+   32  lsblk   | cat  -n  | head  -n  5 | tail -n 4  
+   33  lsblk   | cat  -n  | sed -n '2,5p' 
+   34  lsblk 
+   35  lsblk | sed -n  '3,5p' 
+   36  lsblk | sed -n  '1p;3,5p' 
+   37  df  -h 
+   38  df  -h | cat  -n  
+   39  df  -h | cat  -n   | sed  -n  '6,7p'
+   40  df  -h | cat  -n   | sed  -n  '1p;6,7p'
+   41  df  -h | sed  -n  '1p;6,7p'
+   42  lscpu 
+   43  lscpu | cat -n  
+   44  lscpu | cat -n   | sed -n  '13p'
+   45  grep root  /etc/passwd
+   46  sed   '/root/p'  /etc/passwd
+   47  sed  -n    '/root/p'  /etc/passwd
+   48  sed  -n    '/root/p'  /etc/passwd  | sed  -n  '1p'
+   49  ifconfig 
+   50  ifconfig  | sed  -n  '2p'
+   51  head  /etc/passwd
+   52  head  /etc/passwd  >  /report  
+   53  cat  /report  
+   54  sed  -n  '1p'  /report  
+   55  sed  -n  '$p'  /report  
+   56  cat -n  /report 
+   57  sed   '6d'    /report 
+   58* sed   'd'    /report 
+   59  sed  -n   '6p'    /report 
+   60  cat  /report 
+   61  sed   -i   '6d'    /report 
+   62  cat  -n  /report 
+   63  sed  '1,5d'   /report 
+   64  sed  '1,5!d'   /report 
+   65  sed  -i  '1,5d'   /report 
+   66  cat -n  /report 
+   67  lsblk  
+   68  lsblk   | grep -E  'sda1|sda2'
+   69  lsblk   | grep -E  'sda1|sda2' | sed  '1d'
+   70  lsblk   | grep -E  'sda1|sda2' | sed  -i '1d'
+   71  lsblk   | grep -E  'sda1|sda2' 
+   72  lsblk   | grep -E  'sda1|sda2'  |  sed  '/boot/p'
+   73  lsblk   | grep -E  'sda1|sda2'  |  sed -n  '/boot/p'
+   74  ifconfig 
+   75  ifconfig | grep inet  
+   76  ifconfig | grep -w  inet  
+   77  ifconfig | grep -w  inet   | sed  -n  '1p'
+   78  ifconfig | grep -w  inet   | sed  -n  '1p' | sed 's/inet/ipaddress/'
+   79  ifconfig | grep -w  inet   | sed  -n  '1p' | sed 's/inet/ipaddress/;s/netmask/subnetmask/'
+   80  ifc
+   81  ifconfig 
+   82  ifconfig  |  grep ether  
+   83  ifconfig  |  grep ether   |  head  -n 1  
+   84  ifconfig  |  grep ether   |  head  -n 1   | sed  's/ether/macaddress/'
+   85  grep root  /etc/passwd
+   86  grep root  /etc/passwd | sed  's/root/network/'
+   87  grep root  /etc/passwd | sed  's/root/network/g'
+   88  cat  /report 
+   89  cat  -n    /report 
+   90  sed  '2a  KR network Cloud'  /report 
+   91  cat  /report 
+   92  sed  '2i  KR network Cloud'  /report 
+   93  sed  '2a  KR network Cloud'  /report 
+   94  sed  -i  '2a  KR network Cloud'  /report 
+   95  cat  /report 
+   96  sed  -i  '4i  KR network Cloud'  /report 
+   97  cat /report 
+   98  head  /etc/passwd
+   99  head  /etc/passwd  > /sample  
+  100  cat  /sample 
+  101  grep  root  /sample 
+  102  grep sync    /sample 
+  103  sed   's/root/network/'    /sample 
+  104  sed   's/root/network/g'    /sample 
+  105  sed   's/Root/network/g'    /sample 
+  106  sed   's/ROOT/network/g'    /sample 
+  107  sed   's/ROOT/network/gi'    /sample 
+  108  sed   's/sync/network/gi'    /sample 
+  109  sed   's/sync/network/gi'    /sample   |  grep network  
+  110  grep sync /sample 
+  111  grep sync /sample  ;  sed   's/sync/network/gi'    /sample   |  grep network
+  112  sed    's/root/network/g'  /sample 
+  113  sed    's/root/network/'  /sample 
+  114  grep root   /sample 
+  115  grep root   /sample  | sed  's/root/network/'
+  116  grep root   /sample  | sed  's/root/network/2'
+  117  grep root   /sample  | sed  's/root/network/1'
+  118  grep root   /sample  | sed  's/root/network/'
+  119  grep root   /sample  | sed  's/root/network/2'
+  120  grep root   /sample  | sed  's/root/network/2g'
+  121  sed 's/root/network/2g'   /sample 
+  122  sed '1s/root/network/2g'   /sample 
+  123  sed '1s/root/network/g'   /sample 
+  124  sed '5s/root/network/g'   /sample 
+  125  sed '1,10s/root/network/g'   /sample 
+  126  history 
+  127  ifconfig |  grep -E  'inet|ether'
+  128  ifconfig |  grep -E -w    'inet|ether'
+  129  ifconfig |  grep -E -w    'inet|ether' | sed  -n  '2p'
+  130  ifconfig |  grep -E -w    'inet|ether' | sed  -n  '1,2p'
+  131  ifconfig |  grep -E -w    'inet|ether' | sed  -n  '1,2p' | sed   's/inet/ipaddress/g'
+  132  ifconfig |  grep -E -w    'inet|ether' | sed  -n  '1,2p' | sed   's/ether/macaddress/g'
+  133  ifconfig |  grep -E -w    'inet|ether' | sed  -n  '1,2p' | sed   -e   's/ether/macaddress/g'    -e  s/inet/ipaddress/g'
+  134  ifconfig |  grep -E -w    'inet|ether' | sed  -n  '1,2p' | sed   -e   's/ether/macaddress/g'    -e  's/inet/ipaddress/g'
+  135  ifconfig |  grep -E -w    'inet|ether' | sed  -n  '1,2p' | sed   's/ether/macaddress/g;s/inet/ipaddress/g'
+  136  cat  /report 
+  137  cat  /sample 
+  138  cat  /sample  | grep  -E   'root|sync'
+  139  cat  /sample  | grep  -E   'root|sync' | sed 's/root/network/g;s/sync/cloud/g'
+  140  cat  /sample  | grep  -E   'root|sync' | sed 's/root/network/g;s/sync/cloud/g' | grep  -E  'network|cloud'
+  141  sed 's/root/network/g;s/sync/cloud/g'  /sample 
+  142  sed 's/root/network/g'  /sample 
+  143  history 
+  144  sed    -i   's/root/network/gi'  /sample 
+  145  cat  /sample 
+  146  sed    -i   's/network/root/gi'  /sample 
+  147  cat  /sample 
+  148  sed  's/:/ >>>>  /g'  /sample 
+  149  cat  /sample 
+  150  sed -i   's/:/ >>>>  /g'  /sample 
+  151  cat  /sample 
+  152  sed  's/ >>>>  /:/g'  /sample 
+  153  sed -i   's/ >>>>  /:/g'  /sample 
+  154  cat  /sample 
+  155  grep '^root'  /etc/passwd
+  156  grep '^root'  /etc/passwd | sed  's/root/network/g'
+  157  cat /etc/passwd
+  158  cat  -n  /etc/sudoers 
+  159  sed   -n  '100p'  /etc/sudoers 
+  160  sed   '100s/^/#/'  /etc/sudoers 
+  161  sed  -i    '100s/^/#/'  /etc/sudoers 
+  162  sed   -n  '100p'  /etc/sudoers 
+  163  sed  -i    '100s/^#//'  /etc/sudoers 
+  164  sed   -n  '100p'  /etc/sudoers 
+  165  sed   '1s/root/network/' /sample 
+  166  sed   '1s/root//' /sample 
+  167  sed   '1s/root/     /' /sample 
+  168  sed   '1s/root//' /sample 
+  169  grep -n -i  workgroup  /etc/samba/smb.conf
+  170  sed  '7s/SAMBA/DON/'  /etc/samba/smb.conf
+  171  sed  '7s/SAMBA/DON/'  /etc/samba/smb.conf  |  sed  -n  '7p'
+  172  sed  -i   '7s/SAMBA/DON/'  /etc/samba/smb.conf 
+  173  grep -n -i  workgroup  /etc/samba/smb.conf
+  174  sed  -i   '7s/DON/SAMBA/'  /etc/samba/smb.conf 
+  175  grep -n -i  workgroup  /etc/samba/smb.conf
+  176  lsblk 
+  177  lsblk |  grep sda
+  178  lsblk |  grep -w   sda
+  179  lsblk |  grep -w   sda | sed  's/disk/myfirstdisk/g'
+
+  
+======================================
+1- Redhat installation 
+2- Types of login mode 
+3- Types of machine access method 
+4- Types of user's 
+5- Super user and Normal users
+6-  #  and $ command prompt
+7-  Data store ==>   /    ===> default directort + custom directory or files
+8-  login ==> data writting ==> place ==> home directory + public place
+9-  pwd
+10- ls
+11- touch 
+12- mkdir
+13- mkdir -p 
+14- ls -R
+15- tree
+16- cd directoryname
+17- cd ..
+18- cd ../..
+19- cd -
+20- cd .
+21- cd ~
+22- cd  /
+23- cat 
+24- tac
+25- wc
+26- echo 
+27- symbols ==>  ;   and  pipe symbols  |
+======================================
+Symbols:-
+
+1- ;  
+2- |
+3- >       ==> use to store output of any commands into any file
+4- >>      ==> use to append output of any command into any existing file.
+
+
+>   OR   tee
+>>  OR   tee -a 
+======================================
+head
+tail
+grep
+egrep
+fgrep
+sed 
+======================================
+
+    2  date  
+    3  cal  
+    4  date ;  cal 
+    5  cat  /etc/passwd
+    6  cat  -n /etc/passwd
+    7  cat  -n /etc/passwd  | head  -n 5  
+    8  cat  -n /etc/passwd  | head  -n 5  | grep root  
+    9  cat  /etc/passwd  | head  -n 5  | grep root  
+   10  lsblk | cat  -n 
+   11  lsblk | cat  -n  |  head -n 2  
+   12  cat  /etc/passwd  | head  -n 5  | grep root ; lsblk | cat  -n  |  head -n 2
+   13  cat  /etc/passwd  | head  -n 5  | grep root ; lsblk | head -n 2
+   14  lsblk  
+   15  lscpu 
+   16  df  -h
+   17  ls  /
+   18  lsblk  >  /report 
+   19  ls  /
+   20  cat  /report 
+   21  date  
+   22  date   >>   /report 
+   23  cat  /report 
+   24  echo "this is my final report"  >>  /report 
+   25  cat  /report 
+   26  ls  /
+   27  cat  /report 
+   28  cat  /report  >  /new-report 
+   29  ls  /
+   30  cat  /new-report 
+   31  cat  /report 
+   32  echo  >  /report 
+   33  cat  /report   
+   34  >  /report 
+   35  cat  /report   
+   36  rm -f  /report 
+   37  ls  /
+   38  lsblk | head  -n 2  
+   39  lsblk | head  -n 2   >  /report 
+   40  cat  /report  
+   41  cat /etc/passwd |  head -n 5  >>  /report  
+   42  cat  /report 
+   43  echo  "final report"  >>  /report 
+   44  cat  /report 
+   45  date  
+   46  cal  
+   47  date   ; cal  > /info 
+   48  cat  /info 
+   49  date   > /info ; cal  >> /info 
+   50  cat  /info 
+   51  lsblk | head  -n 2   >  /report  ; cat  /etc/passwd |  head  -n 5 >>  /report  
+   52  cat   /report 
+   53  echo  "testing"  >  /training
+   54  cat  /training 
+   55  echo  "hello team1"  >  /test-1
+   56  echo  "hello team2"  >  /test-2
+   57  ls  /
+   58  cat  /test-1
+   59  cat  /test-2
+   60  cat  /test-1  /test-2 
+   61  cat  /test-1  /test-2   >  /backup-file 
+   62  cat  /backup-file 
+   63  echo  "hello  team3"  >  /test-3
+   64  cat  /test-3
+   65  cat  /test-3  >>  /backup-file 
+   66  cat  /backup-file 
+   67  >  /test-1
+   68  >  /test-2
+   69  >  /test-3
+   70  cat  /test-1
+   71  cat  /test-2
+   72  cat  /test-3
+   73  rm -f   /test-1   /test-2    /test-3 
+   74  ls  /
+   75  cat  /backup-file 
+   76  cat  /etc/passwd   >  /red-info 
+   77  cat  /red-info 
+   78  cat  /etc/group >>  /red-info 
+   79  cat  /red-info 
+   80  cat /etc/shadow  >>  /red-info 
+   81  cat  /red-info 
+   82  history 
+   83  echo  "hello"  >>  /fedora 
+   84  cat  /fedora 
+   85  >  /fedora 
+   86  cat  /fedora 
+   87  lsblk 
+   88  lsblk | head -n 2 
+   89  echo "######### output of lsblk command  #####"  >  /info  
+   90  cat  /info 
+   91  lsblk >>  /info 
+   92  cat  /info 
+   93  echo "######### Finish #####"  >>  /info  
+   94  cat  /info 
+   95  echo >>  /info 
+   96  cat /info 
+   97  echo  "############ output of lscpu command #######"  >>  /info 
+   98  cat /info 
+   99  lscpu |  head -n 3 >>  /info 
+  100  cat  /info 
+  101  echo  "############ Finish #######"  >>  /info 
+  102  cat  /info 
+  103  lsblk  | tee    /network  
+  104  cat  /network 
+  105  lscpu | head  -n 3 
+  106  lscpu | head  -n 3  | tee  -a /network 
+  107  cat  /network 
+  108  echo  "hello finish"  |  tee  -a  /network 
+  109  cat  /network 
+  110  cat /etc/passwd
+  111  cat < /etc/passwd
+  112  cat  /etc/passwd
+  113  cat < /etc/passwd >  /save
+  114  cat  /save 
+  115  < /etc/passwd 
+  116  cat < /etc/passwd 
+  117  cat  /etc/passwd  >  /amandeep  
+  118  ls  /
+  119  cat  /amandeep 
+  120  ls  /
+  121  mkdir  /data  
+  122  cat  /etc/passwd  >  /data/abc  
+  123  cat /data/abc 
+  124  ls /
+  125  cat  /etc/passwd  >   /krishna/abc  
+  126  mkdir  /krishna 
+  127  cat  /etc/passwd  >   /krishna/abc  
+  128  ls  /
+  129  ls  /tmp  
+  130  ls /
+  131  ls -ld  /bin  
+  132  mkdir  -p   /kr/network/cloud
+  133  tree  /kr
+  134  mkdir  /kr1
+  135  cd /kr1
+  136  mkdir  network
+  137  cd  network
+  138  mkdir cloud
+  139  cd
+  140  history 
+  141  ls  /
+  142  touch abc  
+  143  file abc  
+  144  echo  hello > abc  
+  145  cat abc 
+  146  file abc  
+  147  file /etc  
+  148  file /home  
+  149  file /etc/passwd
+  150  ls  /
+  151  file  /bin 
+  152  ls /bin 
+  153  ls /bin | wc -l  
+  154  ls  /usr/bin  | wc -l  
+  155  ls  /sbin | wc -l 
+  156  ls /usr/sbin  | wc -l 
+  157  ls /
+  158  touch   cloud.tar.gz  
+  159  ls 
+  160  file cloud.tar.gz 
+  161  ls  
+  162  ls   | wc -l  
+  163  ls /etc  | wc -l 
+  164  ls /etc 
+  165  ls /
+  166  cat  /etc/redhat-release 
+  167  cat  /etc/system-release
+  168  ls  -l  /etc/system-release
+  169  ls l  /etc/redhat-release 
+  170  ls -l  /etc/redhat-release 
+  171  ls -l  -d  /bin  
+  172  ls -l  -d  /usr/bin  
+  173  file  /etc/system-release
+  174  file  /etc/redhat-release 
+  175  ls -l  /etc/system-release
+  176  ls -ld  /bin  
+
+     1  cat  /etc/passwd 
+    2  cat -n   /etc/passwd 
+    3  tac   /etc/passwd 
+    4  cat  /etc/passwd
+    5  head  /etc/passwd 
+    6  tail  /etc/passwd
+    7  head  -n 5  /etc/passwd
+    8  tail -n 1  /etc/passwd
+    9  useradd  user1
+   10  useradd  user2
+   11  useradd  user
+   12  useradd  user4
+   13  useradd  user5
+   14  tail  -n 5  /etc/passwd
+   15  head -n   1 /etc/passwd
+   16  tail -n 1  /etc/passwd
+   17  head -n   1 /etc/passwd ;  tail -n 1  /etc/passwd
+   18  head  -n 5  /etc/passwd
+   19  head  -n 5  /etc/passwd  >  /tmp/report  
+   20  cat /tmp/report 
+   21  head  /etc/passwd
+   22  head  /etc/passwd | wc -l
+   23  tail  /etc/passwd | wc -l
+   24  cat  /etc/passwd |  head -n  5
+   25  cat -n  /etc/passwd |  head -n  5
+   26  lsblk 
+   27  lsblk  |  head  -n 1  
+   28  lsblk  |  head  -n 3
+   29  lsblk  | tail -n 1  
+   30  lsblk 
+   31  lsblk  | cat -n  
+   32  lsblk  | cat -n   | head  -n 3  
+   33  lscpu | cat  -n  
+   34  lscpu | cat  -n   | head -n 3  
+   35  cat  -n   /etc/passwd
+   36  head -n  25  /etc/passwd
+   37  head -n  25  /etc/passwd | tail -n 5  
+   38  cat -n  /etc/passwd | head -n 25 | tail -n 5
+   39  cat -n  /etc/passwd | head -n 25 | tail -n 5  >  /tmp/new-file
+   40  cat  /tmp/new-file 
+   41  lsblk
+   42  lsblk | cat -n  
+   43  lsblk | cat -n   | head  -n  5 
+   44  lsblk | cat -n   | head  -n  5  | tail -n  3
+   45  lscpu 
+   46  lscpu | cat -n  
+   47  lscpu | cat -n   | head  -n 13 
+   48  lscpu | cat -n   | head  -n 13  | tail -n 4 
+   49  lscpu 
+   50  lscpu | cat  -n 
+   51  lscpu | cat  -n  | head  -n 13
+   52  lscpu | cat  -n  | head  -n 13 | tail -n 1
+   53  head  -n 5  /etc/passwd
+   54  head  -5  /etc/passwd
+   55  tail -n 3  /etc/passwd
+   56  tail -3  /etc/passwd
+   57  ls /
+   58  ls  /var/log 
+   59  useradd soniya  
+   60  date  
+   61  cat  /var/log/secure 
+   62  userdel  -rf soniya 
+   63  cat  /var/log/secure 
+   64  tail   /var/log/secure 
+   65  tail -f   /var/log/secure 
+   66  tail -f  /var/log/secure   /var/log/messages 
+   67* 
+   68  lsblk 
+   69  lsblk  | cat -n 
+   70  lsblk  | cat -n | head  -n 5
+   71  lsblk  | cat -n | head  -n 5 | tail -n 3  
+   72  lsblk 
+   73  cat  -n  /etc/passwd
+   74  head  -n 5  /etc/passwd
+   75  head  -n 5  /etc/passwd | tail -n 1
+   76  sed  '1p'  /etc/passwd
+   77  sed  -n   '1p'  /etc/passwd
+   78  sed  -n   '5p'  /etc/passwd
+   79  sed  -n   '1,5p'  /etc/passwd
+   80  sed  -n   '1p;5p'  /etc/passwd
+   81  sed  -n   '1p'  /etc/passwd
+   82  sed  -n   '$p'  /etc/passwd
+   83  sed  -n   '1p;$p'  /etc/passwd
+   84  cat  -n  /etc/passwd
+   85  cat  -n  /etc/passwd | sed -n  '1p'
+   86  cat  -n  /etc/passwd | sed -n  '5p'
+   87  cat  -n  /etc/passwd | sed -n  '1,5p'
+   88  cat  -n  /etc/passwd | sed -n  '1p;5p'
+   89  cat  -n  /etc/passwd | sed -n  '1p'
+   90  cat  -n  /etc/passwd | sed -n  '$p'
+   91  cat  -n  /etc/passwd | sed -n  '21,25p'
+   92  cat  -n  /etc/passwd | sed -n  '1p;5p;21,25p;41,$p'
+   93  lsblk  
+   94  lsblk  | sed  -n  '1p,3,5p'
+   95  lsblk  | sed  -n  '1p;3,5p'
+   96  lscpu 
+   97  lscpu  | cat  -n  | sed -n  '13p'
+   98  lscpu  | sed -n  '13p'
+   99  df  -h 
+  100  df  -h | cat -n 
+  101  df  -h | sed  -n  '1p;6,7p'
+  102  df  -h | head -n 7 | tail -n  2
+  103  df  -h | sed  -n  '1p'
+  104  df  -h | sed  -n  '1p'  ; df  -h | head -n 7 | tail -n  2
+  105  ifconfig 
+  106  ifconfig  | cat -n 
+  107  ifconfig  | cat -n | sed  -n  '2p;11p;20p'
+  108  ifconfig | sed  -n  '2p;11p;20p'
+  109  ifconfig 
+  110  ifconfig  | head -n 2  
+  111  ifconfig  | head -n 2   | tail -n 1  
+  112  ifconfig  | sed  -n  '2p'
+  113  ifconfig 
+  114  ifconfig  |  grep ether  
+  115  ifconfig  |  grep ether   | head -n 1 
+  116  ifconfig  |  grep ether   | tail -n 1 
+  117  ifconfig |  head  -n  5
+  118  ifconfig |  head  -n  5 |  grep ether  
+  119  ifconfig | grep ether 
+  120  ifconfig | grep ether  | head  -n  1
+  121* cat  -n  /etc/passwd  | head -n 25  | tail -n 5 
+  122  head -n 25 /etc/passwd | tail -n 5
+  123  head -n 25 /etc/passwd | tail -n 5  | cat -n  
+  124  history 
+
+================================================================
+
+Grep  ==> it is use to print any lines as per defined string Required.
+
+
+# grep  <options>    < pattern or string or word >     <file location>
+
+                    OR
+
+# <any-command-name>  | grep  <options>  <pattern or string> 
+
+================================================================
+
+
+
+  136  cat  /etc/passwd
+  137  grep  root   /etc/passwd
+  138  grep  ftp    /etc/passwd
+  139  grep  games    /etc/passwd
+  140  grep  --color  root   /etc/passwd
+  141  grep  root   /etc/passwd
+  142  grep  ROOT   /etc/passwd
+  143  grep  -i    ROOT   /etc/passwd
+  144  grep  -i    Root  /etc/passwd
+  145  grep  dns  /etc/passwd
+  146  grep  -i   dns  /etc/passwd
+  147  grep -n root  /etc/passwd
+  148  grep -n games   /etc/passwd
+  149  grep -n root  /etc/passwd
+  150  grep -c  root  /etc/passwd
+  151  grep -n root  /etc/passwd
+  152  grep -o  root  /etc/passwd
+  153  grep -o  root  /etc/passwd  >  /string.txt  
+  154  cat  /string.txt 
+  155  grep -n -i root  /etc/passwd
+  156  grep -n -i -o  root  /etc/passwd
+  157  grep root  /etc/passwd
+  158  wc -l   /etc/passwd
+  159  grep  -v  root  /etc/passwd 
+  160  grep root  /etc/passwd  | wc -l  
+  161  grep -v   root  /etc/passwd  | wc -l  
+  162  grep -c  root  /etc/passwd  
+  163  grep -c -v    root  /etc/passwd  
+  164  grep root /etc/passwd
+  165  grep root /etc/passwd  >  /tmp/matched 
+  166  grep  -v  root /etc/passwd  >  /tmp/un-matched 
+  167  cat  /tmp/matched 
+  168  cat  /tmp/un-matched 
+  169  useradd manish 
+  170  useradd manisha 
+  171  grep manish  /etc/passwd 
+  172  grep -w  manish  /etc/passwd 
+  173  cat  /etc/passwd  |  grep  root  
+  174  grep root  /etc/passwd
+  175  cat  /etc/services 
+  176  cat  /etc/services  |  grep rsync
+  177  cat  /etc/services  |  grep 873
+  178  cat  /etc/services  |  grep -w  873
+  179  cat  /etc/services  |  grep -w  rsync
+  180  ps -aux 
+  181  ps -aux  | grep systemd  
+  182  ps -aux  | grep crond  
+  183  ps -aux  | grep -n  crond  
+  184  grep   ftp  /etc/passwd
+  185  grep  -n    ftp  /etc/passwd
+  186  grep  -n  -A2    ftp  /etc/passwd
+  187  grep  -n  -A3    ftp  /etc/passwd
+  188  grep  -n  -B2    ftp  /etc/passwd
+  189  grep  -n  -C2    ftp  /etc/passwd
+  190  grep root  /etc/passwd
+  191  grep -n -A2  root  /etc/passwd
+  192  grep  root  /etc/passwd
+  193  grep  "root"  /etc/passwd
+  194  grep  'root'  /etc/passwd
+  195  cat  /etc/passwd
+  196  grep  Red Hat  /etc/passwd
+  197  grep  "Red Hat"  /etc/passwd
+  198  grep  "red hat"  /etc/passwd
+  199  grep  -i  "red hat"  /etc/passwd
+  200  cat  /etc/passwd
+  201  grep  "DHCP and DNS"   /etc/passwd
+  202  grep -i    "DHCP and DNS"   /etc/passwd
+  203  grep root  /etc/passwd
+  204  grep root  /etc/passwd | sed  's/root/network/'
+  205  grep root  /etc/passwd | sed  's/root/network/g'
+  206  grep root  /etc/passwd 
+  207  grep  ftp  /etc/passwd
+  208  grep  'root'   /etc/passwd
+  209  grep  '^root'   /etc/passwd
+  210  grep  '^ftp'   /etc/passwd
+  211  grep  'bash$'   /etc/passwd
+  212  grep  'nologin$'   /etc/passwd
+  213  lsblk  
+  214  lsblk   |  grep sda
+  215  lsblk   |  grep -w  sda
+  216  lsblk   |  grep mountpoint
+  217  lsblk   |  grep -i  mountpoint
+  218  lscpu  |  grep -i  "model name"
+  219  lscpu  |  grep  "Model name"
+  220  cat -n /etc/passwd | sed  -n  '21,25p'
+  221  cat -n /etc/passwd | sed  -n  '21,25p' | grep qemu
+  222  lsblk  
+  223  lsblk   | sed  -n  '1,2p'
+  224  lsblk   | sed  -n  '1,2p'  |  grep sda
+  225  ifconfig 
+  226  history 
+  227  ifconfig 
+  228  ifconfig  |  grep inet  
+  229  ifconfig  |  grep -w  inet  
+  230  ifconfig  |  grep -w  inet   |  head  -n 1  
+  231  ls  
+  232  ls   |  grep ana  
+  233  ls  
+  234  ls  /etc 
+  235  ls  /etc  |  grep  passwd 
+  236  ls  /etc  |  grep  'yum.conf'
+  237  ls  /etc 
+  238  ls  /etc  |  grep  yum.conf
+  239  df  -h  
+  240  df  -h  | grep sda1
+  241  df  -h  | grep sda2
+  242  grep  root  ftp   games  /etc/passwd 
+  243  egrep   'root|ftp|games'    /etc/passwd 
+  244  egrep -n  -i     'root|ftp|games'    /etc/passwd 
+  245  grep  -E   -n  -i     'root|ftp|games'    /etc/passwd 
+  246  df  -h  |  grep -E  'sda1|sda2'
+  247  grep  -E  'root|user1|user5'  /etc/passwd
+  248  fgrep  root  /etc/passwd  /etc/group 
+  249  fgrep -n  -i    root  /etc/passwd  /etc/group 
+  250  grep -F   -n  -i    root  /etc/passwd  /etc/group 
+  251  grep -n  -i    root  /etc/passwd  /etc/group 
+  252  grep  -F  -n  -i    'root|games|ftp'   /etc/passwd  /etc/group 
+  253  grep  -E  -n  -i    'root|games|ftp'   /etc/passwd  /etc/group 
+  254  egrep   -n  -i    'root|games|ftp'   /etc/passwd  /etc/group 
+  255  dmidecode 
+  256  dmidecode | grep  bios  
+  257  dmidecode | grep -i   bios  
+  258  dmidecode | grep -i   smbios 
+
+  ========================================================
+
+    2  useradd user1
+    3  useradd user2
+    4  useradd user3
+    5  useradd user4
+    6  useradd user5
+    7  ls /home  
+    8  cat  /etc/passwd
+    9  tail -n 5  /etc/passwd
+   10  cut  -c1    /etc/passwd 
+   11  cut  -c1,3    /etc/passwd 
+   12  cut  -c1-5    /etc/passwd 
+   13  head  -n 1  /etc/passwd
+   14  head  -n 1  /etc/passwd | cut  -c1 
+   15  head  -n 1  /etc/passwd | cut  -c1,4 
+   16  head  -n 1  /etc/passwd | cut  -c1-4 
+   17  tail - 5  /etc/passwd
+   18  tail -n  5  /etc/passwd
+   19  tail -n  5  /etc/passwd |  cut  -c1
+   20  tail -n  5  /etc/passwd |  cut  -c1-5
+   21  cat -n  /etc/passwd
+   22  sed  -n  '25p'  /etc/passwd
+   23  sed  -n  '25p'  /etc/passwd | cut  -c1-3
+   24  lsblk 
+   25  lsblk  |  sed  -n  '2p'
+   26  lsblk  |  sed  -n  '2p' |  cut -c1-3
+   27  cat  /etc/passwd
+   28  cut  -f1   /etc/passwd  
+   29  cut  -d:  -f1   /etc/passwd  
+   30  cut  -d':'  -f1   /etc/passwd  
+   31  tail -n 5  /etc/passwd
+   32  tail -n 5  /etc/passwd | cut  -d:   -f1
+   33  tail -n 5  /etc/passwd | cut  -d:   -f1,7
+   34  tail -n 5  /etc/passwd | cut  -d:   -f1,7   >  /tmp/info
+   35  cat  /tmp/info 
+   36  tail -n 5  /etc/passwd
+   37  tail -n 5  /etc/passwd | cut  -d:   -f1,7
+   38  tail -n 5  /etc/passwd | cut  -d:   -f1,3,4
+   39  tail -n 5  /etc/passwd | cut  -d:   -f1-4
+   40  tail -n 5  /etc/passwd | cut  -d:   -f1-4 | sed  's/:/>>>/g'
+   41  tail -n 5  /etc/passwd
+   42  tail -n 5  /etc/passwd | cut  -d:   -f7
+   43  vim  example 
+   44  cat  example 
+   45  cut   -f1   example 
+   46  cut  -d' '   -f1   example 
+   47  cut  -d' '   -f1,4   example 
+   48  cut  -c1-4  example 
+   49  sed  -n  '1p,$p' example 
+   50  sed  -n  '1p;$p' example 
+   51  sed  -n  '1p;$p' example  | cut  -d' '  -f1  
+   52  vim example 
+   53  cat   example 
+   54  cat   example | cut -d:  -f1
+   55  cat   example | cut -d:  -f4
+   56  vim example 
+   57  cat   example | cut -d:  -f4
+   58  cat   example | cut -d[;:]  -f4
+   59  cat   example | cut -d[:;]  -f4
+   60  tail -n 5  /etc/passwd
+   61  tail -n 5  /etc/passwd | awk  -F':'   '{print $1}'
+   62  tail -n 5  /etc/passwd | awk  -F':'   '{print $1,$7}'
+   63  tail -n 5  /etc/passwd | cut  -d:   -f1,7
+   64  tail -n 5  /etc/passwd | awk  -F':'   '{print $1,$7}'
+   65  tail -n 5  /etc/passwd | awk  -F':'   '{print $1,$7}'  OFS=':'
+   66  tail -n 5  /etc/passwd | awk  -F':'   '{print $1,$7}'  OFS=' >>> '
+   67  tail -n 5  /etc/passwd | awk  -F':'   '{print $1,$7}'  OFS=' ram '
+   68  tail -n 5  /etc/passwd | awk  -F':'   '{print $1,$7}'
+   69  tail -n 5  /etc/passwd | awk   '{print $1,$7}'  FS=':'
+   70  tail -n 5  /etc/passwd | awk   '{print $1,$7}'  FS=':'  OFS=':'
+   71  head  -n 1  /etc/passwd
+   72  head  -n 1  /etc/passwd | 
+   73  head  -n 1  /etc/passwd | awk  -F:   '{print $1}'
+   74  df  -h
+   75  df  -h | cut -d' '  -f1  
+   76  df  -h | cut -d' '  -f2  
+   77  df  -h 
+   78  df  -h  | awk    '{print $1}'
+   79  df  -h  | awk    '{print $1,$2}'
+   80  df  -h  | awk    '{print $1,$2}'  | column  -t  
+   81  df  -h  | awk    '{print $1,$2}'   
+   82  df  -h  | awk    '{print $1,$2}'   |  column -t 
+   83  df  -h  | awk    '{print $1,$2}'  
+   84  df  -h  | awk    '{print $1,$2}'    OFS='        '
+   85  df  -h  | awk    '{print $1,$2}'   |  column -t 
+   86  df -h
+   87  df -h | cat -n 
+   88  df -h | cat -n  |  sed  -n  '1p;6,7p'
+   89  df -h  |  sed  -n  '1p;6,7p'
+   90  df -h  |  sed  -n  '1p;6,7p'  | awk  '{print $1,$5}'
+   91  df -h  |  sed  -n  '1p;6,7p'  | awk  '{print $1,$5}' | column -t  
+   92  ifconfig 
+   93  ifconfig  | grep inet  
+   94  ifconfig  | grep -w  inet  
+   95  ifconfig  | grep -w  inet   |  head  -n 1  
+   96  ifconfig  | grep -w  inet   |  head  -n 1   | awk  '{print $2,$4}'
+   97  ifconfig  | grep -w  inet   |  head  -n 1   | awk  '{print $2}'
+   98  ifconfig 
+   99  ifconfig  |  grep ether  
+  100  ifconfig  |  grep ether   | head  -n 1  
+  101  ifconfig  |  grep ether   | head  -n 1   | awk  '{print $2}'
+  102  ifconfig  | grep -w  inet   |  head  -n 1   | awk  '{print $2}'
+  103  a=$(ifconfig  | grep -w  inet   |  head  -n 1   | awk  '{print $2}')
+  104  b=$(ifconfig  |  grep ether   | head  -n 1   | awk  '{print $2}')
+  105  echo $a
+  106  echo $b
+  107  echo "our machine IP address is = $a and MAC address is = $b"
+  108  xyz=krishna 
+  109  echo $xyz  
+  110  date  
+  111  xyz=date 
+  112  echo $xyz  
+  113  xyz=$(date) 
+  114  echo $xyz  
+  115  history 
+  116  cat  /var/log/secure 
+  117  tail -n 5   /var/log/secure 
+  118  tail -n 5   /var/log/secure   | awk  '{print  $1,$2,$3,$4}'
+  119  tail -n 5   /var/log/secure   | cut  -d' '   -f1-4
+  120  cat example 
+  121  awk  -F'[;:]'  '{print $1}'
+  122  awk  -F[;:]  '{print $1}'
+  123  awk  -F[;:]  '{print $1}' example 
+  124  awk  -F'[;:]'  '{print $1}' example 
+  125  awk  -F'[;:]'  '{print $4}' example 
+  126  awk  -F'[;:]'  '{print $1,$4}' example 
+  127  cat  /etc/shadow
+  128  tail -n 5  /etc/shadow
+  129  tail -n 5  /etc/shadow | cut -d:  -f1,6
+  130  lsblk  
+  131  lsblk   | sed  -n  '1p;3,5p'
+  132  lsblk   | sed  -n  '1p;3,5p' | awk  '{print $1}'
+  133  lsblk   | sed  -n  '1p;3,5p' | awk  '{print $1,$4}'
+  134  lsblk   | sed  -n  '1p;3,5p' | awk  '{print $1,$4,$7}'
+  135  lsblk   | sed  -n  '1p;3,5p' | awk  '{print $1,$4,$7}'  | column -t  
+  136  history 
+  137  grep  root  /etc/passwd
+  138  grep -o   root  /etc/passwd
+  139  grep -o   root  /etc/passwd |  uniq
+  140  grep -o   root  /etc/passwd |  uniq  -d  
+  141  grep -o   root  /etc/passwd |  uniq  -c  
+  142  grep  -E   'root|games|ftp'   /etc/passwd
+  143  grep  -E -o    'root|games|ftp'   /etc/passwd
+  144  grep  -E -o    'root|games|ftp'   /etc/passwd |  uniq  
+  145  history 
+
+  ===========================================================
+
+    2  find  /   -name  passwd  
+    3  find  /etc    -name  passwd  
+    4  find  /usr     -name  passwd  
+    5  find  /etc    -name     useradd 
+    6  ls  /
+    7  find  /etc    -name     useradd 
+    8  which locate 
+    9  which find  
+   10  rpm -q   -f  /usr/bin/locate
+   11  rpm -q   -f  /usr/bin/find  
+   12  locate useradd
+   13  find /   -name  useradd  
+   14  updatedb 
+   15  locate useradd
+   16  find  /  -name useradd
+   17  locate useradd
+   18  locate useradd | head  -n 5
+   19  locate -n 2 useradd 
+   20  locate  yum.conf  
+   21  locate YUM.conf
+   22  locate -i YUM.conf
+   23  locate USERADD
+   24  locate -i  USERADD
+   25  touch tajmahal 
+   26  ls  /
+   27  locate  tajmahal
+   28  find  /   -name tajmahal
+   29  locate yum.conf 
+   30  locate useradd
+   31  locate  tajmahal
+   32  locate -S
+   33  updatedb 
+   34  locate -S
+   35  locate  tajmahal
+   36  touch   raju  
+   37  locate -S
+   38  locate raju  
+   39  find /  -name raju 
+   40  locate raju  
+   41  updatedb 
+   42  locate raju  
+   43  locate -S
+   44  ls /etc
+   45  ls /etc/skel
+   46  locate  skel  
+   47  locate -S
+   41  updatedb 
+   42  locate raju  
+   43  locate -S
+   44  ls /etc
+   45  ls /etc/skel
+   46  locate  skel  
+   47  locate -S
+   48  history 
+   49  touch  punit  
+   50  locate -S
+   51  locate  punit 
+   52  reboot   
+   53  locate  punit 
+   54  locate -S
+   55  updatedb 
+   56  locate -S
+   57  locate  punit 
+   58  touch rakesh  
+   59  find  /   -name rakesh  
+   60  find  /etc     -name rakesh  
+   61  find  /  -name  useradd
+   62  find  /  -name  *useradd*
+   63  locate  useradd
+   64  find  /  -name  *useradd*
+   65  find  /  -name  *useradd
+   66  find  /  -name  useradd*
+   67  find  /  -name  *useradd*
+   68  find  /  -name  useradd*  | wc -l  
+   69  find  /  -name  *useradd*  | wc -l  
+   70  find /  -name luseradd  
+   71  find /  -name luseradd*  
+   72  locate  useradd
+   73  locate USERADD
+   74  locate -i   USERADD
+   75  find  /   -name   useradd  
+   76  find  /   -name   USERADD  
+   77  find  /   -iname   USERADD  
+   78  find  -name  punit  
+   79  ls
+   80  find  -name  useradd  
+   81  find  /etc   -name  useradd  
+   82  ls  /
+   83  find  /   -empty
+   84  find  /   -empty | wc -l
+   85  mkdir  /data  
+   86  cd /data
+   87  touch abc1 abc2 abc3
+   88  ls
+   89  echo  hello  > abc1
+   90  cat abc1
+   91  cat abc2
+   92  cat abc3
+   93  cd
+   94  find  /data  -empty
+   95  find  /data  ! -empty
+
+
+   =============================================
+
+   1  which tar
+    2  which gzip
+    3  which bzip2
+    4  which xz
+    5  rpm -qa  tar
+    6  rpm -qa  gzip
+    7  rpm -qa  bzip2
+    8  rpm -qa  xz
+    9  history
+   10  ls
+   11  touch abc1 abc2 abc3
+   12  ls
+   13  tar  -cvf  network.tar    abc*
+   14  ls
+   15  tar  -tvf  network.tar
+   16  touch abc4
+   17  ls
+   18  tar  -rvf  network.tar  abc4
+   19  ls
+   20  tar  -tvf  network.tar
+   21  touch abc5
+   22  ls
+   23  ls
+   24  tar  -rvf  network.tar   abc5
+   25  tar  -tvf  network.tar
+   26  ls
+   27  gzip    network.tar
+   28  ls
+   29  tar  -tvf network.tar.gz
+   30  touch abc6
+   31  tar  -rvf  network.tar.gz   abc6
+   32  gzip  -d   network.tar.gz
+   33  ls
+   34  gzip   network.tar
+   35  ls
+   36  gunzip    network.tar.gz
+   37  ls
+   38  tar  -rvf   network.tar  abc6
+   39  ls
+   40  tar  -tvf   network.tar
+   41  gzip   network.tar
+   42  ls
+   43  rm -rf abc*
+   44  ls
+   45  gunzip   network.tar.gz
+   46  ls
+   47  tar -xvf  network.tar
+   48  ls
+   49  tar -xvf  network.tar   -C   /tmp
+   50  ls  /tmp
+   51  mkdir  /linux
+   52  ls
+   53  tar -xvf  network.tar   -C   /linux
+   54  ls  /linux
+   55  mkdir  /redhat
+   56  cd  /redhat
+   57  tar -xvf   /root/network.tar
+   58  ls
+   59  cd
+   60  tar  -xvf  network.tar    -C  /redhat
+   61  ls /redhat
+   62  ls
+   63  gzip   network.tar
+   64  ls
+   65  rm -rf abc*
+   66  ls
+   67  tar  -xvf  network.tar.gz
+   68  ls
+   69  rm -rf abc*
+   70  tar  -xzvf  network.tar.gz
+   71  ls
+   72  rm -rf abc*
+   73  ls
+   74  ls /redhat
+   75  gzip   /redhat
+   76  tar  -cvf   cloud.tar  /redhat/
+   77  ls
+   78  tar  -tvf  cloud.tar
+   79  ls
+   80  gzip  cloud.tar
+   81  ls
+   82  rm -rf cloud.tar.gz
+   83  ls  /redhat
+   84  tar  -czvf  cloud.tar.gz    /redhat/
+   85  ls
+   86  gunzip  cloud.tar.gz
+   87  ls
+   88  tar -xvf  cloud.tar
+   89  ls
+   90  ls redhat
+   91  rm -rf  /redhat
+   92  ls
+   93  ls redhat
+   94  rm -rf cloud.tar   network.tar.gz
+   95  ls
+   96  ls  /
+   97  ls /etc
+   98  du -sh  /etc
+   99  tar  -czvf   redhat.tar.gz    /etc
+  100  ls
+  101  tar  -cjvf fedora.tar.bz2   /etc
+  102  ls
+  103  tar  -cJvf  linux.tar.xz   /etc
+  104  ls
+  105  du -sh  /etc
+  106  du -sh redhat.tar.gz
+  107  du -sh  fedora.tar.bz2
+  108  du -sh  linux.tar.xz
+  109  tar  -tvf  redhat.tar.gz
+  110  tar  -tvf  redhat.tar.gz | grep shadow
+  111  tar  -tvf  redhat.tar.gz | grep useradd
+  112  ls
+  113  tar  -xzvf  redhat.tar.gz
+  114  ls
+  115  du -sh etc
+  116  tar  -xjvf  fedora.tar.bz2
+  117  ls
+  118  tar  -xJvf  linux.tar.xz
+  119  ls
+  120  history
+  121  echo  "testing"  >   tcs
+  122  cat tcs
+  123  ls
+  124  gzip  tcs
+  125  ls
+  126  zcat  tcs.gz
+  127  gunzip  tcs.gz
+  128  ls
+  129  tar  -cvf  krishna.tar  tcs
+  130  ls
+  131  tar -tvf krishna.tar
+  132  gzip   krishna.tar
+  133  ls
+  134  rm -rf  tcs
+  135  ls
+  136  tar -tvf krishna.tar.gz
+  137  tar  -xvf krishna.tar.gz
+  138  ls
+  139  rm -rf  krishna.tar.gz
+  140  ls
+  141  bzip2  tcs
+  142  ls
+  143  bzcat    tcs.bz2
+  144  bunzip2  tcs.bz2
+  145  ls
+  146  xz  tcs
+  147  ls
+  148  xzcat   tcs.xz
+  149  unxz   tcs.xz
+  150  ls
+  151  touch abc1 abc2 abc3
+  152  ls
+  153  tar  -cvf    krnetwork.tar  abc*
+  154  ls
+  155  rm -rf abc*
+  156  ls
+  157  tar -tvf  krnetwork.tar
+  158  touch abc4
+  159  tar -rvf  krnetwork.tar  abc4
+  160  ls
+  161  rm -rf abc4
+  162  tar  -tvf  krnetwork.tar
+  163  ls
+  164  tar  -xvf  krnetwork.tar  abc4
+  165  ls
+  166  tar  -tvf  krnetwork.tar
+  174  tar  -f  krnetwork.tar  --delete   abc4
+  175  tar  -tvf  krnetwork.tar
+  176  ls
+  177  history
+  178  mkdir  /kr-network
+  179  touch  /kr-network/abc{1..3}
+  180  ls /kr-network
+  181  tar  -cvf  ibm.tar   /kr-network
+  182  tar  -tvf  ibm.tar
+  183  ls
+  184  rm -rf abc*
+  185  ls
+  186  tar  -tvf  ibm.tar
+  187  tar  -xvf  ibm.tar  kr-network/abc3
+  188  ls
+  189  cd kr-network
+  190  ls
+  191  cd
+  192  tar  -tvf ibm.tar
+  193  tar  -f ibm.tar --delete  abc1
+  194  tar  -f ibm.tar --delete  kr-network/abc1
+  195  tar  -tvf ibm.tar
+  196  ls
+  
+   
+
+
+
+
 # Keep Learning......
 
 
