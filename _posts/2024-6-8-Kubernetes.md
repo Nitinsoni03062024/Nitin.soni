@@ -73,6 +73,14 @@ This is a Images,
 
 > Kube-controller (Port of Kubelet , 10250) :- it maintain comminicate with worker node and provide instructor to worker nodes.
 
+
+# Latest installtion of kubernetes,
+
+> Crio link :- (  https://cri-o.io/ ) Copy and You can install the kubernetes,
+
+> Kubernetes Link :- ( https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/ )   
+
+
 # How install kubernetes in ubuntu- 20.04 version , (Install kubernete-Master Server)
 
 > Note **3 Server required for kubernetes server and master, 1st for kubernetes master and 2ad and 3ad kubernetes-node server **
