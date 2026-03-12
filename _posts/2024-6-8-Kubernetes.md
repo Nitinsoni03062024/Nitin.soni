@@ -1182,6 +1182,33 @@ If we are copy then file of admin.conf kubernetes file to another server so seco
 We can create 2 Types of costom role,
 - Cammond line
 - Manifact (yml files)
+- 
+
+# What is secret in k8S
+
+we can use the secret in 2 ways
+- As a env variable
+- Mount
+
+# Type of secret
+- Genric (password/confir/ssh-key)
+- TLS (it only uses for storing certificate files )
+- Docker-registry (- it only uses pull the private image form the registry server)
+
+**How to create and view secret**
+
+•	kubectl create secret generic test-secret --from-literal=rootpassword=redhat --from-literal=mysqluser=wpuser --from-literal=mysqlpassword=wp --from-literal=mysqldb 
+
+literal (means we are storing the value key and value format)
+test-secret (this the name of secret)
+generic (this is the type of secret)
+
+•	kubectl get secret
+
+•	kubectl describe secret test-secrets
+
+# config 
+- this is the nonsenstive data inside the config map
 
 
 
