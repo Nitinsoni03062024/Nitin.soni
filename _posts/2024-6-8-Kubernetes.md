@@ -1211,5 +1211,11 @@ generic (this is the type of secret)
 - this is the nonsenstive data inside the config map
 
 
+# What is statefull and stateless
+
+- Active-Active (application/webserver) In K8S lng we are saying stateless, it means all application is runing like :- RC, RS, Deployemnt all stateless
+- Active-passive (Databases,mysql/pgsql) In K8S lng we are saying statefull , its means all databases is runing like :- mysql, mongodb , postgress, this is the statefull
+
+
 
 # Keep Learning.....
