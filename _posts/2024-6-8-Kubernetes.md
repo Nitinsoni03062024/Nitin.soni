@@ -1216,6 +1216,18 @@ generic (this is the type of secret)
 - Active-Active (application/webserver) In K8S lng we are saying stateless, it means all application is runing like :- RC, RS, Deployemnt all stateless
 - Active-passive (Databases,mysql/pgsql) In K8S lng we are saying statefull , its means all databases is runing like :- mysql, mongodb , postgress, this is the statefull
 
+# Commmand to create service account and access given
+
+-  kubectl create sa nitin   
+
+ (creat the service name of this command)
+ 
+- kubectl create clusterrolebinding nitin-access --clusterrole=cluster=admin serviceaccount=defalut:nitin 
+
+  (given permnsision of nitin user in cluster lavel)
+
+
+
 
 
 # Keep Learning.....
