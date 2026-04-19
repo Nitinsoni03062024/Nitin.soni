@@ -1154,6 +1154,13 @@ Command ==> Authenticatio ==> Authorization ==> Admimission Control
          - 1. Cluster level
          - 2. namespace level
 
+
+# What is command for create the user and give the access 
+
+> kubectl create clusterrolebinding test-admin --clusterrole=cluster-admin --user-nitin (given access from cluster level)
+> kubectl get clusterrolebinding | grep test 
+> kubectl describe clusterrolebinding test-admin
+
   
 > Rolebinding
 > Service Account
