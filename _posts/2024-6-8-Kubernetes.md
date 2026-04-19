@@ -1130,7 +1130,9 @@ Command ==> Authenticatio ==> Authorization ==> Admimission Control
 > Group
 > Role 
 
-         (resources+verb=roles => which allow to permission of user for managing kubernetes resources, [pod,deplymenet,rc.rs,afinity,anti-afinity, limit, quota etc,pv,pvc])
+         (resources+verb=roles => which allow to permission of user for managing kubernetes])
+         
+         resources :- pod,deplymenet,rc.rs,afinity,anti-afinity, limit, quota etc,pv,pvc
 
          Verbs:- list/update/pathc/delete
 
