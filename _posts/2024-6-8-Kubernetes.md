@@ -1157,10 +1157,10 @@ Command ==> Authenticatio ==> Authorization ==> Admimission Control
 
 # What is command for create the user and give the access 
 
-> kubectl create clusterrolebinding test-admin --clusterrole=cluster-admin --user-nitin (given access from cluster level)
-> kubectl get clusterrolebinding | grep test 
-> kubectl describe clusterrolebinding test-admin
-> kubectl create rolebinding test-reader --clusterrole=cluster-admin --user=nitin -n argocd  (This command from namespcace lavel)
+- kubectl create clusterrolebinding test-admin --clusterrole=cluster-admin --user-nitin (given access from cluster level)
+- kubectl get clusterrolebinding | grep test 
+- kubectl describe clusterrolebinding test-admin
+- kubectl create rolebinding test-reader --clusterrole=cluster-admin --user=nitin -n argocd  (This command from namespcace lavel)
 
   
 > Rolebinding
