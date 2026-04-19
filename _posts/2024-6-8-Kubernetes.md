@@ -1160,6 +1160,7 @@ Command ==> Authenticatio ==> Authorization ==> Admimission Control
 > kubectl create clusterrolebinding test-admin --clusterrole=cluster-admin --user-nitin (given access from cluster level)
 > kubectl get clusterrolebinding | grep test 
 > kubectl describe clusterrolebinding test-admin
+> kubectl create rolebinding test-reader --clusterrole=cluster-admin --user=nitin (This command from namespcace lavel)
 
   
 > Rolebinding
